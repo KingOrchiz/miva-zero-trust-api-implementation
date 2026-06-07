@@ -51,6 +51,7 @@ data:
       server_address = "spire-server"
       server_port = "8081"
       trust_domain = "miva.local"
+      insecure_bootstrap = true
     }
     plugins {
       NodeAttestor "k8s_psat" {
