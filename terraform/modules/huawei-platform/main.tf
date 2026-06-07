@@ -54,6 +54,63 @@ resource "huaweicloud_cce_cluster" "this" {
   description            = "Lean dedicated lab cluster for ${var.project_display_name} MIVA prototype"
 }
 
+# NAT Gateway for VPC internet egress (required for image pulls from Docker Hub, etc.)
+resource "huaweicloud_vpc_eip" "nat" {
+  count = local.create_dedicated ? 1 : 0
+  region = var.region
+  publicip {
+    type = "5_bgp"
+  }
+  bandwidth {
+    name       = "bw-nat-${local.prefix}"
+    size       = 5
+    charge_mode = "traffic"
+  }
+}
+
+resource "huaweicloud_nat_gateway" "this" {
+  count       = local.create_dedicated ? 1 : 0
+  region      = var.region
+  name        = "nat-gw-${local.prefix}"
+  description = "NAT gateway for CCE VPC internet egress (image pulls)"
+  spec        = "1"
+  vpc_id      = huaweicloud_vpc.this[0].id
+  subnet_id   = huaweicloud_vpc_subnet.this[0].id
+
+  depends_on = [huaweicloud_vpc_subnet.this]
+}
+
+resource "huaweicloud_nat_snat_rule" "this" {
+  count       = local.create_dedicated ? 1 : 0
+  region      = var.region
+  nat_gateway_id = huaweicloud_nat_gateway.this[0].id
+  source_cidr    = var.vpc_cidr
+  floating_ip_id = huaweicloud_vpc_eip.nat[0].id
+}
+
+# EIP for CCE API server public access (kubectl from outside VPC)
+resource "huaweicloud_vpc_eip" "cce_api" {
+  count = local.create_dedicated ? 1 : 0
+  region = var.region
+  publicip {
+    type = "5_bgp"
+  }
+  bandwidth {
+    name       = "bw-cce-api-${local.prefix}"
+    size       = 5
+    charge_mode = "traffic"
+  }
+}
+
+resource "huaweicloud_cce_cluster_eip" "this" {
+  count       = local.create_dedicated ? 1 : 0
+  region      = var.region
+  cluster_id  = huaweicloud_cce_cluster.this[0].id
+  eip_id      = huaweicloud_vpc_eip.cce_api[0].id
+
+  depends_on = [huaweicloud_cce_cluster.this, huaweicloud_vpc_eip.cce_api]
+}
+
 resource "huaweicloud_cce_node_pool" "this" {
   count              = local.create_dedicated && var.create_node_pool ? 1 : 0
   region             = var.region

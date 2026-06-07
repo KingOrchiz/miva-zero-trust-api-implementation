@@ -26,3 +26,5 @@ build/
 # Local cluster access and bulky evidence captures
 .kube/
 evidence/**/*.txt
+huawei-cce-kubeconfig.yaml
+*.kubeconfig
