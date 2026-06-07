@@ -22,3 +22,7 @@ __pycache__/
 node_modules/
 dist/
 build/
+
+# Local cluster access and bulky evidence captures
+.kube/
+evidence/**/*.txt
