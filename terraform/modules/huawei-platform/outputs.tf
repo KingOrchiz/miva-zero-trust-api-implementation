@@ -3,6 +3,7 @@ output "summary" {
     project_display_name = var.project_display_name
     deployment_mode      = var.deployment_mode
     region               = var.region
+    enterprise_project_id = var.enterprise_project_id
     vpc_id               = local.vpc_id
     subnet_id            = local.subnet_id
     cce_cluster_id       = local.cluster_id

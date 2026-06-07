@@ -21,6 +21,7 @@ Use a clean, dedicated lab instead of shared staging clusters. The implementatio
 ### Huawei Cloud
 
 - Region: `af-south-1`
+- Enterprise Project: `irestrict-v3-lab` (`8842e64c-0771-48e5-b4de-dc5a95df99bd`)
 - VPC: `vpc-irestrict-v3-lab`
 - Subnet: `subnet-cce-irestrict-v3-lab`
 - CCE cluster: `cce-irestrict-v3-lab`

@@ -77,6 +77,12 @@ variable "azure_aks_vm_size" {
   default     = "Standard_B2s"
 }
 
+variable "huawei_enterprise_project_id" {
+  type        = string
+  description = "Huawei Enterprise Project ID for iRestrict v3 lab resources."
+  default     = "8842e64c-0771-48e5-b4de-dc5a95df99bd"
+}
+
 variable "huawei_vpc_cidr" {
   type    = string
   default = "10.83.0.0/16"

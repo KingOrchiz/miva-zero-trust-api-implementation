@@ -38,6 +38,7 @@ module "huawei_platform" {
   environment             = var.environment
   deployment_mode         = var.deployment_mode
   region                  = var.huawei_region
+  enterprise_project_id   = var.huawei_enterprise_project_id
   vpc_cidr                = var.huawei_vpc_cidr
   subnet_cidr             = var.huawei_subnet_cidr
   subnet_gateway_ip       = var.huawei_subnet_gateway_ip

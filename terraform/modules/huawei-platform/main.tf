@@ -12,8 +12,9 @@ resource "huaweicloud_vpc" "this" {
   count  = local.create_dedicated ? 1 : 0
   region = var.region
   name   = "vpc-${local.prefix}"
-  cidr   = var.vpc_cidr
-  tags   = var.tags
+  cidr                  = var.vpc_cidr
+  enterprise_project_id = var.enterprise_project_id
+  tags                  = var.tags
 }
 
 resource "huaweicloud_vpc_subnet" "this" {
@@ -22,7 +23,7 @@ resource "huaweicloud_vpc_subnet" "this" {
   name       = "subnet-cce-${local.prefix}"
   cidr       = var.subnet_cidr
   gateway_ip = var.subnet_gateway_ip
-  vpc_id     = huaweicloud_vpc.this[0].id
+  vpc_id                = huaweicloud_vpc.this[0].id
   tags       = var.tags
 }
 
@@ -35,8 +36,9 @@ resource "huaweicloud_swr_organization" "this" {
 resource "huaweicloud_lts_group" "this" {
   count       = local.create_dedicated ? 1 : 0
   region      = var.region
-  group_name  = "lts-${local.prefix}"
-  ttl_in_days = 30
+  group_name            = "lts-${local.prefix}"
+  ttl_in_days           = 30
+  enterprise_project_id = var.enterprise_project_id
   tags        = var.tags
 }
 
@@ -54,6 +56,7 @@ resource "huaweicloud_cce_cluster" "this" {
   region                 = var.region
   name                   = "cce-${local.prefix}"
   flavor_id              = var.cluster_flavor_id
+  enterprise_project_id  = var.enterprise_project_id
   vpc_id                 = huaweicloud_vpc.this[0].id
   subnet_id              = huaweicloud_vpc_subnet.this[0].id
   container_network_type = "overlay_l2"
@@ -67,8 +70,9 @@ resource "huaweicloud_cce_node_pool" "this" {
   cluster_id         = huaweicloud_cce_cluster.this[0].id
   name               = "np-${local.prefix}"
   flavor_id          = var.node_flavor_id
-  initial_node_count = var.node_count
-  os                 = "EulerOS 2.9"
+  initial_node_count    = var.node_count
+  enterprise_project_id = var.enterprise_project_id
+  os                    = "EulerOS 2.9"
   key_pair           = var.node_key_pair != "" ? var.node_key_pair : null
 
   root_volume {

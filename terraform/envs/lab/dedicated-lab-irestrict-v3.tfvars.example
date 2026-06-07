@@ -18,7 +18,8 @@ azure_aks_max_count       = 2
 azure_aks_vm_size         = "Standard_B2s"
 
 # Huawei: closest practical region already reviewed.
-huawei_region            = "af-south-1"
+huawei_region                = "af-south-1"
+huawei_enterprise_project_id = "8842e64c-0771-48e5-b4de-dc5a95df99bd"
 huawei_vpc_cidr          = "10.83.0.0/16"
 huawei_subnet_cidr       = "10.83.1.0/24"
 huawei_subnet_gateway_ip = "10.83.1.1"

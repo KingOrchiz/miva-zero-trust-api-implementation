@@ -3,6 +3,7 @@ variable "project_display_name" { type = string }
 variable "environment" { type = string }
 variable "deployment_mode" { type = string }
 variable "region" { type = string }
+variable "enterprise_project_id" { type = string }
 variable "vpc_cidr" { type = string }
 variable "subnet_cidr" { type = string }
 variable "subnet_gateway_ip" { type = string }
