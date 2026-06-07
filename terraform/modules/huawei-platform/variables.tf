@@ -11,6 +11,11 @@ variable "cluster_flavor_id" { type = string }
 variable "node_flavor_id" { type = string }
 variable "node_count" { type = number }
 variable "node_availability_zone" { type = string }
+variable "node_auth_mode" { type = string }
+variable "node_password" {
+  type      = string
+  sensitive = true
+}
 variable "node_key_pair" { type = string }
 variable "create_node_pool" { type = bool }
 variable "existing_cce_cluster_id" { type = string }

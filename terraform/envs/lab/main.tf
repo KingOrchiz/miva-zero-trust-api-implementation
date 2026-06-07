@@ -46,6 +46,8 @@ module "huawei_platform" {
   node_flavor_id          = var.huawei_node_flavor_id
   node_count              = var.huawei_node_count
   node_availability_zone  = var.huawei_node_availability_zone
+  node_auth_mode          = var.huawei_node_auth_mode
+  node_password           = var.huawei_node_password
   node_key_pair           = var.huawei_node_key_pair
   create_node_pool        = var.create_huawei_node_pool
   existing_cce_cluster_id = var.huawei_existing_cce_cluster_id

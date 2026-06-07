@@ -121,6 +121,24 @@ variable "huawei_node_availability_zone" {
   default     = ""
 }
 
+variable "huawei_node_auth_mode" {
+  type        = string
+  description = "Huawei CCE worker authentication mode: key_pair or password. Use password if ECS keypair IAM permissions are blocked."
+  default     = "key_pair"
+
+  validation {
+    condition     = contains(["key_pair", "password"], var.huawei_node_auth_mode)
+    error_message = "huawei_node_auth_mode must be key_pair or password."
+  }
+}
+
+variable "huawei_node_password" {
+  type        = string
+  description = "Temporary Huawei CCE worker password. Required only when huawei_node_auth_mode is password. Store only as a sensitive HCP Terraform variable."
+  default     = ""
+  sensitive   = true
+}
+
 variable "huawei_node_key_pair" {
   type        = string
   description = "Existing Huawei ECS key pair name for CCE worker access. Set in HCP Terraform if node pool creation requires it."

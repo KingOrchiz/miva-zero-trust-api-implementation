@@ -113,6 +113,10 @@ Also required before apply:
 - Key pair name: `irestrict-v3-lab-key`
 - Private key must stay out of Git and Terraform variables. Terraform only uses the key pair name.
 
+## Password fallback
+
+If Huawei IAM does not allow `ecs:serverKeypairs:list` without broad project access, the node pool can use `huawei_node_auth_mode = "password"` instead. The password must be stored only as a sensitive HCP Terraform variable and rotated or discarded after evidence collection.
+
 ## Immediate next step
 
 Configure non-secret HCP Terraform variables first, then add sensitive cloud credentials. Run a remote Terraform plan only. Review the plan before any apply.
