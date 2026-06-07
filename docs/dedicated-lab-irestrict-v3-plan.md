@@ -108,6 +108,11 @@ Also required before apply:
 - Do not deploy Keycloak, SPIRE, OPA, OpenTelemetry, or sample services yet.
 - Do not apply until plan output and cost posture are approved.
 
+## Huawei key pair
+
+- Key pair name: `irestrict-v3-lab-key`
+- Private key must stay out of Git and Terraform variables. Terraform only uses the key pair name.
+
 ## Immediate next step
 
 Configure non-secret HCP Terraform variables first, then add sensitive cloud credentials. Run a remote Terraform plan only. Review the plan before any apply.
