@@ -73,7 +73,8 @@ resource "huaweicloud_cce_node_pool" "this" {
   initial_node_count    = var.node_count
   enterprise_project_id = var.enterprise_project_id
   os                    = "EulerOS 2.9"
-  key_pair           = var.node_key_pair != "" ? var.node_key_pair : null
+  key_pair              = var.node_auth_mode == "key_pair" && var.node_key_pair != "" ? var.node_key_pair : null
+  password              = var.node_auth_mode == "password" ? var.node_password : null
 
   root_volume {
     size       = 40
