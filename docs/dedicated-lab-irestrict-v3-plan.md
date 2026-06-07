@@ -115,7 +115,7 @@ Also required before apply:
 
 ## Password fallback
 
-If Huawei IAM does not allow `ecs:serverKeypairs:list` without broad project access, the node pool can use `huawei_node_auth_mode = "password"` instead. The password must be stored only as a sensitive HCP Terraform variable and rotated or discarded after evidence collection.
+The lab now uses `huawei_node_auth_mode = "password"` by default to avoid broad ECS keypair permissions. The generated password is stored only as a sensitive HCP Terraform variable and must be rotated or discarded after evidence collection.
 
 ## Immediate next step
 

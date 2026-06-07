@@ -28,8 +28,9 @@ huawei_subnet_gateway_ip = "10.83.1.1"
 huawei_cluster_flavor_id = "cce.s1.small"
 huawei_node_flavor_id    = "s6.large.2"
 huawei_node_count        = 1
-huawei_node_auth_mode    = "key_pair"
+huawei_node_auth_mode    = "password"
 huawei_node_key_pair     = "irestrict-v3-lab-key"
+# huawei_node_password is intentionally not shown here. Store it only as a sensitive HCP Terraform variable.
 create_huawei_node_pool  = true
 
 # Keep disabled until clusters exist and kubeconfig/provider wiring is explicitly approved.
