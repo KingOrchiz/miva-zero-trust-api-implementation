@@ -38,6 +38,13 @@ variable "huawei_region" {
   default     = "af-south-1"
 }
 
+
+variable "azure_create_resource_group" {
+  type        = bool
+  description = "Whether Terraform should create the Azure resource group. False when the RG is pre-created and delegated to Jane."
+  default     = false
+}
+
 variable "azure_address_space" {
   type    = list(string)
   default = ["10.73.0.0/16"]

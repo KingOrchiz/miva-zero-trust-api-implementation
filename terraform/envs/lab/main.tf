@@ -17,6 +17,7 @@ module "azure_platform" {
   environment                  = var.environment
   deployment_mode              = var.deployment_mode
   location                     = var.azure_location
+  create_resource_group        = var.azure_create_resource_group
   address_space                = var.azure_address_space
   aks_subnet_prefixes          = var.azure_aks_subnet_prefixes
   aks_node_count               = var.azure_aks_node_count

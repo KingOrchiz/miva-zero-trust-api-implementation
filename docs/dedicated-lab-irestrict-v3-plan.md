@@ -9,7 +9,7 @@ Use a clean, dedicated lab instead of shared staging clusters. The implementatio
 ### Azure
 
 - Region: `eastus`
-- Resource group: `rg-irestrict-v3-lab`
+- Resource group: `rg-irestrict-v3-lab` (pre-created, Terraform uses it as an existing delegated RG)
 - VNet: `vnet-irestrict-v3-lab`
 - AKS subnet: `snet-aks-irestrict-v3-lab`
 - AKS cluster: `aks-irestrict-v3-lab`

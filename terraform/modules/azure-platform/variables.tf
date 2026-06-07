@@ -3,6 +3,7 @@ variable "project_display_name" { type = string }
 variable "environment" { type = string }
 variable "deployment_mode" { type = string }
 variable "location" { type = string }
+variable "create_resource_group" { type = bool }
 variable "address_space" { type = list(string) }
 variable "aks_subnet_prefixes" { type = list(string) }
 variable "aks_node_count" { type = number }

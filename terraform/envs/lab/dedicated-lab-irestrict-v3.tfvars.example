@@ -6,6 +6,7 @@ project              = "irestrict-v3"
 project_display_name = "iRestrict Version 3"
 environment          = "lab"
 deployment_mode      = "dedicated-lab"
+azure_create_resource_group = false
 
 # Azure: lean US region. Change only if quota, policy, or cost requires another region.
 azure_location            = "eastus"
