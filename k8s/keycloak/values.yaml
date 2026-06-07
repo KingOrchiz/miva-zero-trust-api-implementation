@@ -1,4 +1,4 @@
-# Keycloak Helm values for the MIVA prototype.
+# Keycloak Helm values for the iRestrict Version 3 prototype.
 # Final image/chart source will be locked after target cluster review.
 auth:
   adminUser: admin

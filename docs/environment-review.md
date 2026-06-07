@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Before deploying the MIVA prototype into any existing Azure or Huawei Cloud environment, we must confirm that the target environment is suitable, low-risk, and clearly separated from production workloads.
+Before deploying the iRestrict Version 3 prototype into any existing Azure or Huawei Cloud environment, we must confirm that the target environment is suitable, low-risk, and clearly separated from production workloads.
 
 ## Recommended deployment target
 
@@ -85,10 +85,10 @@ Risk:
 Start with **Mode B** if suitable dev/staging AKS and CCE clusters already exist and can be isolated by namespaces.
 
 Use namespaces:
-- `miva-system`
-- `miva-identity`
-- `miva-security`
-- `miva-observability`
-- `miva-apps`
+- `irestrict-system`
+- `irestrict-identity`
+- `irestrict-security`
+- `irestrict-observability`
+- `irestrict-apps`
 
 If existing clusters are unsuitable, use Mode A with small dedicated clusters and strict teardown controls.

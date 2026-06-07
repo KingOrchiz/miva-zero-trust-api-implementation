@@ -1,12 +1,15 @@
 output "summary" {
   value = {
-    provider                    = "huawei"
-    deployment_mode             = var.deployment_mode
-    region                      = var.region
-    existing_cce_cluster_id     = var.existing_cce_cluster_id
-    existing_vpc_id             = var.existing_vpc_id
-    existing_subnet_id          = var.existing_subnet_id
-    creates_dedicated_resources = local.create_dedicated
-    kubernetes_cluster_deferred = true
+    project_display_name = var.project_display_name
+    deployment_mode      = var.deployment_mode
+    region               = var.region
+    vpc_id               = local.vpc_id
+    subnet_id            = local.subnet_id
+    cce_cluster_id       = local.cluster_id
+    cce_cluster_name     = local.create_dedicated ? huaweicloud_cce_cluster.this[0].name : null
+    swr_organization     = local.create_dedicated ? huaweicloud_swr_organization.this[0].name : null
+    lts_group_name       = local.create_dedicated ? huaweicloud_lts_group.this[0].group_name : null
+    node_flavor_id       = local.create_dedicated && var.create_node_pool ? var.node_flavor_id : null
+    node_count           = local.create_dedicated && var.create_node_pool ? var.node_count : null
   }
 }

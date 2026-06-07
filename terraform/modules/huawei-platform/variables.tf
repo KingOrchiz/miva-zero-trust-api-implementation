@@ -1,7 +1,17 @@
 variable "project" { type = string }
+variable "project_display_name" { type = string }
 variable "environment" { type = string }
 variable "deployment_mode" { type = string }
 variable "region" { type = string }
+variable "vpc_cidr" { type = string }
+variable "subnet_cidr" { type = string }
+variable "subnet_gateway_ip" { type = string }
+variable "cluster_flavor_id" { type = string }
+variable "node_flavor_id" { type = string }
+variable "node_count" { type = number }
+variable "node_availability_zone" { type = string }
+variable "node_key_pair" { type = string }
+variable "create_node_pool" { type = bool }
 variable "existing_cce_cluster_id" { type = string }
 variable "existing_vpc_id" { type = string }
 variable "existing_subnet_id" { type = string }

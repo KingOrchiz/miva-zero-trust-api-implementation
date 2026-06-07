@@ -1,0 +1,43 @@
+# Lean dedicated-lab profile for iRestrict Version 3.
+# Safe to commit because it contains no secrets.
+# Copy these values into HCP Terraform workspace variables after final review.
+
+project              = "irestrict-v3"
+project_display_name = "iRestrict Version 3"
+environment          = "lab"
+deployment_mode      = "dedicated-lab"
+
+# Azure: lean US region. Change only if quota, policy, or cost requires another region.
+azure_location            = "eastus"
+azure_address_space       = ["10.73.0.0/16"]
+azure_aks_subnet_prefixes = ["10.73.1.0/24"]
+azure_aks_node_count      = 1
+azure_aks_min_count       = 1
+azure_aks_max_count       = 2
+azure_aks_vm_size         = "Standard_B2s"
+
+# Huawei: closest practical region already reviewed.
+huawei_region            = "af-south-1"
+huawei_vpc_cidr          = "10.83.0.0/16"
+huawei_subnet_cidr       = "10.83.1.0/24"
+huawei_subnet_gateway_ip = "10.83.1.1"
+
+# Confirm these are available in af-south-1 before final apply.
+huawei_cluster_flavor_id = "cce.s1.small"
+huawei_node_flavor_id    = "s6.large.2"
+huawei_node_count        = 1
+huawei_node_key_pair     = "REPLACE_WITH_EXISTING_HUAWEI_KEYPAIR_NAME"
+create_huawei_node_pool  = true
+
+# Keep disabled until clusters exist and kubeconfig/provider wiring is explicitly approved.
+enable_kubernetes_bootstrap = false
+
+tags = {
+  project      = "irestrict-v3"
+  product      = "iRestrict Version 3"
+  environment  = "lab"
+  purpose      = "miva-chapter4-prototype"
+  owner        = "oche"
+  managed_by   = "terraform"
+  cost_profile = "lean"
+}

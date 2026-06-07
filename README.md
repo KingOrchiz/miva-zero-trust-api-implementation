@@ -1,6 +1,6 @@
-# MIVA Zero-Trust API Authentication Prototype
+# iRestrict Version 3 Prototype
 
-Deployable implementation workspace for the MIVA project: **Design and Implementation of a Zero-Trust, Asymmetric, and Identity-Bound API Authentication Framework for Financial Systems**.
+Deployable implementation workspace for the iRestrict Version 3 MIVA project: **Design and Implementation of a Zero-Trust, Asymmetric, and Identity-Bound API Authentication Framework for Financial Systems**.
 
 ## Purpose
 

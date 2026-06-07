@@ -2,13 +2,13 @@ apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: spire-agent
-  namespace: miva-security
+  namespace: irestrict-security
 ---
 apiVersion: apps/v1
 kind: DaemonSet
 metadata:
   name: spire-agent
-  namespace: miva-security
+  namespace: irestrict-security
 spec:
   selector:
     matchLabels:
@@ -42,7 +42,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: spire-agent-config
-  namespace: miva-security
+  namespace: irestrict-security
 data:
   agent.conf: |
     agent {

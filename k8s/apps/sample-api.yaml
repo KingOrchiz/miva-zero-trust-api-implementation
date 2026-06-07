@@ -2,13 +2,13 @@ apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: sample-financial-api
-  namespace: miva-apps
+  namespace: irestrict-apps
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: sample-financial-api
-  namespace: miva-apps
+  namespace: irestrict-apps
 spec:
   replicas: 2
   selector:
@@ -29,9 +29,9 @@ spec:
             - containerPort: 8080
           env:
             - name: OTEL_EXPORTER_OTLP_ENDPOINT
-              value: http://otel-collector.miva-observability.svc.cluster.local:4318
+              value: http://otel-collector.irestrict-observability.svc.cluster.local:4318
             - name: OPA_POLICY_ENDPOINT
-              value: http://opa.miva-security.svc.cluster.local:8181/v1/data/miva/api/authz/allow
+              value: http://opa.irestrict-security.svc.cluster.local:8181/v1/data/miva/api/authz/allow
           readinessProbe:
             httpGet:
               path: /healthz
@@ -45,7 +45,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: sample-financial-api
-  namespace: miva-apps
+  namespace: irestrict-apps
 spec:
   selector:
     app: sample-financial-api

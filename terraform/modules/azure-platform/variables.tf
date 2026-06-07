@@ -1,7 +1,14 @@
 variable "project" { type = string }
+variable "project_display_name" { type = string }
 variable "environment" { type = string }
 variable "deployment_mode" { type = string }
 variable "location" { type = string }
+variable "address_space" { type = list(string) }
+variable "aks_subnet_prefixes" { type = list(string) }
+variable "aks_node_count" { type = number }
+variable "aks_min_count" { type = number }
+variable "aks_max_count" { type = number }
+variable "aks_vm_size" { type = string }
 variable "existing_resource_group_name" { type = string }
 variable "existing_aks_cluster_name" { type = string }
 variable "tags" { type = map(string) }

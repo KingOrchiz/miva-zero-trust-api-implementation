@@ -8,7 +8,7 @@ Recommended:
 
 Alternative shorter name:
 
-`miva-zt-api-auth`
+`irestrict-v3`
 
 Repository visibility: private.
 

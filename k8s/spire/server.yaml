@@ -2,13 +2,13 @@ apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: spire-server
-  namespace: miva-security
+  namespace: irestrict-security
 ---
 apiVersion: v1
 kind: ConfigMap
 metadata:
   name: spire-server-config
-  namespace: miva-security
+  namespace: irestrict-security
 data:
   server.conf: |
     server {
@@ -29,7 +29,7 @@ data:
         plugin_data {
           clusters = {
             "miva-cluster" = {
-              service_account_allow_list = ["miva-security:spire-agent"]
+              service_account_allow_list = ["irestrict-security:spire-agent"]
             }
           }
         }
@@ -45,7 +45,7 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: spire-server
-  namespace: miva-security
+  namespace: irestrict-security
 spec:
   serviceName: spire-server
   replicas: 1
@@ -86,7 +86,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: spire-server
-  namespace: miva-security
+  namespace: irestrict-security
 spec:
   selector:
     app: spire-server
