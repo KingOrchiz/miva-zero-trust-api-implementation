@@ -21,12 +21,13 @@ spec:
             - --server
             - --addr=0.0.0.0:8181
             - --set=decision_logs.console=true
-            - /policies
+            - /policy/api-authz.rego
           ports:
             - containerPort: 8181
           volumeMounts:
             - name: policies
-              mountPath: /policies
+              mountPath: /policy/api-authz.rego
+              subPath: api-authz.rego
           readinessProbe:
             httpGet:
               path: /health?plugins
