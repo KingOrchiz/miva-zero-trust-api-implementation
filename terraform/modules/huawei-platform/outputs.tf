@@ -8,7 +8,7 @@ output "summary" {
     subnet_id            = local.subnet_id
     cce_cluster_id       = local.cluster_id
     cce_cluster_name     = local.create_dedicated ? huaweicloud_cce_cluster.this[0].name : null
-    swr_organization     = local.create_dedicated ? huaweicloud_swr_organization.this[0].name : null
+    swr_organization     = null
     lts_group_name       = local.create_dedicated ? huaweicloud_lts_group.this[0].group_name : null
     node_auth_mode       = local.create_dedicated && var.create_node_pool ? var.node_auth_mode : null
     node_flavor_id       = local.create_dedicated && var.create_node_pool ? var.node_flavor_id : null

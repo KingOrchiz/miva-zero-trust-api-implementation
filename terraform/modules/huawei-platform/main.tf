@@ -14,7 +14,6 @@ resource "huaweicloud_vpc" "this" {
   name   = "vpc-${local.prefix}"
   cidr                  = var.vpc_cidr
   enterprise_project_id = var.enterprise_project_id
-  tags                  = var.tags
 }
 
 resource "huaweicloud_vpc_subnet" "this" {
@@ -24,14 +23,8 @@ resource "huaweicloud_vpc_subnet" "this" {
   cidr       = var.subnet_cidr
   gateway_ip = var.subnet_gateway_ip
   vpc_id                = huaweicloud_vpc.this[0].id
-  tags       = var.tags
 }
 
-resource "huaweicloud_swr_organization" "this" {
-  count  = local.create_dedicated ? 1 : 0
-  region = var.region
-  name   = substr(local.compact_prefix, 0, 30)
-}
 
 resource "huaweicloud_lts_group" "this" {
   count       = local.create_dedicated ? 1 : 0
@@ -39,7 +32,6 @@ resource "huaweicloud_lts_group" "this" {
   group_name            = "lts-${local.prefix}"
   ttl_in_days           = 30
   enterprise_project_id = var.enterprise_project_id
-  tags        = var.tags
 }
 
 resource "huaweicloud_lts_stream" "cce" {
@@ -48,7 +40,6 @@ resource "huaweicloud_lts_stream" "cce" {
   group_id    = huaweicloud_lts_group.this[0].id
   stream_name = "cce-${local.prefix}"
   ttl_in_days = 30
-  tags        = var.tags
 }
 
 resource "huaweicloud_cce_cluster" "this" {
@@ -61,7 +52,6 @@ resource "huaweicloud_cce_cluster" "this" {
   subnet_id              = huaweicloud_vpc_subnet.this[0].id
   container_network_type = "overlay_l2"
   description            = "Lean dedicated lab cluster for ${var.project_display_name} MIVA prototype"
-  tags                   = var.tags
 }
 
 resource "huaweicloud_cce_node_pool" "this" {
@@ -86,5 +76,4 @@ resource "huaweicloud_cce_node_pool" "this" {
     volumetype = "SAS"
   }
 
-  tags = var.tags
 }
