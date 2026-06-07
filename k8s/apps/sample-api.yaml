@@ -4,6 +4,79 @@ metadata:
   name: sample-financial-api
   namespace: irestrict-apps
 ---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: sample-financial-api-code
+  namespace: irestrict-apps
+data:
+  app.py: |
+    import json
+    import os
+    import time
+    import urllib.request
+    from http.server import BaseHTTPRequestHandler, HTTPServer
+
+    OPA_ENDPOINT = os.environ.get("OPA_POLICY_ENDPOINT", "http://opa.irestrict-security.svc.cluster.local:8181/v1/data/miva/api/authz")
+    SPIFFE_ID = os.environ.get("SPIFFE_ID", "spiffe://miva.local/ns/irestrict-apps/sa/sample-financial-api")
+
+    def parse_scopes(value):
+        return [scope.strip() for scope in value.replace(",", " ").split() if scope.strip()]
+
+    class Handler(BaseHTTPRequestHandler):
+        def _send(self, code, payload):
+            body = json.dumps(payload, indent=2).encode("utf-8")
+            self.send_response(code)
+            self.send_header("content-type", "application/json")
+            self.send_header("content-length", str(len(body)))
+            self.end_headers()
+            self.wfile.write(body)
+
+        def log_message(self, fmt, *args):
+            print(json.dumps({"ts": time.time(), "client": self.client_address[0], "message": fmt % args}))
+
+        def do_GET(self):
+            if self.path == "/healthz":
+                return self._send(200, {"status": "ok", "service": "sample-financial-api"})
+            if self.path == "/v1/accounts":
+                return self.authorize_and_respond("GET", ["v1", "accounts"], {"accounts": [{"id": "demo-001", "balance": "redacted"}]})
+            return self._send(404, {"error": "not_found"})
+
+        def do_POST(self):
+            if self.path == "/v1/payments":
+                return self.authorize_and_respond("POST", ["v1", "payments"], {"payment": "accepted_for_demo"})
+            return self._send(404, {"error": "not_found"})
+
+        def authorize_and_respond(self, method, path_parts, success_payload):
+            input_doc = {
+                "input": {
+                    "method": method,
+                    "path": path_parts,
+                    "claims": {"scope": parse_scopes(self.headers.get("x-demo-scope", ""))},
+                    "spiffe_id": self.headers.get("x-demo-spiffe-id", SPIFFE_ID),
+                    "dpop": {"valid": self.headers.get("x-demo-dpop", "false").lower() == "true"},
+                    "mtls": {"verified": self.headers.get("x-demo-mtls", "false").lower() == "true"},
+                    "risk": {"level": self.headers.get("x-demo-risk", "low")},
+                }
+            }
+            try:
+                data = json.dumps(input_doc).encode("utf-8")
+                req = urllib.request.Request(OPA_ENDPOINT, data=data, headers={"content-type": "application/json"}, method="POST")
+                with urllib.request.urlopen(req, timeout=3) as response:
+                    decision = json.loads(response.read().decode("utf-8"))
+                allowed = bool(decision.get("result", {}).get("allow", False))
+                deny_reason = decision.get("result", {}).get("deny_reason", [])
+            except Exception as exc:
+                return self._send(503, {"error": "policy_engine_unavailable", "detail": str(exc)})
+            if not allowed:
+                return self._send(403, {"decision": "deny", "deny_reason": deny_reason, "input": input_doc["input"]})
+            payload = {"decision": "allow", "policy": "OPA", "workload_identity": input_doc["input"]["spiffe_id"]}
+            payload.update(success_payload)
+            return self._send(200, payload)
+
+    if __name__ == "__main__":
+        HTTPServer(("0.0.0.0", 8080), Handler).serve_forever()
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -23,15 +96,19 @@ spec:
       serviceAccountName: sample-financial-api
       containers:
         - name: api
-          image: ghcr.io/kingorchiz/miva-sample-financial-api:placeholder
+          image: python:3.12-alpine
           imagePullPolicy: IfNotPresent
+          command: ["python", "/app/app.py"]
           ports:
             - containerPort: 8080
           env:
             - name: OTEL_EXPORTER_OTLP_ENDPOINT
               value: http://otel-collector.irestrict-observability.svc.cluster.local:4318
             - name: OPA_POLICY_ENDPOINT
-              value: http://opa.irestrict-security.svc.cluster.local:8181/v1/data/miva/api/authz/allow
+              value: http://opa.irestrict-security.svc.cluster.local:8181/v1/data/miva/api/authz
+          volumeMounts:
+            - name: app-code
+              mountPath: /app
           readinessProbe:
             httpGet:
               path: /healthz
@@ -40,6 +117,10 @@ spec:
             httpGet:
               path: /healthz
               port: 8080
+      volumes:
+        - name: app-code
+          configMap:
+            name: sample-financial-api-code
 ---
 apiVersion: v1
 kind: Service

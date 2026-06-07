@@ -1,0 +1,54 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: opa
+  namespace: irestrict-security
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: opa
+  template:
+    metadata:
+      labels:
+        app: opa
+    spec:
+      containers:
+        - name: opa
+          image: openpolicyagent/opa:1.4.2
+          args:
+            - run
+            - --server
+            - --addr=0.0.0.0:8181
+            - --set=decision_logs.console=true
+            - /policies
+          ports:
+            - containerPort: 8181
+          volumeMounts:
+            - name: policies
+              mountPath: /policies
+          readinessProbe:
+            httpGet:
+              path: /health?plugins
+              port: 8181
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8181
+      volumes:
+        - name: policies
+          configMap:
+            name: miva-api-policies
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: opa
+  namespace: irestrict-security
+spec:
+  selector:
+    app: opa
+  ports:
+    - name: http
+      port: 8181
+      targetPort: 8181

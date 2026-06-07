@@ -11,17 +11,20 @@ fi
 echo "Current kubectl context:"
 kubectl config current-context
 
-echo "This script deploys MIVA Kubernetes manifests to the current context."
-echo "Only proceed after Oche confirms this is the approved dev/staging target."
-read -r -p "Type DEPLOY-MIVA to continue: " confirm
-if [[ "$confirm" != "DEPLOY-MIVA" ]]; then
-  echo "Aborted."
-  exit 1
+echo "This script deploys iRestrict Version 3 Kubernetes manifests to the current context."
+if [[ "${DEPLOY_MIVA_CONFIRMED:-}" != "true" ]]; then
+  read -r -p "Type DEPLOY-MIVA to continue: " confirm
+  if [[ "$confirm" != "DEPLOY-MIVA" ]]; then
+    echo "Aborted."
+    exit 1
+  fi
 fi
 
 kubectl apply -f "$ROOT/k8s/namespaces/namespaces.yaml"
+kubectl apply -f "$ROOT/k8s/keycloak/keycloak-dev.yaml"
 kubectl apply -f "$ROOT/k8s/otel/collector.yaml"
 kubectl apply -f "$ROOT/k8s/opa/policies-configmap.yaml"
+kubectl apply -f "$ROOT/k8s/opa/opa-deployment.yaml"
 kubectl apply -f "$ROOT/k8s/spire/server.yaml"
 kubectl apply -f "$ROOT/k8s/spire/agent.yaml"
 kubectl apply -f "$ROOT/k8s/apps/sample-api.yaml"

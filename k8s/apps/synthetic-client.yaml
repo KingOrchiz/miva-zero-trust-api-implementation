@@ -24,6 +24,18 @@ spec:
           command: ["/bin/sh", "-c"]
           args:
             - |
-              echo "Synthetic client placeholder. Final DPoP/mTLS tests are executed by scripts/run-validation-tests.sh after Keycloak and gateway are configured."
-              curl -sS http://sample-financial-api.irestrict-apps.svc.cluster.local/healthz || true
+              set -eu
+              BASE=http://sample-financial-api.irestrict-apps.svc.cluster.local
+              echo "T00 health"
+              curl -fsS "$BASE/healthz"
+              echo
+              echo "T01 valid OPA decision"
+              curl -fsS -H 'x-demo-scope: accounts.read' -H 'x-demo-dpop: true' -H 'x-demo-mtls: true' "$BASE/v1/accounts"
+              echo
+              echo "T02 missing DPoP should deny"
+              code=$(curl -sS -o /tmp/t02.json -w '%{http_code}' -H 'x-demo-scope: accounts.read' -H 'x-demo-mtls: true' "$BASE/v1/accounts")
+              cat /tmp/t02.json
+              test "$code" = "403"
+              echo
+              echo "Synthetic client tests completed."
   backoffLimit: 0
