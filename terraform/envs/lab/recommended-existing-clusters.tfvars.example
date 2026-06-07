@@ -1,0 +1,26 @@
+# Recommended existing-clusters profile from read-only environment review.
+# Copy to a secure Terraform Cloud variable set or local .tfvars only after approval.
+# Do not commit real secrets or kubeconfig data.
+
+project          = "miva-zt-api-auth"
+environment      = "lab"
+deployment_mode  = "existing-clusters"
+
+azure_location                  = "eastus"
+azure_existing_resource_group_name = "BANKONE-STAG-RSG"
+azure_existing_aks_cluster_name = "aks-staging"
+
+huawei_region                  = "af-south-1"
+huawei_existing_cce_cluster_id = "c66acf7e-fdc8-11f0-91c3-0255ac1000eb"
+huawei_existing_vpc_id         = "b32a142d-4a7d-41f4-a629-471ff07091a6"
+huawei_existing_subnet_id      = "8f7e10f5-5a64-4114-9386-120e698dfcfb"
+
+enable_kubernetes_bootstrap = false
+
+tags = {
+  project     = "miva-zt-api-auth"
+  environment = "lab"
+  purpose     = "miva-chapter4-prototype"
+  owner       = "oche"
+  managed_by  = "terraform"
+}
