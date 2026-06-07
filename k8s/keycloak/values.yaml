@@ -1,0 +1,18 @@
+# Keycloak Helm values for the MIVA prototype.
+# Final image/chart source will be locked after target cluster review.
+auth:
+  adminUser: admin
+  existingSecret: keycloak-admin
+production: false
+proxy: edge
+service:
+  type: ClusterIP
+postgresql:
+  enabled: true
+  auth:
+    existingSecret: keycloak-postgresql
+extraEnvVars:
+  - name: KC_HOSTNAME_STRICT
+    value: "false"
+  - name: KC_HTTP_ENABLED
+    value: "true"

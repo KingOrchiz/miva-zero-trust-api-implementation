@@ -1,0 +1,29 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: synthetic-client
+  namespace: miva-apps
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: synthetic-client-smoke-test
+  namespace: miva-apps
+spec:
+  template:
+    metadata:
+      labels:
+        app: synthetic-client
+        miva.openclaw.io/workload: test-client
+    spec:
+      restartPolicy: Never
+      serviceAccountName: synthetic-client
+      containers:
+        - name: client
+          image: curlimages/curl:8.10.1
+          command: ["/bin/sh", "-c"]
+          args:
+            - |
+              echo "Synthetic client placeholder. Final DPoP/mTLS tests are executed by scripts/run-validation-tests.sh after Keycloak and gateway are configured."
+              curl -sS http://sample-financial-api.miva-apps.svc.cluster.local/healthz || true
+  backoffLimit: 0

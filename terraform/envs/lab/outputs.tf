@@ -1,7 +1,15 @@
-output "azure_cluster_name" {
-  value = module.azure_aks.cluster_name
+output "deployment_mode" {
+  value = var.deployment_mode
 }
 
-output "huawei_cluster_name" {
-  value = module.huawei_cce.cluster_name
+output "azure_summary" {
+  value = var.enable_azure_platform ? module.azure_platform[0].summary : null
+}
+
+output "huawei_summary" {
+  value = var.enable_huawei_platform ? module.huawei_platform[0].summary : null
+}
+
+output "kubernetes_namespaces" {
+  value = var.enable_kubernetes_bootstrap ? module.kubernetes_platform[0].namespaces : []
 }

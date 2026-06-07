@@ -1,0 +1,33 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: miva-api-policies
+  namespace: miva-security
+data:
+  api-authz.rego: |
+    package miva.api.authz
+
+    default allow := false
+
+    allow if {
+      input.method == "GET"
+      input.path == ["v1", "accounts"]
+      input.claims.scope[_] == "accounts.read"
+      startswith(input.spiffe_id, "spiffe://miva.local/ns/miva-apps/sa/")
+      input.dpop.valid == true
+      input.mtls.verified == true
+    }
+
+    allow if {
+      input.method == "POST"
+      input.path == ["v1", "payments"]
+      input.claims.scope[_] == "payments.write"
+      input.risk.level != "high"
+      startswith(input.spiffe_id, "spiffe://miva.local/ns/miva-apps/sa/")
+      input.dpop.valid == true
+      input.mtls.verified == true
+    }
+
+    deny_reason contains "invalid_dpop" if input.dpop.valid != true
+    deny_reason contains "mtls_not_verified" if input.mtls.verified != true
+    deny_reason contains "invalid_workload_identity" if not startswith(input.spiffe_id, "spiffe://miva.local/ns/miva-apps/sa/")

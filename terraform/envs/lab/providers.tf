@@ -4,11 +4,19 @@ terraform {
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = "~> 3.110"
+      version = "~> 3.117"
     }
     huaweicloud = {
       source  = "huaweicloud/huaweicloud"
-      version = "~> 1.70"
+      version = "~> 1.92"
+    }
+    kubernetes = {
+      source  = "hashicorp/kubernetes"
+      version = "~> 2.33"
+    }
+    helm = {
+      source  = "hashicorp/helm"
+      version = "~> 2.16"
     }
   }
 }
@@ -19,4 +27,13 @@ provider "azurerm" {
 
 provider "huaweicloud" {
   region = var.huawei_region
+}
+
+# Kubernetes and Helm providers are intentionally left without connection
+# configuration for now. They will be enabled only after Oche confirms whether
+# the deployment target is a dedicated lab cluster or existing dev/staging
+# AKS/CCE clusters.
+provider "kubernetes" {}
+provider "helm" {
+  kubernetes {}
 }
