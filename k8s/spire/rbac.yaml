@@ -1,0 +1,46 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: irestrict-spire-server-tokenreview
+rules:
+  - apiGroups: ["authentication.k8s.io"]
+    resources: ["tokenreviews"]
+    verbs: ["create"]
+  - apiGroups: [""]
+    resources: ["pods", "nodes", "serviceaccounts"]
+    verbs: ["get", "list", "watch"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: irestrict-spire-server-tokenreview
+subjects:
+  - kind: ServiceAccount
+    name: spire-server
+    namespace: irestrict-security
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: irestrict-spire-server-tokenreview
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: irestrict-spire-agent-workload-attestor
+rules:
+  - apiGroups: [""]
+    resources: ["pods", "nodes", "serviceaccounts"]
+    verbs: ["get", "list", "watch"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: irestrict-spire-agent-workload-attestor
+subjects:
+  - kind: ServiceAccount
+    name: spire-agent
+    namespace: irestrict-security
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: irestrict-spire-agent-workload-attestor
