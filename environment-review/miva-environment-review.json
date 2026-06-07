@@ -1,0 +1,167 @@
+{
+  "azure_subscription": "c04a4c5c-484c-4b8d-865d-ad07f93a3dcd",
+  "azure_aks_clusters": [
+    {
+      "name": "aks-staging",
+      "resourceGroup": "BANKONE-STAG-RSG",
+      "location": "eastus",
+      "kubernetesVersion": "1.36.0",
+      "powerState": "Running",
+      "fqdn": "aks-staging-dns-j1t47r2a.hcp.eastus.azmk8s.io",
+      "networkPlugin": "azure",
+      "outboundType": "loadBalancer",
+      "nodeResourceGroup": "MC_BANKONE-STAG-RSG_aks-staging_eastus",
+      "privateCluster": null,
+      "tags": {
+        "Environment": "Staging",
+        "Opco": "BankOne",
+        "Owner": "Qore"
+      },
+      "candidate_score": 1,
+      "id": "/subscriptions/c04a4c5c-484c-4b8d-865d-ad07f93a3dcd/resourcegroups/BANKONE-STAG-RSG/providers/Microsoft.ContainerService/managedClusters/aks-staging"
+    },
+    {
+      "name": "aks-test",
+      "resourceGroup": "BANKONE-RSG",
+      "location": "eastus",
+      "kubernetesVersion": "1.36.0",
+      "powerState": "Running",
+      "fqdn": "aks-test-dns-68668603.hcp.eastus.azmk8s.io",
+      "networkPlugin": "azure",
+      "outboundType": "loadBalancer",
+      "nodeResourceGroup": "MC_BANKONE-RSG_aks-test_eastus",
+      "privateCluster": null,
+      "tags": {
+        "Environment": "Test",
+        "OpCo": "Bankone",
+        "Owner": "Qore"
+      },
+      "candidate_score": 1,
+      "id": "/subscriptions/c04a4c5c-484c-4b8d-865d-ad07f93a3dcd/resourcegroups/BANKONE-RSG/providers/Microsoft.ContainerService/managedClusters/aks-test"
+    },
+    {
+      "name": "aks-prod",
+      "resourceGroup": "BANKONE-RSG",
+      "location": "eastus",
+      "kubernetesVersion": "1.33.12",
+      "powerState": "Running",
+      "fqdn": "aks-prod-dns-60552d10.hcp.eastus.azmk8s.io",
+      "networkPlugin": "azure",
+      "outboundType": "loadBalancer",
+      "nodeResourceGroup": "MC_BANKONE-RSG_aks-prod_eastus",
+      "privateCluster": null,
+      "tags": {
+        "Environment": "Production",
+        "OpCo": "Bankone",
+        "Owner": "Qore"
+      },
+      "candidate_score": 0,
+      "id": "/subscriptions/c04a4c5c-484c-4b8d-865d-ad07f93a3dcd/resourcegroups/BANKONE-RSG/providers/Microsoft.ContainerService/managedClusters/aks-prod"
+    }
+  ],
+  "huawei_cce_clusters": [
+    {
+      "name": "recova-test",
+      "region": "af-south-1",
+      "id": "c3256e3e-0358-11f1-ad9c-0255ac1000ee",
+      "phase": "Available",
+      "vpc_id": "b32a142d-4a7d-41f4-a629-471ff07091a6",
+      "subnet_id": "e72ea743-bb74-4cb2-b351-e31838adc24d",
+      "endpoint_types": [
+        "Internal"
+      ],
+      "candidate_score": 3
+    },
+    {
+      "name": "cluster-test",
+      "region": "af-south-1",
+      "id": "6122b887-ebbc-11f0-b3c8-0255ac1000d4",
+      "phase": "Hibernation",
+      "vpc_id": "b32a142d-4a7d-41f4-a629-471ff07091a6",
+      "subnet_id": "7a4179be-f22f-4f9d-844d-626eee967a0b",
+      "endpoint_types": [
+        "Internal"
+      ],
+      "candidate_score": 3
+    },
+    {
+      "name": "clustertest",
+      "region": "af-south-1",
+      "id": "c3a4523c-fb72-11f0-b7bf-0255ac1000d5",
+      "phase": "Available",
+      "vpc_id": "b32a142d-4a7d-41f4-a629-471ff07091a6",
+      "subnet_id": "7a4179be-f22f-4f9d-844d-626eee967a0b",
+      "endpoint_types": [
+        "Internal"
+      ],
+      "candidate_score": 3
+    },
+    {
+      "name": "deployment-cluster",
+      "region": "af-south-1",
+      "id": "f44699c8-b03d-11f0-9273-0255ac1000e9",
+      "phase": "Available",
+      "vpc_id": "b32a142d-4a7d-41f4-a629-471ff07091a6",
+      "subnet_id": "5d6aa716-b812-4025-8230-fb4b41812e09",
+      "endpoint_types": [
+        "Internal"
+      ],
+      "candidate_score": 1
+    },
+    {
+      "name": "bankone-test",
+      "region": "af-south-1",
+      "id": "28c29062-fd23-11f0-ab67-0255ac1000e5",
+      "phase": "Available",
+      "vpc_id": "b32a142d-4a7d-41f4-a629-471ff07091a6",
+      "subnet_id": "88165328-88c8-4359-a11a-f6c0e48dd267",
+      "endpoint_types": [
+        "Internal"
+      ],
+      "candidate_score": 3
+    },
+    {
+      "name": "cluster-staging",
+      "region": "af-south-1",
+      "id": "c66acf7e-fdc8-11f0-91c3-0255ac1000eb",
+      "phase": "Available",
+      "vpc_id": "b32a142d-4a7d-41f4-a629-471ff07091a6",
+      "subnet_id": "8f7e10f5-5a64-4114-9386-120e698dfcfb",
+      "endpoint_types": [
+        "Internal"
+      ],
+      "candidate_score": 3
+    },
+    {
+      "name": "cluster-prod",
+      "region": "af-south-1",
+      "id": "d687dc37-01b3-11f1-85e5-0255ac1000db",
+      "phase": "Available",
+      "vpc_id": "b32a142d-4a7d-41f4-a629-471ff07091a6",
+      "subnet_id": "8a33699d-cd05-4eb6-9baa-a1872f63585c",
+      "endpoint_types": [
+        "Internal"
+      ],
+      "candidate_score": 1
+    }
+  ],
+  "recommendation": {
+    "azure_primary": "aks-staging in BANKONE-STAG-RSG",
+    "azure_secondary": "aks-test in BANKONE-RSG if staging is unavailable",
+    "huawei_primary": "cluster-staging in af-south-1",
+    "huawei_secondary": "bankone-test in af-south-1 if staging is unavailable",
+    "deployment_mode": "existing-clusters",
+    "rationale": [
+      "Both providers already have visible non-production Kubernetes clusters",
+      "Using existing clusters avoids unnecessary cost and speeds Chapter 4 evidence collection",
+      "Production clusters are excluded",
+      "Huawei hibernated cluster is excluded"
+    ]
+  },
+  "next_approval_needed": [
+    "Confirm use of Azure aks-staging and Huawei cluster-staging for the MIVA prototype",
+    "Confirm namespace-only deployment boundary",
+    "Confirm whether Jane may fetch kubeconfigs for these clusters",
+    "Confirm cost ceiling for any supporting services such as ingress, registry, secrets, logging"
+  ]
+}

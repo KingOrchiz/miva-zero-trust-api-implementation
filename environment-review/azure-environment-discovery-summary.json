@@ -1,0 +1,623 @@
+{
+  "counts": {
+    "resources": 1810,
+    "rgs": 106,
+    "aks": 3,
+    "acr": 2,
+    "kv": 13,
+    "law": 8,
+    "vnets": 3,
+    "lbs": 35,
+    "publicips": 49
+  },
+  "errors": {},
+  "aks_clusters": [
+    {
+      "name": "aks-staging",
+      "resourceGroup": null,
+      "location": "eastus",
+      "kubernetesVersion": "1.36.0",
+      "powerState": "Running",
+      "fqdn": "aks-staging-dns-j1t47r2a.hcp.eastus.azmk8s.io",
+      "networkPlugin": "azure",
+      "outboundType": "loadBalancer",
+      "nodeResourceGroup": "MC_BANKONE-STAG-RSG_aks-staging_eastus",
+      "privateCluster": null,
+      "tags": {
+        "Environment": "Staging",
+        "Opco": "BankOne",
+        "Owner": "Qore"
+      },
+      "candidate_score": 1,
+      "id": "/subscriptions/c04a4c5c-484c-4b8d-865d-ad07f93a3dcd/resourcegroups/BANKONE-STAG-RSG/providers/Microsoft.ContainerService/managedClusters/aks-staging"
+    },
+    {
+      "name": "aks-test",
+      "resourceGroup": null,
+      "location": "eastus",
+      "kubernetesVersion": "1.36.0",
+      "powerState": "Running",
+      "fqdn": "aks-test-dns-68668603.hcp.eastus.azmk8s.io",
+      "networkPlugin": "azure",
+      "outboundType": "loadBalancer",
+      "nodeResourceGroup": "MC_BANKONE-RSG_aks-test_eastus",
+      "privateCluster": null,
+      "tags": {
+        "Environment": "Test",
+        "OpCo": "Bankone",
+        "Owner": "Qore"
+      },
+      "candidate_score": 1,
+      "id": "/subscriptions/c04a4c5c-484c-4b8d-865d-ad07f93a3dcd/resourcegroups/BANKONE-RSG/providers/Microsoft.ContainerService/managedClusters/aks-test"
+    },
+    {
+      "name": "aks-prod",
+      "resourceGroup": null,
+      "location": "eastus",
+      "kubernetesVersion": "1.33.12",
+      "powerState": "Running",
+      "fqdn": "aks-prod-dns-60552d10.hcp.eastus.azmk8s.io",
+      "networkPlugin": "azure",
+      "outboundType": "loadBalancer",
+      "nodeResourceGroup": "MC_BANKONE-RSG_aks-prod_eastus",
+      "privateCluster": null,
+      "tags": {
+        "Environment": "Production",
+        "OpCo": "Bankone",
+        "Owner": "Qore"
+      },
+      "candidate_score": 0,
+      "id": "/subscriptions/c04a4c5c-484c-4b8d-865d-ad07f93a3dcd/resourcegroups/BANKONE-RSG/providers/Microsoft.ContainerService/managedClusters/aks-prod"
+    }
+  ],
+  "top_candidate_resource_groups": [
+    {
+      "name": "Testsegment_AvailabilitySet-CSP",
+      "location": "eastus",
+      "tags": {
+        "Owner": "Qore",
+        "Environment": "Staging",
+        "Opco": "Bankone",
+        "CostCenter": "ContosoIT"
+      },
+      "candidate_score": 3
+    },
+    {
+      "name": "DR-Testsegment_AvailabilitySet",
+      "location": "westeurope",
+      "tags": {
+        "CostCenter": "ContosoIT",
+        "Owner": "Qore",
+        "Environment": "DR",
+        "Opco": "Recova"
+      },
+      "candidate_score": 2
+    },
+    {
+      "name": "Qore-QA-Testing",
+      "location": "eastus",
+      "tags": {
+        "Environment": "QA",
+        "Owner": "Qore",
+        "opco": "Qore",
+        "CostCenter": "ContosoIT"
+      },
+      "candidate_score": 2
+    },
+    {
+      "name": "TestOctopus",
+      "location": "eastus",
+      "tags": {
+        "Owner": "Qore",
+        "Environment": "Staging",
+        "Opco": "Bankone",
+        "CostCenter": "ContosoIT"
+      },
+      "candidate_score": 2
+    },
+    {
+      "name": "testRSg-CSP",
+      "location": "eastus",
+      "tags": {
+        "Owner": "Qore",
+        "Environment": "Staging",
+        "Opco": "Prime",
+        "CostCenter": "ContosoIT"
+      },
+      "candidate_score": 2
+    },
+    {
+      "name": "AppSegmentAvailabilitySetRG",
+      "location": "eastus",
+      "tags": {
+        "Owner": "Qore",
+        "Opco": "Bankone",
+        "Environment": "Production",
+        "CostCenter": "ContosoIT"
+      },
+      "candidate_score": 1
+    },
+    {
+      "name": "AppSegmentavailabilitySetRSG-CSP",
+      "location": "eastus",
+      "tags": {
+        "Owner": "Qore",
+        "Environment": "Production",
+        "Opco": "Bankone",
+        "CostCenter": "ContosoIT"
+      },
+      "candidate_score": 1
+    },
+    {
+      "name": "APPSEGMENTAVAILABILITYSETRSG-CSP-eastus",
+      "location": "eastus",
+      "tags": {
+        "CostCenter": "ContosoIT"
+      },
+      "candidate_score": 1
+    },
+    {
+      "name": "BANKONE-DEV-RSG",
+      "location": "eastus",
+      "tags": {
+        "Environment": "Development",
+        "Owner": "Qore",
+        "OpCo": "Bankone",
+        "CostCenter": "ContosoIT"
+      },
+      "candidate_score": 1
+    },
+    {
+      "name": "BANKONE-STAG-RSG",
+      "location": "eastus",
+      "tags": {
+        "Owner": "Qore ",
+        "OpCo": "Bankone",
+        "Environment": "Staging",
+        "CostCenter": "ContosoIT"
+      },
+      "candidate_score": 1
+    },
+    {
+      "name": "CBA_TEST_RSG",
+      "location": "eastus",
+      "tags": {
+        "CBA_TEST_RSG": "RSG",
+        "CostCenter": "ContosoIT",
+        "Owner": "Qore",
+        "Environment": "Test",
+        "Opco": "Bankone"
+      },
+      "candidate_score": 1
+    },
+    {
+      "name": "CLUSTER-DEV-RSG",
+      "location": "eastus",
+      "tags": {
+        "CostCenter": "ContosoIT",
+        "Environment": "Dev",
+        "Owner": "Qore",
+        "opco": "Cluster"
+      },
+      "candidate_score": 1
+    },
+    {
+      "name": "CLUSTER-STAG-RSG",
+      "location": "eastus",
+      "tags": {
+        "Environment": "Staging",
+        "Owner": "Cluster",
+        "Opco": "Qore",
+        "CostCenter": "ContosoIT"
+      },
+      "candidate_score": 1
+    },
+    {
+      "name": "DBsegment_AvailabilitySet-CSP",
+      "location": "eastus",
+      "tags": {
+        "Owner": "Qore",
+        "Environment": "DB",
+        "Opco": "Bankone",
+        "CostCenter": "ContosoIT"
+      },
+      "candidate_score": 1
+    },
+    {
+      "name": "DBsegment_AvailabilitySet-CSP-eastus",
+      "location": "eastus",
+      "tags": {
+        "CostCenter": "ContosoIT"
+      },
+      "candidate_score": 1
+    },
+    {
+      "name": "DR-AppSegmentavailabilitySetRSG",
+      "location": "westeurope",
+      "tags": {
+        "CostCenter": "ContosoIT",
+        "Owner": "Qore",
+        "Environment": "DR",
+        "Opco": "Holdco",
+        "Team": "Infrastructure"
+      },
+      "candidate_score": 1
+    },
+    {
+      "name": "DR-websegmt_AvailabilitySet",
+      "location": "westeurope",
+      "tags": {
+        "CostCenter": "ContosoIT",
+        "Owner": "Qore",
+        "Environment": "DR",
+        "Opco": "Recova"
+      },
+      "candidate_score": 1
+    },
+    {
+      "name": "Infra-TestRSG",
+      "location": "eastus",
+      "tags": {
+        "CostCenter": "ContosoIT"
+      },
+      "candidate_score": 1
+    },
+    {
+      "name": "MC_BANKONE-RSG_aks-test_eastus",
+      "location": "eastus",
+      "tags": {
+        "Environment": "Test",
+        "OpCo": "Bankone",
+        "Owner": "Qore",
+        "aks-managed-cluster-name": "aks-test",
+        "aks-managed-cluster-rg": "BANKONE-RSG",
+        "CostCenter": "ContosoIT"
+      },
+      "candidate_score": 1
+    },
+    {
+      "name": "MC_BANKONE-STAG-RSG_aks-staging_eastus",
+      "location": "eastus",
+      "tags": {
+        "Environment": "Staging",
+        "Opco": "BankOne",
+        "Owner": "Qore",
+        "aks-managed-cluster-name": "aks-staging",
+        "aks-managed-cluster-rg": "BANKONE-STAG-RSG",
+        "CostCenter": "ContosoIT"
+      },
+      "candidate_score": 1
+    },
+    {
+      "name": "Mgtsegment_AvailabilitySetRSG-CSP",
+      "location": "eastus",
+      "tags": {
+        "CostCenter": "ContosoIT",
+        "OpCo": "Holdco",
+        "Owner": "Qore",
+        "Environment": "Production"
+      },
+      "candidate_score": 1
+    },
+    {
+      "name": "PRIME-DEV-RSG",
+      "location": "uksouth",
+      "tags": {
+        "Environment": "Dev",
+        "Owner": "Qore",
+        "opco": "Prime",
+        "CostCenter": "ContosoIT"
+      },
+      "candidate_score": 1
+    },
+    {
+      "name": "PRIME-STAG-RSG",
+      "location": "uksouth",
+      "tags": {
+        "Environment": "Staging",
+        "Owner": "Prime",
+        "Opco": "Qore",
+        "CostCenter": "ContosoIT"
+      },
+      "candidate_score": 1
+    },
+    {
+      "name": "RECOVA-DEV-RSG",
+      "location": "eastus",
+      "tags": {
+        "CostCenter": "ContosoIT",
+        "Environment": "Dev",
+        "Owner": "Qore",
+        "opco": "Recova"
+      },
+      "candidate_score": 1
+    },
+    {
+      "name": "RECOVA-STAG-RSG",
+      "location": "eastus",
+      "tags": {
+        "Environment": "Staging",
+        "Owner": "Qore",
+        "Opco": "Recova",
+        "CostCenter": "ContosoIT"
+      },
+      "candidate_score": 1
+    }
+  ],
+  "container_registries": [
+    {
+      "name": "appzone",
+      "resourceGroup": "AppZone_ACR_RG",
+      "location": "eastus",
+      "type": "Microsoft.ContainerRegistry/registries",
+      "tags": {
+        "RSG": "AppZone_ACR_RG",
+        "OpCo": "Bankone",
+        "Environment": "Production",
+        "Owner": "Qore"
+      },
+      "id": "/subscriptions/c04a4c5c-484c-4b8d-865d-ad07f93a3dcd/resourceGroups/AppZone_ACR_RG/providers/Microsoft.ContainerRegistry/registries/appzone"
+    },
+    {
+      "name": "recovacontainer",
+      "resourceGroup": "RecovaRSG",
+      "location": "eastus",
+      "type": "Microsoft.ContainerRegistry/registries",
+      "tags": {
+        "RSG": "RecovaContainer",
+        "Owner": "Qore",
+        "environment": "Production",
+        "OpCo": "Recova"
+      },
+      "id": "/subscriptions/c04a4c5c-484c-4b8d-865d-ad07f93a3dcd/resourceGroups/RecovaRSG/providers/Microsoft.ContainerRegistry/registries/recovacontainer"
+    }
+  ],
+  "key_vaults": [
+    {
+      "name": "Channels-test",
+      "resourceGroup": "BANKONE-DEV-RSG",
+      "location": "eastus",
+      "type": "Microsoft.KeyVault/vaults",
+      "tags": {
+        "Owner ": "Qore",
+        "OpCo": "BankOne",
+        "Environment": "Dev"
+      },
+      "id": "/subscriptions/c04a4c5c-484c-4b8d-865d-ad07f93a3dcd/resourceGroups/BANKONE-DEV-RSG/providers/Microsoft.KeyVault/vaults/Channels-test"
+    },
+    {
+      "name": "Bankone-aks-prod",
+      "resourceGroup": "BANKONE-RSG",
+      "location": "eastus",
+      "type": "Microsoft.KeyVault/vaults",
+      "tags": {
+        "Owner": "Qore",
+        "OpCo": "BankOne",
+        "Environment ": "Production"
+      },
+      "id": "/subscriptions/c04a4c5c-484c-4b8d-865d-ad07f93a3dcd/resourceGroups/BANKONE-RSG/providers/Microsoft.KeyVault/vaults/Bankone-aks-prod"
+    },
+    {
+      "name": "Bankone-AKS-test-Vault",
+      "resourceGroup": "BANKONE-STAG-RSG",
+      "location": "eastus",
+      "type": "Microsoft.KeyVault/vaults",
+      "tags": {
+        "Owner": "Qore",
+        "OpCo": "Bankone",
+        "Environment": "Staging"
+      },
+      "id": "/subscriptions/c04a4c5c-484c-4b8d-865d-ad07f93a3dcd/resourceGroups/BANKONE-STAG-RSG/providers/Microsoft.KeyVault/vaults/Bankone-AKS-test-Vault"
+    },
+    {
+      "name": "CBATest3731",
+      "resourceGroup": "CBA_TEST_RSG",
+      "location": "eastus",
+      "type": "Microsoft.KeyVault/vaults",
+      "tags": {
+        "hidden-DevTestLabs-LabUId": "658e13bb-8f88-442a-a8bc-281eaf13ea92",
+        "CreatedBy": "DevTestLabs",
+        "Owner": "Qore",
+        "OpCo": "Bankone",
+        "Environment": "Test"
+      },
+      "id": "/subscriptions/c04a4c5c-484c-4b8d-865d-ad07f93a3dcd/resourceGroups/CBA_TEST_RSG/providers/Microsoft.KeyVault/vaults/CBATest3731"
+    },
+    {
+      "name": "clusterdevkv",
+      "resourceGroup": "CLUSTER-DEV-RSG",
+      "location": "eastus",
+      "type": "Microsoft.KeyVault/vaults",
+      "tags": {
+        "Owner ": "Qore",
+        "Environment": "Production",
+        "OpCo": "Cluster"
+      },
+      "id": "/subscriptions/c04a4c5c-484c-4b8d-865d-ad07f93a3dcd/resourceGroups/CLUSTER-DEV-RSG/providers/Microsoft.KeyVault/vaults/clusterdevkv"
+    },
+    {
+      "name": "PrimeTesting",
+      "resourceGroup": "PRIME-STAG-RSG",
+      "location": "uksouth",
+      "type": "Microsoft.KeyVault/vaults",
+      "tags": {
+        "Owner": "Qore",
+        "OpCo": "Prime",
+        "Environment": "Test"
+      },
+      "id": "/subscriptions/c04a4c5c-484c-4b8d-865d-ad07f93a3dcd/resourceGroups/PRIME-STAG-RSG/providers/Microsoft.KeyVault/vaults/PrimeTesting"
+    },
+    {
+      "name": "dejavumobileprime",
+      "resourceGroup": "PRIME-UKSOUTH-RSG",
+      "location": "uksouth",
+      "type": "Microsoft.KeyVault/vaults",
+      "tags": {
+        "OpCo": "Prime",
+        "Owner": "Qore",
+        "Environment": "Production"
+      },
+      "id": "/subscriptions/c04a4c5c-484c-4b8d-865d-ad07f93a3dcd/resourceGroups/PRIME-UKSOUTH-RSG/providers/Microsoft.KeyVault/vaults/dejavumobileprime"
+    },
+    {
+      "name": "PrimeKeyDb",
+      "resourceGroup": "PrimeServiceFabricUK_RSG",
+      "location": "uksouth",
+      "type": "Microsoft.KeyVault/vaults",
+      "tags": {
+        "Opco": "Prime",
+        "Owner": "Qore",
+        "Environment": "Production"
+      },
+      "id": "/subscriptions/c04a4c5c-484c-4b8d-865d-ad07f93a3dcd/resourceGroups/PrimeServiceFabricUK_RSG/providers/Microsoft.KeyVault/vaults/PrimeKeyDb"
+    },
+    {
+      "name": "Channels-Prod",
+      "resourceGroup": "cluster",
+      "location": "eastus",
+      "type": "Microsoft.KeyVault/vaults",
+      "tags": {},
+      "id": "/subscriptions/c04a4c5c-484c-4b8d-865d-ad07f93a3dcd/resourceGroups/cluster/providers/Microsoft.KeyVault/vaults/Channels-Prod"
+    },
+    {
+      "name": "Channelskv",
+      "resourceGroup": "cluster",
+      "location": "eastus",
+      "type": "Microsoft.KeyVault/vaults",
+      "tags": {
+        "Owner ": "Qore",
+        "Environment": "Production",
+        "OpCo": "Cluster"
+      },
+      "id": "/subscriptions/c04a4c5c-484c-4b8d-865d-ad07f93a3dcd/resourceGroups/cluster/providers/Microsoft.KeyVault/vaults/Channelskv"
+    },
+    {
+      "name": "Disk-Encrption-Test",
+      "resourceGroup": "HOLDCO-RSG",
+      "location": "eastus",
+      "type": "Microsoft.KeyVault/vaults",
+      "tags": {
+        "Owner": "Qore",
+        "environment": "Test",
+        "Team": "App Admin",
+        "OpCo": "Holdco"
+      },
+      "id": "/subscriptions/c04a4c5c-484c-4b8d-865d-ad07f93a3dcd/resourceGroups/HOLDCO-RSG/providers/Microsoft.KeyVault/vaults/Disk-Encrption-Test"
+    },
+    {
+      "name": "Qore-MongoDB-Keyvault",
+      "resourceGroup": "Mgtsegment_AvailabilitySetRSG-CSP",
+      "location": "eastus",
+      "type": "Microsoft.KeyVault/vaults",
+      "tags": {
+        "Environment": "Production",
+        "owner": "Qore",
+        "opco": "Qore"
+      },
+      "id": "/subscriptions/c04a4c5c-484c-4b8d-865d-ad07f93a3dcd/resourceGroups/Mgtsegment_AvailabilitySetRSG-CSP/providers/Microsoft.KeyVault/vaults/Qore-MongoDB-Keyvault"
+    },
+    {
+      "name": "PrimeKV",
+      "resourceGroup": "ServiceFabric_RSG",
+      "location": "eastus",
+      "type": "Microsoft.KeyVault/vaults",
+      "tags": {
+        "Owner": "Qore",
+        "OpCo": "Prime",
+        "Environment": "Production"
+      },
+      "id": "/subscriptions/c04a4c5c-484c-4b8d-865d-ad07f93a3dcd/resourceGroups/ServiceFabric_RSG/providers/Microsoft.KeyVault/vaults/PrimeKV"
+    }
+  ],
+  "log_analytics_workspaces": [
+    {
+      "name": "Vm-Insights-Workspace",
+      "resourceGroup": "HOLDCO-RSG",
+      "location": "eastus",
+      "type": "Microsoft.OperationalInsights/workspaces",
+      "tags": {},
+      "id": "/subscriptions/c04a4c5c-484c-4b8d-865d-ad07f93a3dcd/resourceGroups/HOLDCO-RSG/providers/Microsoft.OperationalInsights/workspaces/Vm-Insights-Workspace"
+    },
+    {
+      "name": "Sentinel",
+      "resourceGroup": null,
+      "location": "eastus",
+      "type": "Microsoft.OperationalInsights/workspaces",
+      "tags": {
+        "Owner": "QoreZone",
+        "OpCo": "Holdco",
+        "Environment": "Production"
+      },
+      "id": "/subscriptions/c04a4c5c-484c-4b8d-865d-ad07f93a3dcd/resourcegroups/holdco-rsg/providers/microsoft.operationalinsights/workspaces/sentinel"
+    },
+    {
+      "name": "Appzone-OMS",
+      "resourceGroup": null,
+      "location": "eastus",
+      "type": "Microsoft.OperationalInsights/workspaces",
+      "tags": {
+        "Owner": "QoreZone",
+        "OpCo": "Holdco",
+        "Environment": "Production"
+      },
+      "id": "/subscriptions/c04a4c5c-484c-4b8d-865d-ad07f93a3dcd/resourcegroups/mgtsegment_availabilitysetrsg-csp/providers/microsoft.operationalinsights/workspaces/appzone-oms"
+    },
+    {
+      "name": "DefaultWorkspace-c04a4c5c-484c-4b8d-865d-ad07f93a3dcd-EUS",
+      "resourceGroup": null,
+      "location": "eastus",
+      "type": "Microsoft.OperationalInsights/workspaces",
+      "tags": {
+        "Owner": "QoreZone",
+        "OpCo": "Holdco",
+        "Environment": "Production"
+      },
+      "id": "/subscriptions/c04a4c5c-484c-4b8d-865d-ad07f93a3dcd/resourcegroups/defaultresourcegroup-eus/providers/microsoft.operationalinsights/workspaces/defaultworkspace-c04a4c5c-484c-4b8d-865d-ad07f93a3dcd-eus"
+    },
+    {
+      "name": "AppZoneAzureSentinel",
+      "resourceGroup": null,
+      "location": "eastus",
+      "type": "Microsoft.OperationalInsights/workspaces",
+      "tags": {
+        "Owner": "QoreZone",
+        "environment": "Production",
+        "Team": "Security",
+        "OpCo": "Holdco"
+      },
+      "id": "/subscriptions/c04a4c5c-484c-4b8d-865d-ad07f93a3dcd/resourcegroups/holdco-rsg/providers/microsoft.operationalinsights/workspaces/appzoneazuresentinel"
+    },
+    {
+      "name": "DefaultWorkspace-c04a4c5c-484c-4b8d-865d-ad07f93a3dcd-WEU",
+      "resourceGroup": null,
+      "location": "westeurope",
+      "type": "Microsoft.OperationalInsights/workspaces",
+      "tags": {
+        "Owner": "Qore",
+        "OpCo": "Holdco",
+        "Environment": "DR"
+      },
+      "id": "/subscriptions/c04a4c5c-484c-4b8d-865d-ad07f93a3dcd/resourcegroups/defaultresourcegroup-weu/providers/microsoft.operationalinsights/workspaces/defaultworkspace-c04a4c5c-484c-4b8d-865d-ad07f93a3dcd-weu"
+    },
+    {
+      "name": "DefaultWorkspace-c04a4c5c-484c-4b8d-865d-ad07f93a3dcd-SUK",
+      "resourceGroup": null,
+      "location": "uksouth",
+      "type": "Microsoft.OperationalInsights/workspaces",
+      "tags": {
+        "Owner": "Qore",
+        "OpCo": "Prime",
+        "Environment": "Production"
+      },
+      "id": "/subscriptions/c04a4c5c-484c-4b8d-865d-ad07f93a3dcd/resourcegroups/defaultresourcegroup-suk/providers/microsoft.operationalinsights/workspaces/defaultworkspace-c04a4c5c-484c-4b8d-865d-ad07f93a3dcd-suk"
+    },
+    {
+      "name": "DefaultWorkspace-c04a4c5c-484c-4b8d-865d-ad07f93a3dcd-CCAN",
+      "resourceGroup": "DefaultResourceGroup-CCAN",
+      "location": "canadacentral",
+      "type": "Microsoft.OperationalInsights/workspaces",
+      "tags": {},
+      "id": "/subscriptions/c04a4c5c-484c-4b8d-865d-ad07f93a3dcd/resourceGroups/DefaultResourceGroup-CCAN/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-c04a4c5c-484c-4b8d-865d-ad07f93a3dcd-CCAN"
+    }
+  ]
+}
