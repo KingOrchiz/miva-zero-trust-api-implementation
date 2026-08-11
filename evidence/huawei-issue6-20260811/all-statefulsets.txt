@@ -1,0 +1,2 @@
+NAMESPACE            NAME           READY   AGE     CONTAINERS     IMAGES
+irestrict-security   spire-server   0/1     4m29s   spire-server   ghcr.io/spiffe/spire-server:1.11.2

@@ -16,10 +16,10 @@ mkdir -p "$OUT"
   kubectl config current-context 2>/dev/null || true
   echo
   echo "## Evidence scope"
-  echo "This evidence bundle covers the Azure AKS deployment, Huawei CCE infrastructure provisioning, Kubernetes security workloads, and live authorization tests for the iRestrict Version 3 prototype."
+  echo "This evidence bundle captures the currently selected Kubernetes context, infrastructure outputs where available, workload health, service inventory, pod logs, and any validation-test outputs already present for the iRestrict Version 3 prototype. Interpret the bundle according to the active context and run ID, for example Azure AKS or Huawei CCE."
   echo
-  echo "## Huawei CCE access note"
-  echo "Huawei CCE was provisioned successfully, but its kubeconfig exposes an internal API endpoint in the 10.83.1.0/24 VPC range. The current runner cannot reach that private endpoint directly, so Kubernetes workload tests were executed on AKS while Huawei evidence is captured at infrastructure level."
+  echo "## Context note"
+  echo "This script no longer assumes Huawei CCE is unreachable or that tests run only on AKS. If the active context is Huawei CCE, the collected Kubernetes inventory and logs are Huawei runtime evidence. If the active context is Azure AKS, they are Azure runtime evidence."
 } > "$OUT/chapter4-evidence-summary.md"
 
 if command -v terraform >/dev/null 2>&1; then
@@ -29,7 +29,9 @@ if command -v terraform >/dev/null 2>&1; then
 fi
 
 if command -v kubectl >/dev/null 2>&1; then
-  kubectl get nodes -o wide > "$OUT/aks-nodes.txt" 2>&1 || true
+  kubectl config view --minify --raw | sed -E 's/(client-certificate-data:|client-key-data:|certificate-authority-data:|token:).*/\1 [REDACTED]/' > "$OUT/kube-context-sanitized.txt" 2>&1 || true
+  kubectl get nodes -o wide > "$OUT/nodes.txt" 2>&1 || true
+  cp "$OUT/nodes.txt" "$OUT/aks-nodes.txt" 2>/dev/null || true
   kubectl get ns --show-labels > "$OUT/namespaces.txt" 2>&1 || true
   kubectl get pods -A -o wide > "$OUT/all-pods.txt" 2>&1 || true
   kubectl get svc -A -o wide > "$OUT/all-services.txt" 2>&1 || true

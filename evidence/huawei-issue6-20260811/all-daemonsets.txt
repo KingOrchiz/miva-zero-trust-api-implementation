@@ -1,0 +1,4 @@
+NAMESPACE            NAME                 DESIRED   CURRENT   READY   UP-TO-DATE   AVAILABLE   NODE SELECTOR   AGE     CONTAINERS           IMAGES                                                       SELECTOR
+irestrict-security   spire-agent          2         2         0       2            0           <none>          4m29s   spire-agent          ghcr.io/spiffe/spire-agent:1.11.2                            app=spire-agent
+kube-system          everest-csi-driver   2         2         2       2            2           <none>          8m48s   everest-csi-driver   swr.af-south-1.myhuaweicloud.com/hwofficial/everest:2.5.66   release=cceaddon-everest
+kube-system          icagent              2         2         2       2            2           <none>          8m20s   icagent              swr.af-south-1.myhuaweicloud.com/op_svc_apm/icagent:7.9.1    app=icagent

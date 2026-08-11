@@ -1,0 +1,5 @@
+Run ID: azure-issue6-20260811
+Collected: 2026-08-11T11:47:50+01:00
+Namespace: irestrict-apps
+Target service: http://sample-financial-api.irestrict-apps.svc.cluster.local
+Kubernetes context: aks-irestrict-v3-lab

@@ -1,0 +1,13 @@
+NAMESPACE                 NAME                                TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)                  AGE     SELECTOR
+default                   kubernetes                          ClusterIP   10.247.0.1       <none>        443/TCP                  9m46s   <none>
+irestrict-apps            sample-financial-api                ClusterIP   10.247.7.223     <none>        80/TCP                   4m28s   app=sample-financial-api
+irestrict-identity        keycloak                            ClusterIP   10.247.48.139    <none>        8080/TCP                 4m30s   app=keycloak
+irestrict-observability   otel-collector                      ClusterIP   10.247.114.133   <none>        4317/TCP,4318/TCP        4m30s   app=otel-collector
+irestrict-security        opa                                 ClusterIP   10.247.85.203    <none>        8181/TCP                 4m29s   app=opa
+irestrict-security        spire-server                        ClusterIP   10.247.1.253     <none>        8081/TCP                 4m29s   app=spire-server
+kube-system               coredns                             ClusterIP   10.247.3.10      <none>        53/UDP,53/TCP,8080/TCP   8m50s   app=coredns,k8s-app=coredns
+kube-system               etcd-server-proxy                   ClusterIP   10.247.0.6       <none>        4001/TCP                 8m53s   <none>
+kube-system               external-controller-manager-proxy   ClusterIP   10.247.0.9       <none>        8091/TCP                 8m52s   <none>
+kube-system               kube-controller-proxy               ClusterIP   10.247.0.8       <none>        10257/TCP                8m52s   <none>
+kube-system               kube-scheduler-proxy                ClusterIP   10.247.0.7       <none>        10259/TCP                8m52s   <none>
+kube-system               proxy-exporter                      ClusterIP   10.247.0.5       <none>        10451/TCP                8m53s   <none>

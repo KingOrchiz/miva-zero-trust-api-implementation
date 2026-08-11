@@ -8,6 +8,41 @@ locals {
   })
 }
 
+resource "terraform_data" "dedicated_lab_guardrails" {
+  input = {
+    deployment_mode                    = var.deployment_mode
+    azure_existing_resource_group_name = var.azure_existing_resource_group_name
+    huawei_enterprise_project_id       = var.huawei_enterprise_project_id
+  }
+
+  lifecycle {
+    precondition {
+      condition     = var.deployment_mode == "dedicated-lab"
+      error_message = "Dedicated lab only: do not use existing enterprise/dev/staging clusters for this project."
+    }
+
+    precondition {
+      condition     = var.azure_existing_resource_group_name == "Jane_Lab"
+      error_message = "Azure target must remain the dedicated Jane_Lab resource group."
+    }
+
+    precondition {
+      condition     = var.azure_existing_aks_cluster_name == "" && var.huawei_existing_cce_cluster_id == "" && var.huawei_existing_vpc_id == "" && var.huawei_existing_subnet_id == ""
+      error_message = "Existing cluster/VPC/subnet IDs must stay empty. This lab must create/use dedicated lab resources only."
+    }
+
+    precondition {
+      condition     = var.huawei_enterprise_project_id == "8842e64c-0771-48e5-b4de-dc5a95df99bd"
+      error_message = "Huawei target must remain the dedicated irestrict-v3-lab Enterprise Project."
+    }
+
+    precondition {
+      condition     = var.huawei_region == "af-south-1" && var.huawei_vpc_cidr == "10.83.0.0/16" && var.huawei_subnet_cidr == "10.83.1.0/24"
+      error_message = "Huawei region/CIDR must match the MIVA report lab conditions: af-south-1, 10.83.0.0/16, 10.83.1.0/24."
+    }
+  }
+}
+
 module "azure_platform" {
   count  = var.enable_azure_platform ? 1 : 0
   source = "../../modules/azure-platform"

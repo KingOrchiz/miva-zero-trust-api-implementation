@@ -1,0 +1,19 @@
+NAMESPACE                 NAME                                       READY   STATUS              RESTARTS      AGE     IP            NODE          NOMINATED NODE   READINESS GATES
+irestrict-apps            sample-financial-api-599d567944-5jlrv      1/1     Running             0             3m46s   172.16.0.22   10.83.1.38    <none>           <none>
+irestrict-apps            sample-financial-api-599d567944-crq6p      0/1     ImagePullBackOff    0             3m46s   172.16.0.38   10.83.1.158   <none>           <none>
+irestrict-apps            synthetic-client-smoke-test-vsbhw          0/1     Completed           0             3m46s   172.16.0.39   10.83.1.158   <none>           <none>
+irestrict-apps            validation-runner-huawei-issue6-20260811   1/1     Running             0             14s     172.16.0.23   10.83.1.38    <none>           <none>
+irestrict-identity        keycloak-585c8989f8-c592h                  0/1     ContainerCreating   0             3m48s   <none>        10.83.1.38    <none>           <none>
+irestrict-observability   otel-collector-775bbc666f-jdfd7            1/1     Running             0             3m48s   172.16.0.35   10.83.1.158   <none>           <none>
+irestrict-security        opa-5f989d48b6-lg26c                       1/1     Running             0             3m47s   172.16.0.20   10.83.1.38    <none>           <none>
+irestrict-security        spire-agent-d6bbs                          0/1     Error               4 (75s ago)   3m47s   172.16.0.21   10.83.1.38    <none>           <none>
+irestrict-security        spire-agent-l5hj8                          0/1     ContainerCreating   0             3m47s   <none>        10.83.1.158   <none>           <none>
+irestrict-security        spire-server-0                             0/1     ContainerCreating   0             3m47s   <none>        10.83.1.158   <none>           <none>
+kube-system               coredns-59f65879cd-nvgs9                   1/1     Running             0             8m8s    172.16.0.34   10.83.1.158   <none>           <none>
+kube-system               coredns-59f65879cd-zxc74                   1/1     Running             0             8m8s    172.16.0.18   10.83.1.38    <none>           <none>
+kube-system               everest-csi-controller-7fffc8d6c7-h2jmp    1/1     Running             0             8m6s    172.16.0.32   10.83.1.158   <none>           <none>
+kube-system               everest-csi-controller-7fffc8d6c7-qm2sz    1/1     Running             0             8m6s    172.16.0.16   10.83.1.38    <none>           <none>
+kube-system               everest-csi-driver-h7qgv                   1/1     Running             0             5m46s   10.83.1.158   10.83.1.158   <none>           <none>
+kube-system               everest-csi-driver-t2xr2                   1/1     Running             0             6m      10.83.1.38    10.83.1.38    <none>           <none>
+kube-system               icagent-8jdpb                              1/1     Running             0             6m      10.83.1.38    10.83.1.38    <none>           <none>
+kube-system               icagent-qcfpg                              1/1     Running             0             5m46s   10.83.1.158   10.83.1.158   <none>           <none>

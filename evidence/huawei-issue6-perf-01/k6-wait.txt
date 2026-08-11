@@ -1,0 +1,1 @@
+job.batch/k6-benchmark-huawei-issue6-perf-01 condition met

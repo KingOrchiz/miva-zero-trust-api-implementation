@@ -1,0 +1,9 @@
+NAME                                               READY   STATUS      RESTARTS   AGE     IP           NODE                             NOMINATED NODE   READINESS GATES
+k6-benchmark-azure-issue6-perf-01-49xxk            0/1     Completed   0          4h35m   10.73.1.16   aks-system-11373536-vmss000000   <none>           <none>
+k6-benchmark-azure-issue6-perf-02-dhx4s            0/1     Completed   0          4h34m   10.73.1.14   aks-system-11373536-vmss000000   <none>           <none>
+k6-benchmark-azure-issue6-tagged-01-g5bs2          0/1     Completed   0          4h30m   10.73.1.18   aks-system-11373536-vmss000000   <none>           <none>
+k6-benchmark-azure-issue6-tagged-02-r6824          0/1     Completed   0          4h30m   10.73.1.16   aks-system-11373536-vmss000000   <none>           <none>
+k6-capacity-azure-issue6-capacity-20260811-qpkkj   0/1     Completed   0          4h26m   10.73.1.31   aks-system-11373536-vmss000000   <none>           <none>
+sample-financial-api-7bf5cfb79f-2rksd              1/1     Running     0          4h36m   10.73.1.15   aks-system-11373536-vmss000000   <none>           <none>
+sample-financial-api-7bf5cfb79f-q5z5h              1/1     Running     0          4h36m   10.73.1.28   aks-system-11373536-vmss000000   <none>           <none>
+synthetic-client-smoke-test-v27t9                  0/1     Error       0          4h41m   10.73.1.15   aks-system-11373536-vmss000000   <none>           <none>

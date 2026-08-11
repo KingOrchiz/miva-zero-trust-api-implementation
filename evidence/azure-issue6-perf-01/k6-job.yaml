@@ -1,0 +1,93 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"batch/v1","kind":"Job","metadata":{"annotations":{},"name":"k6-benchmark-azure-issue6-perf-01","namespace":"irestrict-apps"},"spec":{"backoffLimit":0,"template":{"spec":{"containers":[{"command":["k6","run","--summary-trend-stats","avg,min,med,p(90),p(95),p(99),max","/scripts/k6-script.js"],"env":[{"name":"SERVICE_URL","value":"http://sample-financial-api.irestrict-apps.svc.cluster.local"},{"name":"VUS","value":"50"},{"name":"DURATION","value":"20s"},{"name":"SECURED_START","value":"25s"},{"name":"BASELINE_START","value":"0s"}],"image":"grafana/k6:0.55.0","name":"k6","volumeMounts":[{"mountPath":"/scripts","name":"script"}]}],"restartPolicy":"Never","volumes":[{"configMap":{"name":"k6-benchmark-azure-issue6-perf-01-script"},"name":"script"}]}}}}
+  creationTimestamp: "2026-08-11T10:52:29Z"
+  generation: 1
+  labels:
+    batch.kubernetes.io/controller-uid: fa302bb1-6b27-435f-8b99-a7f62413ea8a
+    batch.kubernetes.io/job-name: k6-benchmark-azure-issue6-perf-01
+    controller-uid: fa302bb1-6b27-435f-8b99-a7f62413ea8a
+    job-name: k6-benchmark-azure-issue6-perf-01
+  name: k6-benchmark-azure-issue6-perf-01
+  namespace: irestrict-apps
+  resourceVersion: "4923"
+  uid: fa302bb1-6b27-435f-8b99-a7f62413ea8a
+spec:
+  backoffLimit: 0
+  completionMode: NonIndexed
+  completions: 1
+  manualSelector: false
+  parallelism: 1
+  podReplacementPolicy: TerminatingOrFailed
+  selector:
+    matchLabels:
+      batch.kubernetes.io/controller-uid: fa302bb1-6b27-435f-8b99-a7f62413ea8a
+  suspend: false
+  template:
+    metadata:
+      labels:
+        batch.kubernetes.io/controller-uid: fa302bb1-6b27-435f-8b99-a7f62413ea8a
+        batch.kubernetes.io/job-name: k6-benchmark-azure-issue6-perf-01
+        controller-uid: fa302bb1-6b27-435f-8b99-a7f62413ea8a
+        job-name: k6-benchmark-azure-issue6-perf-01
+    spec:
+      containers:
+      - command:
+        - k6
+        - run
+        - --summary-trend-stats
+        - avg,min,med,p(90),p(95),p(99),max
+        - /scripts/k6-script.js
+        env:
+        - name: SERVICE_URL
+          value: http://sample-financial-api.irestrict-apps.svc.cluster.local
+        - name: VUS
+          value: "50"
+        - name: DURATION
+          value: 20s
+        - name: SECURED_START
+          value: 25s
+        - name: BASELINE_START
+          value: 0s
+        image: grafana/k6:0.55.0
+        imagePullPolicy: IfNotPresent
+        name: k6
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /scripts
+          name: script
+      dnsPolicy: ClusterFirst
+      restartPolicy: Never
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+      volumes:
+      - configMap:
+          defaultMode: 420
+          name: k6-benchmark-azure-issue6-perf-01-script
+        name: script
+status:
+  completionTime: "2026-08-11T10:53:23Z"
+  conditions:
+  - lastProbeTime: "2026-08-11T10:53:23Z"
+    lastTransitionTime: "2026-08-11T10:53:23Z"
+    message: Reached expected number of succeeded pods
+    reason: CompletionsReached
+    status: "True"
+    type: SuccessCriteriaMet
+  - lastProbeTime: "2026-08-11T10:53:23Z"
+    lastTransitionTime: "2026-08-11T10:53:23Z"
+    message: Reached expected number of succeeded pods
+    reason: CompletionsReached
+    status: "True"
+    type: Complete
+  ready: 0
+  startTime: "2026-08-11T10:52:29Z"
+  succeeded: 1
+  terminating: 0
+  uncountedTerminatedPods: {}

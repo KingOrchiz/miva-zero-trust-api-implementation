@@ -1,0 +1,10 @@
+2026-08-11T10:48:28.116Z	info	service@v0.113.0/service.go:166	Setting up own telemetry...
+2026-08-11T10:48:28.116Z	info	telemetry/metrics.go:70	Serving metrics	{"address": "localhost:8888", "metrics level": "Normal"}
+2026-08-11T10:48:28.116Z	info	builders/builders.go:26	Development component. May change in the future.	{"kind": "exporter", "data_type": "logs", "name": "debug"}
+2026-08-11T10:48:28.116Z	info	builders/builders.go:26	Development component. May change in the future.	{"kind": "exporter", "data_type": "metrics", "name": "debug"}
+2026-08-11T10:48:28.116Z	info	builders/builders.go:26	Development component. May change in the future.	{"kind": "exporter", "data_type": "traces", "name": "debug"}
+2026-08-11T10:48:28.117Z	info	service@v0.113.0/service.go:238	Starting otelcol-contrib...	{"Version": "0.113.0", "NumCPU": 2}
+2026-08-11T10:48:28.117Z	info	extensions/extensions.go:39	Starting extensions...
+2026-08-11T10:48:28.117Z	info	otlpreceiver@v0.113.0/otlp.go:112	Starting GRPC server	{"kind": "receiver", "name": "otlp", "data_type": "traces", "endpoint": "localhost:4317"}
+2026-08-11T10:48:28.117Z	info	otlpreceiver@v0.113.0/otlp.go:169	Starting HTTP server	{"kind": "receiver", "name": "otlp", "data_type": "traces", "endpoint": "localhost:4318"}
+2026-08-11T10:48:28.117Z	info	service@v0.113.0/service.go:261	Everything is ready. Begin running and processing data.

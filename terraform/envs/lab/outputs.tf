@@ -13,3 +13,8 @@ output "huawei_summary" {
 output "kubernetes_namespaces" {
   value = var.enable_kubernetes_bootstrap ? module.kubernetes_platform[0].namespaces : []
 }
+
+output "huawei_kube_config_raw" {
+  value     = var.enable_huawei_platform ? module.huawei_platform[0].kube_config_raw : null
+  sensitive = true
+}

@@ -1,0 +1,70 @@
+{
+  "generated_at_epoch": 1786462259,
+  "passed": 6,
+  "total": 6,
+  "cases": [
+    {
+      "id": "FR2-CERT-01",
+      "requirement": "FR-2 / certificate lifetime and renewal",
+      "expected": "certificate lifetime <= 3600 seconds and renewal triggered before expiry",
+      "actual": "lifetime=3600s renewed=True old=SVID-0001 new=SVID-0002",
+      "status": "Pass"
+    },
+    {
+      "id": "FR7-AUDIT-01",
+      "requirement": "FR-7 / NFR-6 tamper-evident auditability",
+      "expected": "valid chain verifies and modified record is rejected",
+      "actual": "chain_valid=True tamper_detected=True",
+      "status": "Pass"
+    },
+    {
+      "id": "FR8-REVOCATION-01",
+      "requirement": "FR-8 / NFR-7 revocation within 60 seconds",
+      "expected": "identity denied within 60 seconds of revocation event",
+      "actual": "before=allow after=deny propagation=5s",
+      "status": "Pass"
+    },
+    {
+      "id": "FR9-IDENTITY-01",
+      "requirement": "FR-9 identity propagation",
+      "expected": "workload and end-user identity available in policy input and auditable context",
+      "actual": "propagated=True decision_allow=True",
+      "status": "Pass"
+    },
+    {
+      "id": "FR10-BRIDGE-01",
+      "requirement": "FR-10 controlled legacy bearer-token bridge",
+      "expected": "approved legacy route allowed with obligations; protected payment route denied",
+      "actual": "legacy_allow=True obligations=['rate_limit', 'enhanced_audit', 'migration_deadline'] protected_allow=False",
+      "status": "Pass"
+    },
+    {
+      "id": "NFR4-AGILITY-01",
+      "requirement": "NFR-4 cryptographic agility",
+      "expected": "algorithm identifier and key material can be rotated through configuration boundary",
+      "actual": "supported_algorithms=['ES256', 'EdDSA-ready', 'PQ-hybrid-placeholder'] active=ES256 kid=iuewtA5avoZw1sUF",
+      "status": "Pass"
+    }
+  ],
+  "audit_records": [
+    {
+      "ts": 1800000000,
+      "subject": "user-001",
+      "route": "/accounts",
+      "decision": "allow",
+      "correlation_id": "7596d6ab-88ce-4c79-8857-7abc9af35b8f",
+      "previous_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+      "record_hash": "2ddf3f4866a2933e366e6dcd48eb0b1f09365363323bbb7985d53bf3048d03b6"
+    },
+    {
+      "ts": 1800000001,
+      "subject": "user-001",
+      "route": "/payments",
+      "decision": "deny",
+      "reason": "risk_threshold",
+      "correlation_id": "5e6552f7-df5e-45ad-9944-280f18e737d0",
+      "previous_hash": "2ddf3f4866a2933e366e6dcd48eb0b1f09365363323bbb7985d53bf3048d03b6",
+      "record_hash": "394f83c85c0d6e97a180d5a887c6fd19b4bfc75312f34fb2be8c5e1f6fb30526"
+    }
+  ]
+}

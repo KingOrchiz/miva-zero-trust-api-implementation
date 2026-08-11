@@ -1,0 +1,2 @@
+T00 health
+curl: (7) Failed to connect to sample-financial-api.irestrict-apps.svc.cluster.local port 80 after 8 ms: Could not connect to server

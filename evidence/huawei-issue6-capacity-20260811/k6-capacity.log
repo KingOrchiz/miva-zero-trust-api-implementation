@@ -1,0 +1,1666 @@
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+     execution: local
+        script: /scripts/k6-capacity.js
+        output: -
+
+     scenarios: (100.00%) 5 scenarios, 4800 max VUs, 1m40s max duration (incl. graceful stop):
+              * rps_500: 500.00 iterations/s for 10s (maxVUs: 100-1600, exec: secured, gracefulStop: 30s)
+              * rps_1000: 1000.00 iterations/s for 10s (maxVUs: 120-1600, exec: secured, startTime: 15s, gracefulStop: 30s)
+              * rps_2000: 2000.00 iterations/s for 10s (maxVUs: 240-1600, exec: secured, startTime: 30s, gracefulStop: 30s)
+              * rps_5000: 5000.00 iterations/s for 10s (maxVUs: 600-1600, exec: secured, startTime: 45s, gracefulStop: 30s)
+              * rps_10000: 10000.00 iterations/s for 10s (maxVUs: 1200-1600, exec: secured, startTime: 1m0s, gracefulStop: 30s)
+
+
+running (0m00.4s), 0004/2040 VUs, 174 complete and 0 interrupted iterations
+rps_500     [   4% ] 0004/0100 VUs  00.4s/10s  500.00 iters/s
+rps_1000  • [   0% ] waiting        14.6s     
+rps_2000  • [   0% ] waiting        29.6s     
+rps_5000  • [   0% ] waiting        44.6s     
+rps_10000 • [   0% ] waiting        0m59.6s   
+
+running (0m01.4s), 0002/2040 VUs, 675 complete and 0 interrupted iterations
+rps_500     [  14% ] 0002/0100 VUs  01.4s/10s  500.00 iters/s
+rps_1000  • [   0% ] waiting        13.6s     
+rps_2000  • [   0% ] waiting        28.6s     
+rps_5000  • [   0% ] waiting        43.6s     
+rps_10000 • [   0% ] waiting        0m58.6s   
+
+running (0m02.4s), 0002/2040 VUs, 1175 complete and 0 interrupted iterations
+rps_500     [  24% ] 0002/0100 VUs  02.4s/10s  500.00 iters/s
+rps_1000  • [   0% ] waiting        12.6s     
+rps_2000  • [   0% ] waiting        27.6s     
+rps_5000  • [   0% ] waiting        42.6s     
+rps_10000 • [   0% ] waiting        0m57.6s   
+
+running (0m03.4s), 0003/2040 VUs, 1675 complete and 0 interrupted iterations
+rps_500     [  34% ] 0003/0100 VUs  03.4s/10s  500.00 iters/s
+rps_1000  • [   0% ] waiting        11.6s     
+rps_2000  • [   0% ] waiting        26.6s     
+rps_5000  • [   0% ] waiting        41.6s     
+rps_10000 • [   0% ] waiting        0m56.6s   
+
+running (0m04.4s), 0002/2040 VUs, 2175 complete and 0 interrupted iterations
+rps_500     [  44% ] 0002/0100 VUs  04.4s/10s  500.00 iters/s
+rps_1000  • [   0% ] waiting        10.6s     
+rps_2000  • [   0% ] waiting        25.6s     
+rps_5000  • [   0% ] waiting        40.6s     
+rps_10000 • [   0% ] waiting        0m55.6s   
+
+running (0m05.4s), 0003/2040 VUs, 2675 complete and 0 interrupted iterations
+rps_500     [  54% ] 0003/0100 VUs  05.4s/10s  500.00 iters/s
+rps_1000  • [   0% ] waiting        09.6s     
+rps_2000  • [   0% ] waiting        24.6s     
+rps_5000  • [   0% ] waiting        39.6s     
+rps_10000 • [   0% ] waiting        0m54.6s   
+
+running (0m06.4s), 0004/2040 VUs, 3174 complete and 0 interrupted iterations
+rps_500     [  64% ] 0004/0100 VUs  06.4s/10s  500.00 iters/s
+rps_1000  • [   0% ] waiting        08.6s     
+rps_2000  • [   0% ] waiting        23.6s     
+rps_5000  • [   0% ] waiting        38.6s     
+rps_10000 • [   0% ] waiting        0m53.6s   
+
+running (0m07.4s), 0004/2040 VUs, 3674 complete and 0 interrupted iterations
+rps_500     [  74% ] 0004/0100 VUs  07.4s/10s  500.00 iters/s
+rps_1000  • [   0% ] waiting        07.6s     
+rps_2000  • [   0% ] waiting        22.6s     
+rps_5000  • [   0% ] waiting        37.6s     
+rps_10000 • [   0% ] waiting        0m52.6s   
+
+running (0m08.4s), 0020/2040 VUs, 4158 complete and 0 interrupted iterations
+rps_500     [  84% ] 0020/0100 VUs  08.4s/10s  500.00 iters/s
+rps_1000  • [   0% ] waiting        06.6s     
+rps_2000  • [   0% ] waiting        21.6s     
+rps_5000  • [   0% ] waiting        36.6s     
+rps_10000 • [   0% ] waiting        0m51.6s   
+
+running (0m09.4s), 0006/2040 VUs, 4672 complete and 0 interrupted iterations
+rps_500     [  94% ] 0006/0100 VUs  09.4s/10s  500.00 iters/s
+rps_1000  • [   0% ] waiting        05.6s     
+rps_2000  • [   0% ] waiting        20.6s     
+rps_5000  • [   0% ] waiting        35.6s     
+rps_10000 • [   0% ] waiting        0m50.6s   
+
+running (0m10.4s), 0000/2040 VUs, 5002 complete and 0 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s  500.00 iters/s
+rps_1000  • [   0% ] waiting        04.6s
+rps_2000  • [   0% ] waiting        19.6s
+rps_5000  • [   0% ] waiting        34.6s
+rps_10000 • [   0% ] waiting        0m49.6s
+
+running (0m11.4s), 0000/2040 VUs, 5002 complete and 0 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s  500.00 iters/s
+rps_1000  • [   0% ] waiting        03.6s
+rps_2000  • [   0% ] waiting        18.6s
+rps_5000  • [   0% ] waiting        33.6s
+rps_10000 • [   0% ] waiting        0m48.6s
+
+running (0m12.4s), 0000/2040 VUs, 5002 complete and 0 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s  500.00 iters/s
+rps_1000  • [   0% ] waiting        02.6s
+rps_2000  • [   0% ] waiting        17.6s
+rps_5000  • [   0% ] waiting        32.6s
+rps_10000 • [   0% ] waiting        0m47.6s
+
+running (0m13.4s), 0000/2040 VUs, 5002 complete and 0 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s  500.00 iters/s
+rps_1000  • [   0% ] waiting        01.6s
+rps_2000  • [   0% ] waiting        16.6s
+rps_5000  • [   0% ] waiting        31.6s
+rps_10000 • [   0% ] waiting        0m46.6s
+
+running (0m14.4s), 0000/2040 VUs, 5002 complete and 0 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s  500.00 iters/s
+rps_1000  • [   0% ] waiting        00.6s
+rps_2000  • [   0% ] waiting        15.6s
+rps_5000  • [   0% ] waiting        30.6s
+rps_10000 • [   0% ] waiting        0m45.6s
+
+running (0m15.4s), 0086/2040 VUs, 5267 complete and 0 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s        500.00 iters/s
+rps_1000    [   4% ] 0086/0120 VUs  00.4s/10s  1000.00 iters/s
+rps_2000  • [   0% ] waiting        14.6s     
+rps_5000  • [   0% ] waiting        29.6s     
+rps_10000 • [   0% ] waiting        0m44.6s   
+
+running (0m16.4s), 0174/2094 VUs, 6041 complete and 0 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s        500.00 iters/s
+rps_1000    [  14% ] 0174/0174 VUs  01.4s/10s  1000.00 iters/s
+rps_2000  • [   0% ] waiting        13.6s     
+rps_5000  • [   0% ] waiting        28.6s     
+rps_10000 • [   0% ] waiting        0m43.6s   
+
+running (0m17.4s), 0251/2172 VUs, 6777 complete and 0 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s        500.00 iters/s
+rps_1000    [  24% ] 0251/0252 VUs  02.4s/10s  1000.00 iters/s
+rps_2000  • [   0% ] waiting        12.6s     
+rps_5000  • [   0% ] waiting        27.6s     
+rps_10000 • [   0% ] waiting        0m42.6s   
+
+running (0m18.4s), 0312/2232 VUs, 7567 complete and 0 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s        500.00 iters/s
+rps_1000    [  34% ] 0312/0312 VUs  03.4s/10s  1000.00 iters/s
+rps_2000  • [   0% ] waiting        11.6s     
+rps_5000  • [   0% ] waiting        26.6s     
+rps_10000 • [   0% ] waiting        0m41.6s   
+
+running (0m19.4s), 0344/2289 VUs, 8263 complete and 0 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s        500.00 iters/s
+rps_1000    [  44% ] 0344/0369 VUs  04.4s/10s  1000.00 iters/s
+rps_2000  • [   0% ] waiting        10.6s     
+rps_5000  • [   0% ] waiting        25.6s     
+rps_10000 • [   0% ] waiting        0m40.6s   
+
+running (0m20.4s), 0407/2339 VUs, 9079 complete and 0 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s        500.00 iters/s
+rps_1000    [  54% ] 0407/0419 VUs  05.4s/10s  1000.00 iters/s
+rps_2000  • [   0% ] waiting        09.6s     
+rps_5000  • [   0% ] waiting        24.6s     
+rps_10000 • [   0% ] waiting        0m39.6s   
+
+running (0m21.4s), 0456/2387 VUs, 9930 complete and 0 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s        500.00 iters/s
+rps_1000    [  64% ] 0456/0467 VUs  06.4s/10s  1000.00 iters/s
+rps_2000  • [   0% ] waiting        08.6s     
+rps_5000  • [   0% ] waiting        23.6s     
+rps_10000 • [   0% ] waiting        0m38.6s   
+
+running (0m22.4s), 0506/2434 VUs, 10738 complete and 0 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s        500.00 iters/s
+rps_1000    [  74% ] 0506/0514 VUs  07.4s/10s  1000.00 iters/s
+rps_2000  • [   0% ] waiting        07.6s     
+rps_5000  • [   0% ] waiting        22.6s     
+rps_10000 • [   0% ] waiting        0m37.6s   
+
+running (0m23.4s), 0565/2486 VUs, 11529 complete and 0 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s        500.00 iters/s
+rps_1000    [  84% ] 0565/0566 VUs  08.4s/10s  1000.00 iters/s
+rps_2000  • [   0% ] waiting        06.6s     
+rps_5000  • [   0% ] waiting        21.6s     
+rps_10000 • [   0% ] waiting        0m36.6s   
+
+running (0m24.4s), 0626/2549 VUs, 12196 complete and 0 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s        500.00 iters/s
+rps_1000    [  94% ] 0626/0629 VUs  09.4s/10s  1000.00 iters/s
+rps_2000  • [   0% ] waiting        05.6s     
+rps_5000  • [   0% ] waiting        20.6s     
+rps_10000 • [   0% ] waiting        0m35.6s   
+
+running (0m25.4s), 0564/2592 VUs, 12817 complete and 0 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s  500.00 iters/s
+rps_1000  ↓ [ 100% ] 0662/0672 VUs  10s  1000.00 iters/s
+rps_2000  • [   0% ] waiting        04.6s
+rps_5000  • [   0% ] waiting        19.6s
+rps_10000 • [   0% ] waiting        0m34.6s
+
+running (0m26.4s), 0367/2592 VUs, 13014 complete and 0 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s  500.00 iters/s
+rps_1000  ↓ [ 100% ] 0662/0672 VUs  10s  1000.00 iters/s
+rps_2000  • [   0% ] waiting        03.6s
+rps_5000  • [   0% ] waiting        18.6s
+rps_10000 • [   0% ] waiting        0m33.6s
+
+running (0m27.4s), 0246/2592 VUs, 13135 complete and 0 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s  500.00 iters/s
+rps_1000  ↓ [ 100% ] 0662/0672 VUs  10s  1000.00 iters/s
+rps_2000  • [   0% ] waiting        02.6s
+rps_5000  • [   0% ] waiting        17.6s
+rps_10000 • [   0% ] waiting        0m32.6s
+
+running (0m28.4s), 0194/2592 VUs, 13187 complete and 0 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s  500.00 iters/s
+rps_1000  ↓ [ 100% ] 0662/0672 VUs  10s  1000.00 iters/s
+rps_2000  • [   0% ] waiting        01.6s
+rps_5000  • [   0% ] waiting        16.6s
+rps_10000 • [   0% ] waiting        0m31.6s
+
+running (0m29.4s), 0158/2592 VUs, 13223 complete and 0 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s  500.00 iters/s
+rps_1000  ↓ [ 100% ] 0662/0672 VUs  10s  1000.00 iters/s
+rps_2000  • [   0% ] waiting        00.6s
+rps_5000  • [   0% ] waiting        15.6s
+rps_10000 • [   0% ] waiting        0m30.6s
+
+running (0m30.4s), 0393/2608 VUs, 13533 complete and 0 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s        500.00 iters/s
+rps_1000  ↓ [ 100% ] 0662/0672 VUs  10s        1000.00 iters/s
+rps_2000    [   4% ] 0256/0256 VUs  00.4s/10s  2000.00 iters/s
+rps_5000  • [   0% ] waiting        14.6s     
+rps_10000 • [   0% ] waiting        0m29.6s   
+
+running (0m31.4s), 0569/2798 VUs, 14369 complete and 0 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s        500.00 iters/s
+rps_1000  ↓ [ 100% ] 0662/0672 VUs  10s        1000.00 iters/s
+rps_2000    [  14% ] 0445/0446 VUs  01.4s/10s  2000.00 iters/s
+rps_5000  • [   0% ] waiting        13.6s     
+rps_10000 • [   0% ] waiting        0m28.6s   
+
+running (0m32.4s), 0733/2965 VUs, 15100 complete and 0 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s        500.00 iters/s
+rps_1000  ↓ [ 100% ] 0662/0672 VUs  10s        1000.00 iters/s
+rps_2000    [  24% ] 0609/0613 VUs  02.4s/10s  2000.00 iters/s
+rps_5000  • [   0% ] waiting        12.6s     
+rps_10000 • [   0% ] waiting        0m27.6s   
+
+running (0m33.4s), 0885/3114 VUs, 15702 complete and 0 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s        500.00 iters/s
+rps_1000  ↓ [ 100% ] 0662/0672 VUs  10s        1000.00 iters/s
+rps_2000    [  34% ] 0761/0762 VUs  03.4s/10s  2000.00 iters/s
+rps_5000  • [   0% ] waiting        11.6s     
+rps_10000 • [   0% ] waiting        0m26.6s   
+
+running (0m34.4s), 1050/3279 VUs, 16664 complete and 0 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s        500.00 iters/s
+rps_1000  ↓ [ 100% ] 0662/0672 VUs  10s        1000.00 iters/s
+rps_2000    [  44% ] 0927/0927 VUs  04.4s/10s  2000.00 iters/s
+rps_5000  • [   0% ] waiting        10.6s     
+rps_10000 • [   0% ] waiting        0m25.6s   
+
+running (0m35.4s), 1219/3457 VUs, 17518 complete and 0 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s        500.00 iters/s
+rps_1000  ↓ [ 100% ] 0662/0672 VUs  10s        1000.00 iters/s
+rps_2000    [  54% ] 1101/1105 VUs  05.4s/10s  2000.00 iters/s
+rps_5000  • [   0% ] waiting        09.6s     
+rps_10000 • [   0% ] waiting        0m24.6s   
+
+running (0m36.4s), 1395/3643 VUs, 18334 complete and 0 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s        500.00 iters/s
+rps_1000  ↓ [ 100% ] 0662/0672 VUs  10s        1000.00 iters/s
+rps_2000    [  64% ] 1284/1291 VUs  06.4s/10s  2000.00 iters/s
+rps_5000  • [   0% ] waiting        08.6s     
+rps_10000 • [   0% ] waiting        0m23.6s   
+
+running (0m37.4s), 1552/3796 VUs, 19118 complete and 0 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s        500.00 iters/s
+rps_1000  ↓ [ 100% ] 0662/0672 VUs  10s        1000.00 iters/s
+rps_2000    [  74% ] 1444/1444 VUs  07.4s/10s  2000.00 iters/s
+rps_5000  • [   0% ] waiting        07.6s     
+rps_10000 • [   0% ] waiting        0m22.6s   
+
+running (0m38.4s), 1666/3911 VUs, 19695 complete and 0 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s        500.00 iters/s
+rps_1000  ↓ [ 100% ] 0662/0672 VUs  10s        1000.00 iters/s
+rps_2000    [  84% ] 1558/1559 VUs  08.4s/10s  2000.00 iters/s
+rps_5000  • [   0% ] waiting        06.6s     
+rps_10000 • [   0% ] waiting        0m21.6s   
+time="2026-08-11T11:04:12Z" level=warning msg="Insufficient VUs, reached 1600 active VUs and cannot initialize more" executor=constant-arrival-rate scenario=rps_2000
+
+running (0m39.4s), 1707/3952 VUs, 20540 complete and 0 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s        500.00 iters/s
+rps_1000  ↓ [ 100% ] 0662/0672 VUs  10s        1000.00 iters/s
+rps_2000    [  94% ] 1599/1600 VUs  09.4s/10s  2000.00 iters/s
+rps_5000  • [   0% ] waiting        05.6s     
+rps_10000 • [   0% ] waiting        0m20.6s   
+
+running (0m40.4s), 1620/3952 VUs, 21137 complete and 0 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s  500.00 iters/s
+rps_1000  ↓ [ 100% ] 0662/0672 VUs  10s  1000.00 iters/s
+rps_2000  ↓ [ 100% ] 1596/1600 VUs  10s  2000.00 iters/s
+rps_5000  • [   0% ] waiting        04.6s
+rps_10000 • [   0% ] waiting        0m19.6s
+
+running (0m41.4s), 1413/3952 VUs, 21344 complete and 0 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s  500.00 iters/s
+rps_1000  ↓ [ 100% ] 0662/0672 VUs  10s  1000.00 iters/s
+rps_2000  ↓ [ 100% ] 1596/1600 VUs  10s  2000.00 iters/s
+rps_5000  • [   0% ] waiting        03.6s
+rps_10000 • [   0% ] waiting        0m18.6s
+
+running (0m42.4s), 1166/3952 VUs, 21591 complete and 0 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s  500.00 iters/s
+rps_1000  ↓ [ 100% ] 0662/0672 VUs  10s  1000.00 iters/s
+rps_2000  ↓ [ 100% ] 1596/1600 VUs  10s  2000.00 iters/s
+rps_5000  • [   0% ] waiting        02.6s
+rps_10000 • [   0% ] waiting        0m17.6s
+
+running (0m43.4s), 1023/3952 VUs, 21734 complete and 0 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s  500.00 iters/s
+rps_1000  ↓ [ 100% ] 0662/0672 VUs  10s  1000.00 iters/s
+rps_2000  ↓ [ 100% ] 1596/1600 VUs  10s  2000.00 iters/s
+rps_5000  • [   0% ] waiting        01.6s
+rps_10000 • [   0% ] waiting        0m16.6s
+
+running (0m44.4s), 0912/3952 VUs, 21845 complete and 0 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s  500.00 iters/s
+rps_1000  ↓ [ 100% ] 0662/0672 VUs  10s  1000.00 iters/s
+rps_2000  ↓ [ 100% ] 1596/1600 VUs  10s  2000.00 iters/s
+rps_5000  • [   0% ] waiting        00.6s
+rps_10000 • [   0% ] waiting        0m15.6s
+
+running (0m45.4s), 1537/4047 VUs, 21999 complete and 0 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s        500.00 iters/s
+rps_1000  ↓ [ 100% ] 0662/0672 VUs  10s        1000.00 iters/s
+rps_2000  ↓ [ 100% ] 1596/1600 VUs  10s        2000.00 iters/s
+rps_5000    [   4% ] 0680/0695 VUs  00.4s/10s  5000.00 iters/s
+rps_10000 • [   0% ] waiting        0m14.6s   
+time="2026-08-11T11:04:19Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:19Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:19Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:19Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:19Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:19Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:19Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:19Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:19Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:19Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:19Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:19Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:19Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:19Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:20Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:20Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:20Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+
+running (0m46.4s), 1749/4281 VUs, 23030 complete and 0 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s        500.00 iters/s
+rps_1000  ↓ [ 100% ] 0662/0672 VUs  10s        1000.00 iters/s
+rps_2000  ↓ [ 100% ] 1596/1600 VUs  10s        2000.00 iters/s
+rps_5000    [  14% ] 0927/0929 VUs  01.4s/10s  5000.00 iters/s
+rps_10000 • [   0% ] waiting        0m13.6s   
+time="2026-08-11T11:04:20Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:20Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:20Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:20Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:20Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:20Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:20Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:20Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:20Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:20Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:20Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+
+running (0m47.4s), 2031/4577 VUs, 23796 complete and 0 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s        500.00 iters/s
+rps_1000  ↓ [ 100% ] 0662/0672 VUs  10s        1000.00 iters/s
+rps_2000  ↓ [ 100% ] 1596/1600 VUs  10s        2000.00 iters/s
+rps_5000    [  24% ] 1224/1225 VUs  02.4s/10s  5000.00 iters/s
+rps_10000 • [   0% ] waiting        0m12.6s   
+time="2026-08-11T11:04:21Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:21Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:21Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:21Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:21Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:21Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:21Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:21Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:22Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+
+running (0m48.4s), 2346/4800 VUs, 24644 complete and 0 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s        500.00 iters/s
+rps_1000  ↓ [ 100% ] 0662/0672 VUs  10s        1000.00 iters/s
+rps_2000  ↓ [ 100% ] 1596/1600 VUs  10s        2000.00 iters/s
+rps_5000    [  33% ] 1553/1584 VUs  03.3s/10s  5000.00 iters/s
+rps_10000 • [   0% ] waiting        0m11.6s   
+time="2026-08-11T11:04:22Z" level=warning msg="Insufficient VUs, reached 1600 active VUs and cannot initialize more" executor=constant-arrival-rate scenario=rps_5000
+time="2026-08-11T11:04:22Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:22Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:22Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:22Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+
+running (0m49.4s), 2373/4800 VUs, 25093 complete and 0 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s        500.00 iters/s
+rps_1000  ↓ [ 100% ] 0662/0672 VUs  10s        1000.00 iters/s
+rps_2000  ↓ [ 100% ] 1596/1600 VUs  10s        2000.00 iters/s
+rps_5000    [  44% ] 1589/1600 VUs  04.4s/10s  5000.00 iters/s
+rps_10000 • [   0% ] waiting        0m10.6s   
+
+running (0m50.4s), 2332/4800 VUs, 26120 complete and 0 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s        500.00 iters/s
+rps_1000  ↓ [ 100% ] 0662/0672 VUs  10s        1000.00 iters/s
+rps_2000  ↓ [ 100% ] 1596/1600 VUs  10s        2000.00 iters/s
+rps_5000    [  54% ] 1600/1600 VUs  05.4s/10s  5000.00 iters/s
+rps_10000 • [   0% ] waiting        0m09.6s   
+
+running (0m51.4s), 2325/4800 VUs, 26954 complete and 0 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s        500.00 iters/s
+rps_1000  ↓ [ 100% ] 0662/0672 VUs  10s        1000.00 iters/s
+rps_2000  ↓ [ 100% ] 1596/1600 VUs  10s        2000.00 iters/s
+rps_5000    [  64% ] 1600/1600 VUs  06.4s/10s  5000.00 iters/s
+rps_10000 • [   0% ] waiting        0m08.6s   
+
+running (0m52.4s), 2317/4800 VUs, 27758 complete and 0 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s        500.00 iters/s
+rps_1000  ↓ [ 100% ] 0662/0672 VUs  10s        1000.00 iters/s
+rps_2000  ↓ [ 100% ] 1596/1600 VUs  10s        2000.00 iters/s
+rps_5000    [  74% ] 1598/1600 VUs  07.4s/10s  5000.00 iters/s
+rps_10000 • [   0% ] waiting        0m07.6s   
+time="2026-08-11T11:04:26Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:26Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:26Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:26Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:26Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:26Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:26Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:26Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:26Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:26Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:26Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:26Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+
+running (0m53.4s), 2303/4800 VUs, 28522 complete and 0 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s        500.00 iters/s
+rps_1000  ↓ [ 100% ] 0662/0672 VUs  10s        1000.00 iters/s
+rps_2000  ↓ [ 100% ] 1596/1600 VUs  10s        2000.00 iters/s
+rps_5000    [  84% ] 1598/1600 VUs  08.4s/10s  5000.00 iters/s
+rps_10000 • [   0% ] waiting        0m06.6s   
+time="2026-08-11T11:04:27Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:27Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:27Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:27Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:27Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:27Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:27Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:27Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:27Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:27Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:27Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:27Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:27Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:27Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:27Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:27Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:27Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:27Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:27Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:27Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:27Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+
+running (0m54.4s), 2281/4800 VUs, 29293 complete and 0 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s        500.00 iters/s
+rps_1000  ↓ [ 100% ] 0662/0672 VUs  10s        1000.00 iters/s
+rps_2000  ↓ [ 100% ] 1596/1600 VUs  10s        2000.00 iters/s
+rps_5000    [  94% ] 1600/1600 VUs  09.4s/10s  5000.00 iters/s
+rps_10000 • [   0% ] waiting        0m05.6s   
+
+running (0m55.4s), 2171/4800 VUs, 29859 complete and 21 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s  500.00 iters/s
+rps_1000  ✓ [ 100% ] 0021/0672 VUs  10s  1000.00 iters/s
+rps_2000  ↓ [ 100% ] 1596/1600 VUs  10s  2000.00 iters/s
+rps_5000  ↓ [ 100% ] 1600/1600 VUs  10s  5000.00 iters/s
+rps_10000 • [   0% ] waiting        0m04.6s
+
+running (0m56.4s), 1931/4800 VUs, 30099 complete and 21 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s  500.00 iters/s
+rps_1000  ✓ [ 100% ] 0021/0672 VUs  10s  1000.00 iters/s
+rps_2000  ↓ [ 100% ] 1596/1600 VUs  10s  2000.00 iters/s
+rps_5000  ↓ [ 100% ] 1600/1600 VUs  10s  5000.00 iters/s
+rps_10000 • [   0% ] waiting        0m03.6s
+
+running (0m57.4s), 1782/4800 VUs, 30248 complete and 21 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s  500.00 iters/s
+rps_1000  ✓ [ 100% ] 0021/0672 VUs  10s  1000.00 iters/s
+rps_2000  ↓ [ 100% ] 1596/1600 VUs  10s  2000.00 iters/s
+rps_5000  ↓ [ 100% ] 1600/1600 VUs  10s  5000.00 iters/s
+rps_10000 • [   0% ] waiting        0m02.6s
+
+running (0m58.4s), 1688/4800 VUs, 30342 complete and 21 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s  500.00 iters/s
+rps_1000  ✓ [ 100% ] 0021/0672 VUs  10s  1000.00 iters/s
+rps_2000  ↓ [ 100% ] 1596/1600 VUs  10s  2000.00 iters/s
+rps_5000  ↓ [ 100% ] 1600/1600 VUs  10s  5000.00 iters/s
+rps_10000 • [   0% ] waiting        0m01.6s
+
+running (0m59.4s), 1614/4800 VUs, 30416 complete and 21 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s  500.00 iters/s
+rps_1000  ✓ [ 100% ] 0021/0672 VUs  10s  1000.00 iters/s
+rps_2000  ↓ [ 100% ] 1596/1600 VUs  10s  2000.00 iters/s
+rps_5000  ↓ [ 100% ] 1600/1600 VUs  10s  5000.00 iters/s
+rps_10000 • [   0% ] waiting        0m00.6s
+time="2026-08-11T11:04:34Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:34Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:34Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:34Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:34Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:34Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:34Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:34Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:34Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:34Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:34Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:34Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:34Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:34Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:34Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:34Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:34Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:34Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:34Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:34Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:34Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:34Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:34Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:34Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:34Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:34Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:34Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:34Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:34Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:34Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:34Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:34Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:34Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:34Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+
+running (1m00.4s), 2762/4800 VUs, 30590 complete and 21 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s        500.00 iters/s
+rps_1000  ✓ [ 100% ] 0021/0672 VUs  10s        1000.00 iters/s
+rps_2000  ↓ [ 100% ] 1596/1600 VUs  10s        2000.00 iters/s
+rps_5000  ↓ [ 100% ] 1600/1600 VUs  10s        5000.00 iters/s
+rps_10000   [   4% ] 1213/1228 VUs  00.4s/10s  10000.00 iters/s
+time="2026-08-11T11:04:34Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:34Z" level=warning msg="Insufficient VUs, reached 1600 active VUs and cannot initialize more" executor=constant-arrival-rate scenario=rps_10000
+time="2026-08-11T11:04:34Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:34Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:34Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:34Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+
+running (1m01.4s), 3088/4800 VUs, 31598 complete and 21 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s        500.00 iters/s
+rps_1000  ✓ [ 100% ] 0021/0672 VUs  10s        1000.00 iters/s
+rps_2000  ↓ [ 100% ] 1596/1600 VUs  10s        2000.00 iters/s
+rps_5000  ↓ [ 100% ] 1600/1600 VUs  10s        5000.00 iters/s
+rps_10000   [  14% ] 1583/1600 VUs  01.4s/10s  10000.00 iters/s
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:35Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:36Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:36Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:36Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:36Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:36Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:36Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:36Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:36Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+
+running (1m02.4s), 3025/4800 VUs, 32602 complete and 21 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s        500.00 iters/s
+rps_1000  ✓ [ 100% ] 0021/0672 VUs  10s        1000.00 iters/s
+rps_2000  ↓ [ 100% ] 1596/1600 VUs  10s        2000.00 iters/s
+rps_5000  ↓ [ 100% ] 1600/1600 VUs  10s        5000.00 iters/s
+rps_10000   [  24% ] 1599/1600 VUs  02.4s/10s  10000.00 iters/s
+time="2026-08-11T11:04:36Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:36Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:36Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:36Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:36Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:36Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:36Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:36Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:36Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:36Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:36Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:36Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:36Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:36Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:36Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:36Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:36Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:36Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:36Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:36Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:36Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:36Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:36Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:36Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:36Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:36Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:36Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:36Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:36Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:36Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:36Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+
+running (1m03.4s), 2989/4800 VUs, 33450 complete and 21 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s        500.00 iters/s
+rps_1000  ✓ [ 100% ] 0021/0672 VUs  10s        1000.00 iters/s
+rps_2000  ↓ [ 100% ] 1596/1600 VUs  10s        2000.00 iters/s
+rps_5000  ↓ [ 100% ] 1600/1600 VUs  10s        5000.00 iters/s
+rps_10000   [  34% ] 1600/1600 VUs  03.4s/10s  10000.00 iters/s
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:37Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+
+running (1m04.4s), 2879/4800 VUs, 34413 complete and 21 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s        500.00 iters/s
+rps_1000  ✓ [ 100% ] 0021/0672 VUs  10s        1000.00 iters/s
+rps_2000  ↓ [ 100% ] 1596/1600 VUs  10s        2000.00 iters/s
+rps_5000  ↓ [ 100% ] 1600/1600 VUs  10s        5000.00 iters/s
+rps_10000   [  44% ] 1600/1600 VUs  04.4s/10s  10000.00 iters/s
+time="2026-08-11T11:04:38Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:38Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:38Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:38Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:39Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+
+running (1m05.4s), 2871/4800 VUs, 35241 complete and 21 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s        500.00 iters/s
+rps_1000  ✓ [ 100% ] 0021/0672 VUs  10s        1000.00 iters/s
+rps_2000  ↓ [ 100% ] 1596/1600 VUs  10s        2000.00 iters/s
+rps_5000  ↓ [ 100% ] 1600/1600 VUs  10s        5000.00 iters/s
+rps_10000   [  54% ] 1599/1600 VUs  05.4s/10s  10000.00 iters/s
+time="2026-08-11T11:04:39Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:39Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:39Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:39Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:39Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+
+running (1m06.4s), 2859/4800 VUs, 36033 complete and 21 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s        500.00 iters/s
+rps_1000  ✓ [ 100% ] 0021/0672 VUs  10s        1000.00 iters/s
+rps_2000  ↓ [ 100% ] 1596/1600 VUs  10s        2000.00 iters/s
+rps_5000  ↓ [ 100% ] 1600/1600 VUs  10s        5000.00 iters/s
+rps_10000   [  64% ] 1600/1600 VUs  06.4s/10s  10000.00 iters/s
+time="2026-08-11T11:04:40Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:40Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:40Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:40Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:40Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:40Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:40Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:40Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:40Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:40Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:40Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:40Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:40Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:40Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:40Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:40Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:40Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:40Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:40Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:40Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:40Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:40Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:40Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:40Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:40Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+
+running (1m07.4s), 2812/4800 VUs, 36794 complete and 21 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s        500.00 iters/s
+rps_1000  ✓ [ 100% ] 0021/0672 VUs  10s        1000.00 iters/s
+rps_2000  ↓ [ 100% ] 1596/1600 VUs  10s        2000.00 iters/s
+rps_5000  ↓ [ 100% ] 1600/1600 VUs  10s        5000.00 iters/s
+rps_10000   [  74% ] 1600/1600 VUs  07.4s/10s  10000.00 iters/s
+
+running (1m08.4s), 2805/4800 VUs, 37255 complete and 21 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s        500.00 iters/s
+rps_1000  ✓ [ 100% ] 0021/0672 VUs  10s        1000.00 iters/s
+rps_2000  ↓ [ 100% ] 1596/1600 VUs  10s        2000.00 iters/s
+rps_5000  ↓ [ 100% ] 1600/1600 VUs  10s        5000.00 iters/s
+rps_10000   [  84% ] 1600/1600 VUs  08.4s/10s  10000.00 iters/s
+time="2026-08-11T11:04:42Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:42Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:42Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:42Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:42Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:42Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:42Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:42Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:42Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:42Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:42Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:42Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:42Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:42Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:42Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:42Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:42Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:42Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:42Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:42Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:42Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:42Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:42Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:42Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:42Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+
+running (1m09.4s), 2774/4800 VUs, 37899 complete and 21 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s        500.00 iters/s
+rps_1000  ✓ [ 100% ] 0021/0672 VUs  10s        1000.00 iters/s
+rps_2000  ↓ [ 100% ] 1596/1600 VUs  10s        2000.00 iters/s
+rps_5000  ↓ [ 100% ] 1600/1600 VUs  10s        5000.00 iters/s
+rps_10000   [  94% ] 1600/1600 VUs  09.4s/10s  10000.00 iters/s
+
+running (1m10.4s), 2380/4800 VUs, 38495 complete and 335 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s  500.00 iters/s
+rps_1000  ✓ [ 100% ] 0021/0672 VUs  10s  1000.00 iters/s
+rps_2000  ✓ [ 100% ] 0314/1600 VUs  10s  2000.00 iters/s
+rps_5000  ↓ [ 100% ] 1600/1600 VUs  10s  5000.00 iters/s
+rps_10000 ↓ [ 100% ] 1600/1600 VUs  10s  10000.00 iters/s
+
+running (1m11.4s), 2184/4800 VUs, 38691 complete and 335 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s  500.00 iters/s
+rps_1000  ✓ [ 100% ] 0021/0672 VUs  10s  1000.00 iters/s
+rps_2000  ✓ [ 100% ] 0314/1600 VUs  10s  2000.00 iters/s
+rps_5000  ↓ [ 100% ] 1600/1600 VUs  10s  5000.00 iters/s
+rps_10000 ↓ [ 100% ] 1600/1600 VUs  10s  10000.00 iters/s
+
+running (1m12.4s), 2063/4800 VUs, 38812 complete and 335 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s  500.00 iters/s
+rps_1000  ✓ [ 100% ] 0021/0672 VUs  10s  1000.00 iters/s
+rps_2000  ✓ [ 100% ] 0314/1600 VUs  10s  2000.00 iters/s
+rps_5000  ↓ [ 100% ] 1600/1600 VUs  10s  5000.00 iters/s
+rps_10000 ↓ [ 100% ] 1600/1600 VUs  10s  10000.00 iters/s
+
+running (1m13.4s), 1987/4800 VUs, 38888 complete and 335 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s  500.00 iters/s
+rps_1000  ✓ [ 100% ] 0021/0672 VUs  10s  1000.00 iters/s
+rps_2000  ✓ [ 100% ] 0314/1600 VUs  10s  2000.00 iters/s
+rps_5000  ↓ [ 100% ] 1600/1600 VUs  10s  5000.00 iters/s
+rps_10000 ↓ [ 100% ] 1600/1600 VUs  10s  10000.00 iters/s
+
+running (1m14.4s), 1927/4800 VUs, 38948 complete and 335 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s  500.00 iters/s
+rps_1000  ✓ [ 100% ] 0021/0672 VUs  10s  1000.00 iters/s
+rps_2000  ✓ [ 100% ] 0314/1600 VUs  10s  2000.00 iters/s
+rps_5000  ↓ [ 100% ] 1600/1600 VUs  10s  5000.00 iters/s
+rps_10000 ↓ [ 100% ] 1600/1600 VUs  10s  10000.00 iters/s
+time="2026-08-11T11:04:48Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:48Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:48Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:48Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:48Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:48Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:48Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:48Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:48Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:48Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:48Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:48Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:48Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:48Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:48Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:48Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:48Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:48Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:48Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:48Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:48Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:48Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:48Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:48Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:48Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:48Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:48Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:48Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:48Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:48Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:48Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:48Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:48Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:48Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:48Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:48Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:48Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:48Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:48Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:48Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:48Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:48Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:48Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:48Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:48Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:48Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:48Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:48Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:48Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:48Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:48Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:48Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:48Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:48Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:49Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:49Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:49Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:49Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:49Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:49Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:49Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:49Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:49Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:49Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:49Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:49Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:49Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:49Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+
+running (1m15.4s), 1828/4800 VUs, 39047 complete and 335 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s  500.00 iters/s
+rps_1000  ✓ [ 100% ] 0021/0672 VUs  10s  1000.00 iters/s
+rps_2000  ✓ [ 100% ] 0314/1600 VUs  10s  2000.00 iters/s
+rps_5000  ↓ [ 100% ] 1600/1600 VUs  10s  5000.00 iters/s
+rps_10000 ↓ [ 100% ] 1600/1600 VUs  10s  10000.00 iters/s
+time="2026-08-11T11:04:49Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:49Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:49Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:49Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:49Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:49Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:49Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:49Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:49Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:49Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:49Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:49Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:49Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:49Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:49Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:49Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:49Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:49Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:49Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:49Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:49Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:49Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:49Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:49Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:49Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:49Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:49Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:49Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:49Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:49Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:49Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:49Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:49Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:49Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:49Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:49Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:49Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:49Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:49Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:49Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:49Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:49Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+
+running (1m16.4s), 1721/4800 VUs, 39154 complete and 335 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s  500.00 iters/s
+rps_1000  ✓ [ 100% ] 0021/0672 VUs  10s  1000.00 iters/s
+rps_2000  ✓ [ 100% ] 0314/1600 VUs  10s  2000.00 iters/s
+rps_5000  ↓ [ 100% ] 1600/1600 VUs  10s  5000.00 iters/s
+rps_10000 ↓ [ 100% ] 1600/1600 VUs  10s  10000.00 iters/s
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:50Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:51Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:51Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:51Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:51Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:51Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:51Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+
+running (1m17.4s), 1555/4800 VUs, 39320 complete and 335 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s  500.00 iters/s
+rps_1000  ✓ [ 100% ] 0021/0672 VUs  10s  1000.00 iters/s
+rps_2000  ✓ [ 100% ] 0314/1600 VUs  10s  2000.00 iters/s
+rps_5000  ↓ [ 100% ] 1600/1600 VUs  10s  5000.00 iters/s
+rps_10000 ↓ [ 100% ] 1600/1600 VUs  10s  10000.00 iters/s
+time="2026-08-11T11:04:51Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+
+running (1m18.4s), 1503/4800 VUs, 39372 complete and 335 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s  500.00 iters/s
+rps_1000  ✓ [ 100% ] 0021/0672 VUs  10s  1000.00 iters/s
+rps_2000  ✓ [ 100% ] 0314/1600 VUs  10s  2000.00 iters/s
+rps_5000  ↓ [ 100% ] 1600/1600 VUs  10s  5000.00 iters/s
+rps_10000 ↓ [ 100% ] 1600/1600 VUs  10s  10000.00 iters/s
+
+running (1m19.4s), 1458/4800 VUs, 39417 complete and 335 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s  500.00 iters/s
+rps_1000  ✓ [ 100% ] 0021/0672 VUs  10s  1000.00 iters/s
+rps_2000  ✓ [ 100% ] 0314/1600 VUs  10s  2000.00 iters/s
+rps_5000  ↓ [ 100% ] 1600/1600 VUs  10s  5000.00 iters/s
+rps_10000 ↓ [ 100% ] 1600/1600 VUs  10s  10000.00 iters/s
+time="2026-08-11T11:04:53Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:53Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:53Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:53Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:53Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:53Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:53Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:53Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:53Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:53Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:53Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:53Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:53Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:53Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:53Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:53Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:53Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:53Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:53Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:53Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:53Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:53Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:53Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:53Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:53Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:53Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:53Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:53Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:53Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:53Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:53Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:53Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:53Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:53Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:53Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:53Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:53Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:53Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+
+running (1m20.4s), 1364/4800 VUs, 39511 complete and 335 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s  500.00 iters/s
+rps_1000  ✓ [ 100% ] 0021/0672 VUs  10s  1000.00 iters/s
+rps_2000  ✓ [ 100% ] 0314/1600 VUs  10s  2000.00 iters/s
+rps_5000  ↓ [ 100% ] 1600/1600 VUs  10s  5000.00 iters/s
+rps_10000 ↓ [ 100% ] 1600/1600 VUs  10s  10000.00 iters/s
+
+running (1m21.4s), 1343/4800 VUs, 39532 complete and 335 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s  500.00 iters/s
+rps_1000  ✓ [ 100% ] 0021/0672 VUs  10s  1000.00 iters/s
+rps_2000  ✓ [ 100% ] 0314/1600 VUs  10s  2000.00 iters/s
+rps_5000  ↓ [ 100% ] 1600/1600 VUs  10s  5000.00 iters/s
+rps_10000 ↓ [ 100% ] 1600/1600 VUs  10s  10000.00 iters/s
+
+running (1m22.4s), 1333/4800 VUs, 39542 complete and 335 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s  500.00 iters/s
+rps_1000  ✓ [ 100% ] 0021/0672 VUs  10s  1000.00 iters/s
+rps_2000  ✓ [ 100% ] 0314/1600 VUs  10s  2000.00 iters/s
+rps_5000  ↓ [ 100% ] 1600/1600 VUs  10s  5000.00 iters/s
+rps_10000 ↓ [ 100% ] 1600/1600 VUs  10s  10000.00 iters/s
+time="2026-08-11T11:04:56Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:56Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+
+running (1m23.4s), 1323/4800 VUs, 39552 complete and 335 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s  500.00 iters/s
+rps_1000  ✓ [ 100% ] 0021/0672 VUs  10s  1000.00 iters/s
+rps_2000  ✓ [ 100% ] 0314/1600 VUs  10s  2000.00 iters/s
+rps_5000  ↓ [ 100% ] 1600/1600 VUs  10s  5000.00 iters/s
+rps_10000 ↓ [ 100% ] 1600/1600 VUs  10s  10000.00 iters/s
+
+running (1m24.4s), 1317/4800 VUs, 39558 complete and 335 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s  500.00 iters/s
+rps_1000  ✓ [ 100% ] 0021/0672 VUs  10s  1000.00 iters/s
+rps_2000  ✓ [ 100% ] 0314/1600 VUs  10s  2000.00 iters/s
+rps_5000  ↓ [ 100% ] 1600/1600 VUs  10s  5000.00 iters/s
+rps_10000 ↓ [ 100% ] 1600/1600 VUs  10s  10000.00 iters/s
+time="2026-08-11T11:04:58Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:58Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:58Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:58Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:04:58Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+
+running (1m25.4s), 0797/4800 VUs, 39564 complete and 849 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s  500.00 iters/s
+rps_1000  ✓ [ 100% ] 0021/0672 VUs  10s  1000.00 iters/s
+rps_2000  ✓ [ 100% ] 0314/1600 VUs  10s  2000.00 iters/s
+rps_5000  ✓ [ 100% ] 0514/1600 VUs  10s  5000.00 iters/s
+rps_10000 ↓ [ 100% ] 1600/1600 VUs  10s  10000.00 iters/s
+
+running (1m26.4s), 0797/4800 VUs, 39564 complete and 849 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s  500.00 iters/s
+rps_1000  ✓ [ 100% ] 0021/0672 VUs  10s  1000.00 iters/s
+rps_2000  ✓ [ 100% ] 0314/1600 VUs  10s  2000.00 iters/s
+rps_5000  ✓ [ 100% ] 0514/1600 VUs  10s  5000.00 iters/s
+rps_10000 ↓ [ 100% ] 1600/1600 VUs  10s  10000.00 iters/s
+
+running (1m27.4s), 0797/4800 VUs, 39564 complete and 849 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s  500.00 iters/s
+rps_1000  ✓ [ 100% ] 0021/0672 VUs  10s  1000.00 iters/s
+rps_2000  ✓ [ 100% ] 0314/1600 VUs  10s  2000.00 iters/s
+rps_5000  ✓ [ 100% ] 0514/1600 VUs  10s  5000.00 iters/s
+rps_10000 ↓ [ 100% ] 1600/1600 VUs  10s  10000.00 iters/s
+time="2026-08-11T11:05:01Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": read tcp 172.16.0.28:53902->10.247.7.223:80: read: connection reset by peer"
+time="2026-08-11T11:05:01Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": read tcp 172.16.0.28:53858->10.247.7.223:80: read: connection reset by peer"
+
+running (1m28.4s), 0784/4800 VUs, 39577 complete and 849 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s  500.00 iters/s
+rps_1000  ✓ [ 100% ] 0021/0672 VUs  10s  1000.00 iters/s
+rps_2000  ✓ [ 100% ] 0314/1600 VUs  10s  2000.00 iters/s
+rps_5000  ✓ [ 100% ] 0514/1600 VUs  10s  5000.00 iters/s
+rps_10000 ↓ [ 100% ] 1600/1600 VUs  10s  10000.00 iters/s
+
+running (1m29.4s), 0770/4800 VUs, 39591 complete and 849 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s  500.00 iters/s
+rps_1000  ✓ [ 100% ] 0021/0672 VUs  10s  1000.00 iters/s
+rps_2000  ✓ [ 100% ] 0314/1600 VUs  10s  2000.00 iters/s
+rps_5000  ✓ [ 100% ] 0514/1600 VUs  10s  5000.00 iters/s
+rps_10000 ↓ [ 100% ] 1600/1600 VUs  10s  10000.00 iters/s
+time="2026-08-11T11:05:03Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:03Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:03Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:03Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:03Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:03Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:03Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:03Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:03Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:03Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:03Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:03Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:03Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:03Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:03Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:03Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:03Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:03Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:03Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:03Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:03Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:03Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:03Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:03Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:03Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:03Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:03Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:03Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:03Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:03Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:04Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:04Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:04Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:04Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:04Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:04Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:04Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:04Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:04Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:04Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:04Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:04Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:04Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:04Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:04Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:04Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:04Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:04Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:04Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:04Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:04Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:04Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:04Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:04Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:04Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:04Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:04Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:04Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:04Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:04Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:04Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:04Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+
+running (1m30.4s), 0687/4800 VUs, 39674 complete and 849 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s  500.00 iters/s
+rps_1000  ✓ [ 100% ] 0021/0672 VUs  10s  1000.00 iters/s
+rps_2000  ✓ [ 100% ] 0314/1600 VUs  10s  2000.00 iters/s
+rps_5000  ✓ [ 100% ] 0514/1600 VUs  10s  5000.00 iters/s
+rps_10000 ↓ [ 100% ] 1600/1600 VUs  10s  10000.00 iters/s
+time="2026-08-11T11:05:04Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:04Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+
+running (1m31.4s), 0657/4800 VUs, 39704 complete and 849 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s  500.00 iters/s
+rps_1000  ✓ [ 100% ] 0021/0672 VUs  10s  1000.00 iters/s
+rps_2000  ✓ [ 100% ] 0314/1600 VUs  10s  2000.00 iters/s
+rps_5000  ✓ [ 100% ] 0514/1600 VUs  10s  5000.00 iters/s
+rps_10000 ↓ [ 100% ] 1600/1600 VUs  10s  10000.00 iters/s
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:05Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:06Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:06Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:06Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:06Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:06Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:06Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:06Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:06Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:06Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:06Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:06Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:06Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:06Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:06Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+
+running (1m32.4s), 0546/4800 VUs, 39815 complete and 849 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s  500.00 iters/s
+rps_1000  ✓ [ 100% ] 0021/0672 VUs  10s  1000.00 iters/s
+rps_2000  ✓ [ 100% ] 0314/1600 VUs  10s  2000.00 iters/s
+rps_5000  ✓ [ 100% ] 0514/1600 VUs  10s  5000.00 iters/s
+rps_10000 ↓ [ 100% ] 1600/1600 VUs  10s  10000.00 iters/s
+time="2026-08-11T11:05:06Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:06Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:06Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:06Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:06Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:06Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:06Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:06Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:06Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:06Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:06Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:06Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:06Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:06Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:06Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:06Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:06Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:06Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:06Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:06Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:06Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:06Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:06Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:06Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:06Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:06Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:06Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+time="2026-08-11T11:05:06Z" level=warning msg="Request Failed" error="Get \"http://sample-financial-api.irestrict-apps.svc.cluster.local/v1/accounts\": dial: i/o timeout"
+
+running (1m33.4s), 0518/4800 VUs, 39843 complete and 849 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s  500.00 iters/s
+rps_1000  ✓ [ 100% ] 0021/0672 VUs  10s  1000.00 iters/s
+rps_2000  ✓ [ 100% ] 0314/1600 VUs  10s  2000.00 iters/s
+rps_5000  ✓ [ 100% ] 0514/1600 VUs  10s  5000.00 iters/s
+rps_10000 ↓ [ 100% ] 1600/1600 VUs  10s  10000.00 iters/s
+
+running (1m34.4s), 0512/4800 VUs, 39849 complete and 849 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s  500.00 iters/s
+rps_1000  ✓ [ 100% ] 0021/0672 VUs  10s  1000.00 iters/s
+rps_2000  ✓ [ 100% ] 0314/1600 VUs  10s  2000.00 iters/s
+rps_5000  ✓ [ 100% ] 0514/1600 VUs  10s  5000.00 iters/s
+rps_10000 ↓ [ 100% ] 1600/1600 VUs  10s  10000.00 iters/s
+
+running (1m35.4s), 0512/4800 VUs, 39849 complete and 849 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s  500.00 iters/s
+rps_1000  ✓ [ 100% ] 0021/0672 VUs  10s  1000.00 iters/s
+rps_2000  ✓ [ 100% ] 0314/1600 VUs  10s  2000.00 iters/s
+rps_5000  ✓ [ 100% ] 0514/1600 VUs  10s  5000.00 iters/s
+rps_10000 ↓ [ 100% ] 1600/1600 VUs  10s  10000.00 iters/s
+
+running (1m36.4s), 0512/4800 VUs, 39849 complete and 849 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s  500.00 iters/s
+rps_1000  ✓ [ 100% ] 0021/0672 VUs  10s  1000.00 iters/s
+rps_2000  ✓ [ 100% ] 0314/1600 VUs  10s  2000.00 iters/s
+rps_5000  ✓ [ 100% ] 0514/1600 VUs  10s  5000.00 iters/s
+rps_10000 ↓ [ 100% ] 1600/1600 VUs  10s  10000.00 iters/s
+
+running (1m37.4s), 0512/4800 VUs, 39849 complete and 849 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s  500.00 iters/s
+rps_1000  ✓ [ 100% ] 0021/0672 VUs  10s  1000.00 iters/s
+rps_2000  ✓ [ 100% ] 0314/1600 VUs  10s  2000.00 iters/s
+rps_5000  ✓ [ 100% ] 0514/1600 VUs  10s  5000.00 iters/s
+rps_10000 ↓ [ 100% ] 1600/1600 VUs  10s  10000.00 iters/s
+
+running (1m38.4s), 0512/4800 VUs, 39849 complete and 849 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s  500.00 iters/s
+rps_1000  ✓ [ 100% ] 0021/0672 VUs  10s  1000.00 iters/s
+rps_2000  ✓ [ 100% ] 0314/1600 VUs  10s  2000.00 iters/s
+rps_5000  ✓ [ 100% ] 0514/1600 VUs  10s  5000.00 iters/s
+rps_10000 ↓ [ 100% ] 1600/1600 VUs  10s  10000.00 iters/s
+
+running (1m39.4s), 0512/4800 VUs, 39849 complete and 849 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s  500.00 iters/s
+rps_1000  ✓ [ 100% ] 0021/0672 VUs  10s  1000.00 iters/s
+rps_2000  ✓ [ 100% ] 0314/1600 VUs  10s  2000.00 iters/s
+rps_5000  ✓ [ 100% ] 0514/1600 VUs  10s  5000.00 iters/s
+rps_10000 ↓ [ 100% ] 1600/1600 VUs  10s  10000.00 iters/s
+
+     ✗ secured 200
+      ↳  97% — ✓ 38944 / ✗ 905
+
+     checks.........................: 97.72% 38944 out of 39849
+     data_received..................: 9.0 MB 90 kB/s
+     data_sent......................: 9.1 MB 91 kB/s
+     dropped_iterations.............: 143785 1437.280477/s
+     http_req_blocked...............: avg=589.77ms min=0s     med=1.06ms   p(90)=1.05s    p(95)=3.09s    p(99)=7.14s   max=15.79s  
+     http_req_connecting............: avg=588.76ms min=0s     med=883.25µs p(90)=1.05s    p(95)=3.09s    p(99)=7.14s   max=15.65s  
+     http_req_duration..............: avg=352.04ms min=0s     med=34.89ms  p(90)=443.37ms p(95)=857.19ms p(99)=6.6s    max=27.13s  
+       { expected_response:true }...: avg=358.86ms min=2.45ms med=36.25ms  p(90)=448.36ms p(95)=861.08ms p(99)=6.6s    max=27.13s  
+     ✓ { offered_rate:1000 }........: avg=155.35ms min=0s     med=29.53ms  p(90)=110.16ms p(95)=422.11ms p(99)=3.33s   max=27.13s  
+     ✓ { offered_rate:10000 }.......: avg=594.14ms min=0s     med=45.31ms  p(90)=827.81ms p(95)=1.68s    p(99)=13.31s  max=26.83s  
+     ✓ { offered_rate:2000 }........: avg=300.07ms min=0s     med=57.74ms  p(90)=311.5ms  p(95)=847.75ms p(99)=6.59s   max=26.87s  
+     ✓ { offered_rate:500 }.........: avg=7.63ms   min=2.45ms med=4.97ms   p(90)=13.66ms  p(95)=23ms     p(99)=47.92ms max=213.93ms
+     ✓ { offered_rate:5000 }........: avg=550.71ms min=0s     med=78.98ms  p(90)=689.18ms p(95)=1.67s    p(99)=13.37s  max=26.84s  
+     http_req_failed................: 2.27%  905 out of 39849
+     ✓ { offered_rate:1000 }........: 0.88%  74 out of 8358
+     ✓ { offered_rate:10000 }.......: 2.54%  220 out of 8647
+     ✓ { offered_rate:2000 }........: 3.60%  327 out of 9062
+     ✓ { offered_rate:500 }.........: 0.00%  0 out of 5002
+     ✓ { offered_rate:5000 }........: 3.23%  284 out of 8780
+     http_req_receiving.............: avg=1.55ms   min=0s     med=194.59µs p(90)=3.25ms   p(95)=6.91ms   p(99)=22.18ms max=212ms   
+     http_req_sending...............: avg=971.54µs min=0s     med=95.04µs  p(90)=1.88ms   p(95)=4.45ms   p(99)=18.26ms max=110.08ms
+     http_req_tls_handshaking.......: avg=0s       min=0s     med=0s       p(90)=0s       p(95)=0s       p(99)=0s      max=0s      
+     http_req_waiting...............: avg=349.52ms min=0s     med=33.43ms  p(90)=440.26ms p(95)=852.09ms p(99)=6.6s    max=27.11s  
+     http_reqs......................: 39849  398.332161/s
+     iteration_duration.............: avg=1.62s    min=2.79ms med=46.21ms  p(90)=3.3s     p(95)=7.64s    p(99)=30s     max=33.89s  
+     iterations.....................: 39849  398.332161/s
+     vus............................: 512    min=0              max=3093
+     vus_max........................: 4800   min=2040           max=4800
+
+
+running (1m40.0s), 0000/4800 VUs, 39849 complete and 1361 interrupted iterations
+rps_500   ✓ [ 100% ] 0000/0100 VUs  10s  500.00 iters/s
+rps_1000  ✓ [ 100% ] 0021/0672 VUs  10s  1000.00 iters/s
+rps_2000  ✓ [ 100% ] 0314/1600 VUs  10s  2000.00 iters/s
+rps_5000  ✓ [ 100% ] 0514/1600 VUs  10s  5000.00 iters/s
+rps_10000 ✓ [ 100% ] 0512/1600 VUs  10s  10000.00 iters/s

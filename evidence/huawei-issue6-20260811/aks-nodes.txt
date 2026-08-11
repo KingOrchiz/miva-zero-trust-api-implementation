@@ -1,0 +1,3 @@
+NAME          STATUS   ROLES    AGE     VERSION             INTERNAL-IP   EXTERNAL-IP   OS-IMAGE                            KERNEL-VERSION                            CONTAINER-RUNTIME
+10.83.1.158   Ready    <none>   6m28s   v1.35.3-r0-35.0.8   10.83.1.158   <none>        Huawei Cloud EulerOS 2.0 (x86_64)   5.10.0-182.0.0.95.r3450_282.hce2.x86_64   containerd://2.2.1-57-gb72de14b1
+10.83.1.38    Ready    <none>   6m42s   v1.35.3-r0-35.0.8   10.83.1.38    <none>        Huawei Cloud EulerOS 2.0 (x86_64)   5.10.0-182.0.0.95.r3450_282.hce2.x86_64   containerd://2.2.1-57-gb72de14b1

@@ -1,0 +1,2 @@
+NAME                              READY   STATUS    RESTARTS   AGE   IP          NODE                             NOMINATED NODE   READINESS GATES
+otel-collector-64cb8f97cb-v2lpm   1/1     Running   0          3m    10.73.1.9   aks-system-11373536-vmss000000   <none>           <none>

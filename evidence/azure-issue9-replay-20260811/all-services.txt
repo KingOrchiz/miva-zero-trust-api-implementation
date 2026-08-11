@@ -1,0 +1,10 @@
+NAMESPACE                 NAME                               TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)             AGE     SELECTOR
+default                   kubernetes                         ClusterIP   10.0.0.1       <none>        443/TCP             4h48m   <none>
+irestrict-apps            sample-financial-api               ClusterIP   10.0.158.110   <none>        80/TCP              4h41m   app=sample-financial-api
+irestrict-identity        keycloak                           ClusterIP   10.0.142.139   <none>        8080/TCP            4h41m   app=keycloak
+irestrict-observability   otel-collector                     ClusterIP   10.0.107.41    <none>        4317/TCP,4318/TCP   4h41m   app=otel-collector
+irestrict-security        opa                                ClusterIP   10.0.222.218   <none>        8181/TCP            4h41m   app=opa
+irestrict-security        spire-server                       ClusterIP   10.0.104.193   <none>        8081/TCP            4h41m   app=spire-server
+kube-system               azure-wi-webhook-webhook-service   ClusterIP   10.0.134.21    <none>        443/TCP             4h48m   azure-workload-identity.io/system=true,kubernetes.azure.com/managedby=aks
+kube-system               kube-dns                           ClusterIP   10.0.0.10      <none>        53/UDP,53/TCP       4h47m   k8s-app=kube-dns
+kube-system               metrics-server                     ClusterIP   10.0.24.223    <none>        443/TCP             4h47m   k8s-app=metrics-server

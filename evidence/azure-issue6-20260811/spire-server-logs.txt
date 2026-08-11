@@ -1,0 +1,24 @@
+time="2026-08-11T10:46:34Z" level=info msg="Using legacy downstream X509 CA TTL calculation by default; this default will change in a future release"
+time="2026-08-11T10:46:34Z" level=warning msg="Current umask 0022 is too permissive; setting umask 0027"
+time="2026-08-11T10:46:34Z" level=info msg=Configured admin_ids="[]" data_dir=/run/spire/data launch_log_level=info version=1.11.2
+time="2026-08-11T10:46:34Z" level=info msg="Opening SQL database" db_type=sqlite3 subsystem_name=sql
+time="2026-08-11T10:46:34Z" level=info msg="Initializing new database" subsystem_name=sql
+time="2026-08-11T10:46:34Z" level=info msg="Connected to SQL database" read_only=false subsystem_name=sql type=sqlite3 version=3.46.1
+time="2026-08-11T10:46:34Z" level=info msg="Configured DataStore" reconfigurable=false subsystem_name=catalog
+time="2026-08-11T10:46:34Z" level=info msg="Configured plugin" external=false plugin_name=k8s_psat plugin_type=NodeAttestor reconfigurable=false subsystem_name=catalog
+time="2026-08-11T10:46:34Z" level=info msg="Plugin loaded" external=false plugin_name=k8s_psat plugin_type=NodeAttestor subsystem_name=catalog
+time="2026-08-11T10:46:34Z" level=info msg="Configured plugin" external=false plugin_name=disk plugin_type=KeyManager reconfigurable=false subsystem_name=catalog
+time="2026-08-11T10:46:34Z" level=info msg="Plugin loaded" external=false plugin_name=disk plugin_type=KeyManager subsystem_name=catalog
+time="2026-08-11T10:46:34Z" level=info msg="There is not a CA journal record that matches any of the local X509 authority IDs" subsystem_name=ca_manager
+time="2026-08-11T10:46:34Z" level=info msg="Journal loaded" jwt_keys=0 subsystem_name=ca_manager x509_cas=0
+time="2026-08-11T10:46:35Z" level=info msg="X509 CA prepared" expiration="2026-08-12 10:46:35 +0000 UTC" issued_at="2026-08-11 10:46:34.472408364 +0000 UTC" local_authority_id=42f6d4cce11e9f0db32c3b3e1c8fc84a0460e9ba self_signed=true slot=A subsystem_name=ca_manager upstream_authority_id=
+time="2026-08-11T10:46:35Z" level=info msg="X509 CA activated" expiration="2026-08-12 10:46:35 +0000 UTC" issued_at="2026-08-11 10:46:34.472408364 +0000 UTC" local_authority_id=42f6d4cce11e9f0db32c3b3e1c8fc84a0460e9ba slot=A subsystem_name=ca_manager upstream_authority_id=
+time="2026-08-11T10:46:35Z" level=info msg="Creating a new CA journal entry" subsystem_name=ca_manager
+time="2026-08-11T10:46:35Z" level=info msg="JWT key prepared" expiration="2026-08-12 10:46:35.036904634 +0000 UTC" issued_at="2026-08-11 10:46:35.036904634 +0000 UTC" local_authority_id=4diNQnHQuYygraWpsaWivvAMCevQ5z3i slot=A subsystem_name=ca_manager
+time="2026-08-11T10:46:35Z" level=info msg="JWT key activated" expiration="2026-08-12 10:46:35.036904634 +0000 UTC" issued_at="2026-08-11 10:46:35.036904634 +0000 UTC" local_authority_id=4diNQnHQuYygraWpsaWivvAMCevQ5z3i slot=A subsystem_name=ca_manager
+time="2026-08-11T10:46:35Z" level=info msg="Building in-memory entry cache" subsystem_name=endpoints
+time="2026-08-11T10:46:35Z" level=info msg="Completed building in-memory entry cache" subsystem_name=endpoints
+time="2026-08-11T10:46:35Z" level=info msg="Logger service configured" launch_log_level=info
+time="2026-08-11T10:46:35Z" level=info msg="Starting Server APIs" address="[::]:8081" network=tcp subsystem_name=endpoints
+time="2026-08-11T10:46:35Z" level=info msg="Starting Server APIs" address=/tmp/spire-server/private/api.sock network=unix subsystem_name=endpoints
+time="2026-08-11T10:46:38Z" level=info msg="Agent attestation request completed" address="10.73.1.11:40274" agent_id="spiffe://miva.local/spire/agent/k8s_psat/miva-cluster/814987df-5d55-425b-9d5b-46eb12a57c10" authorized_as=nobody authorized_via= caller_addr="10.73.1.11:40274" method=AttestAgent node_attestor_type=k8s_psat request_id=53afdd3c-9c4f-4791-9f6e-e3c210e275e6 service=agent.v1.Agent subsystem_name=api

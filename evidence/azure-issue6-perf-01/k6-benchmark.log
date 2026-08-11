@@ -1,0 +1,227 @@
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+     execution: local
+        script: /scripts/k6-script.js
+        output: -
+
+     scenarios: (100.00%) 2 scenarios, 100 max VUs, 1m15s max duration (incl. graceful stop):
+              * baseline: 50 looping VUs for 20s (exec: baseline, gracefulStop: 30s)
+              * secured: 50 looping VUs for 20s (exec: secured, startTime: 25s, gracefulStop: 30s)
+
+
+running (0m00.9s), 050/100 VUs, 977 complete and 0 interrupted iterations
+baseline   [   5% ] 50 VUs   00.9s/20s
+secured  • [   0% ] waiting  24.1s
+
+running (0m01.9s), 050/100 VUs, 1942 complete and 0 interrupted iterations
+baseline   [  10% ] 50 VUs   01.9s/20s
+secured  • [   0% ] waiting  23.1s
+
+running (0m02.9s), 050/100 VUs, 3124 complete and 0 interrupted iterations
+baseline   [  15% ] 50 VUs   02.9s/20s
+secured  • [   0% ] waiting  22.1s
+
+running (0m03.9s), 050/100 VUs, 4498 complete and 0 interrupted iterations
+baseline   [  20% ] 50 VUs   03.9s/20s
+secured  • [   0% ] waiting  21.1s
+
+running (0m04.9s), 050/100 VUs, 5838 complete and 0 interrupted iterations
+baseline   [  25% ] 50 VUs   04.9s/20s
+secured  • [   0% ] waiting  20.1s
+
+running (0m05.9s), 050/100 VUs, 7203 complete and 0 interrupted iterations
+baseline   [  30% ] 50 VUs   05.9s/20s
+secured  • [   0% ] waiting  19.1s
+
+running (0m06.9s), 050/100 VUs, 8183 complete and 0 interrupted iterations
+baseline   [  35% ] 50 VUs   06.9s/20s
+secured  • [   0% ] waiting  18.1s
+
+running (0m07.9s), 050/100 VUs, 9512 complete and 0 interrupted iterations
+baseline   [  40% ] 50 VUs   07.9s/20s
+secured  • [   0% ] waiting  17.1s
+
+running (0m08.9s), 050/100 VUs, 10849 complete and 0 interrupted iterations
+baseline   [  45% ] 50 VUs   08.9s/20s
+secured  • [   0% ] waiting  16.1s
+
+running (0m09.9s), 050/100 VUs, 11859 complete and 0 interrupted iterations
+baseline   [  50% ] 50 VUs   09.9s/20s
+secured  • [   0% ] waiting  15.1s
+
+running (0m10.9s), 050/100 VUs, 13148 complete and 0 interrupted iterations
+baseline   [  55% ] 50 VUs   10.9s/20s
+secured  • [   0% ] waiting  14.1s
+
+running (0m11.9s), 050/100 VUs, 14428 complete and 0 interrupted iterations
+baseline   [  60% ] 50 VUs   11.9s/20s
+secured  • [   0% ] waiting  13.1s
+
+running (0m12.9s), 050/100 VUs, 15764 complete and 0 interrupted iterations
+baseline   [  65% ] 50 VUs   12.9s/20s
+secured  • [   0% ] waiting  12.1s
+
+running (0m13.9s), 050/100 VUs, 17088 complete and 0 interrupted iterations
+baseline   [  70% ] 50 VUs   13.9s/20s
+secured  • [   0% ] waiting  11.1s
+
+running (0m14.9s), 050/100 VUs, 18403 complete and 0 interrupted iterations
+baseline   [  75% ] 50 VUs   14.9s/20s
+secured  • [   0% ] waiting  10.1s
+
+running (0m15.9s), 050/100 VUs, 19405 complete and 0 interrupted iterations
+baseline   [  80% ] 50 VUs   15.9s/20s
+secured  • [   0% ] waiting  09.1s
+
+running (0m16.9s), 050/100 VUs, 20692 complete and 0 interrupted iterations
+baseline   [  85% ] 50 VUs   16.9s/20s
+secured  • [   0% ] waiting  08.1s
+
+running (0m17.9s), 050/100 VUs, 21995 complete and 0 interrupted iterations
+baseline   [  90% ] 50 VUs   17.9s/20s
+secured  • [   0% ] waiting  07.1s
+
+running (0m18.9s), 050/100 VUs, 23383 complete and 0 interrupted iterations
+baseline   [  95% ] 50 VUs   18.9s/20s
+secured  • [   0% ] waiting  06.1s
+
+running (0m19.9s), 050/100 VUs, 24642 complete and 0 interrupted iterations
+baseline   [ 100% ] 50 VUs   19.9s/20s
+secured  • [   0% ] waiting  05.1s
+
+running (0m20.9s), 011/100 VUs, 24797 complete and 0 interrupted iterations
+baseline ↓ [ 100% ] 50 VUs   20s
+secured  • [   0% ] waiting  04.1s
+
+running (0m21.9s), 000/100 VUs, 24808 complete and 0 interrupted iterations
+baseline ✓ [ 100% ] 50 VUs   20s
+secured  • [   0% ] waiting  03.1s
+
+running (0m22.9s), 000/100 VUs, 24808 complete and 0 interrupted iterations
+baseline ✓ [ 100% ] 50 VUs   20s
+secured  • [   0% ] waiting  02.1s
+
+running (0m23.9s), 000/100 VUs, 24808 complete and 0 interrupted iterations
+baseline ✓ [ 100% ] 50 VUs   20s
+secured  • [   0% ] waiting  01.1s
+
+running (0m24.9s), 000/100 VUs, 24808 complete and 0 interrupted iterations
+baseline ✓ [ 100% ] 50 VUs   20s
+secured  • [   0% ] waiting  00.1s
+
+running (0m25.9s), 050/100 VUs, 24813 complete and 0 interrupted iterations
+baseline ✓ [ 100% ] 50 VUs  20s
+secured    [   5% ] 50 VUs  00.9s/20s
+
+running (0m26.9s), 050/100 VUs, 24948 complete and 0 interrupted iterations
+baseline ✓ [ 100% ] 50 VUs  20s
+secured    [  10% ] 50 VUs  01.9s/20s
+
+running (0m27.9s), 050/100 VUs, 25207 complete and 0 interrupted iterations
+baseline ✓ [ 100% ] 50 VUs  20s
+secured    [  15% ] 50 VUs  02.9s/20s
+
+running (0m28.9s), 050/100 VUs, 25477 complete and 0 interrupted iterations
+baseline ✓ [ 100% ] 50 VUs  20s
+secured    [  20% ] 50 VUs  03.9s/20s
+
+running (0m29.9s), 050/100 VUs, 25702 complete and 0 interrupted iterations
+baseline ✓ [ 100% ] 50 VUs  20s
+secured    [  25% ] 50 VUs  04.9s/20s
+
+running (0m30.9s), 050/100 VUs, 25960 complete and 0 interrupted iterations
+baseline ✓ [ 100% ] 50 VUs  20s
+secured    [  30% ] 50 VUs  05.9s/20s
+
+running (0m31.9s), 050/100 VUs, 26205 complete and 0 interrupted iterations
+baseline ✓ [ 100% ] 50 VUs  20s
+secured    [  35% ] 50 VUs  06.9s/20s
+
+running (0m32.9s), 050/100 VUs, 26470 complete and 0 interrupted iterations
+baseline ✓ [ 100% ] 50 VUs  20s
+secured    [  40% ] 50 VUs  07.9s/20s
+
+running (0m33.9s), 050/100 VUs, 26702 complete and 0 interrupted iterations
+baseline ✓ [ 100% ] 50 VUs  20s
+secured    [  45% ] 50 VUs  08.9s/20s
+
+running (0m34.9s), 050/100 VUs, 26970 complete and 0 interrupted iterations
+baseline ✓ [ 100% ] 50 VUs  20s
+secured    [  50% ] 50 VUs  09.9s/20s
+
+running (0m35.9s), 050/100 VUs, 27242 complete and 0 interrupted iterations
+baseline ✓ [ 100% ] 50 VUs  20s
+secured    [  55% ] 50 VUs  10.9s/20s
+
+running (0m36.9s), 050/100 VUs, 27478 complete and 0 interrupted iterations
+baseline ✓ [ 100% ] 50 VUs  20s
+secured    [  60% ] 50 VUs  11.9s/20s
+
+running (0m37.9s), 050/100 VUs, 27722 complete and 0 interrupted iterations
+baseline ✓ [ 100% ] 50 VUs  20s
+secured    [  65% ] 50 VUs  12.9s/20s
+
+running (0m38.9s), 050/100 VUs, 28005 complete and 0 interrupted iterations
+baseline ✓ [ 100% ] 50 VUs  20s
+secured    [  70% ] 50 VUs  13.9s/20s
+
+running (0m39.9s), 050/100 VUs, 28236 complete and 0 interrupted iterations
+baseline ✓ [ 100% ] 50 VUs  20s
+secured    [  75% ] 50 VUs  14.9s/20s
+
+running (0m40.9s), 050/100 VUs, 28515 complete and 0 interrupted iterations
+baseline ✓ [ 100% ] 50 VUs  20s
+secured    [  80% ] 50 VUs  15.9s/20s
+
+running (0m41.9s), 050/100 VUs, 28771 complete and 0 interrupted iterations
+baseline ✓ [ 100% ] 50 VUs  20s
+secured    [  85% ] 50 VUs  16.9s/20s
+
+running (0m42.9s), 050/100 VUs, 29044 complete and 0 interrupted iterations
+baseline ✓ [ 100% ] 50 VUs  20s
+secured    [  90% ] 50 VUs  17.9s/20s
+
+running (0m43.9s), 050/100 VUs, 29313 complete and 0 interrupted iterations
+baseline ✓ [ 100% ] 50 VUs  20s
+secured    [  95% ] 50 VUs  18.9s/20s
+
+running (0m44.9s), 050/100 VUs, 29583 complete and 0 interrupted iterations
+baseline ✓ [ 100% ] 50 VUs  20s
+secured    [ 100% ] 50 VUs  19.9s/20s
+
+running (0m45.9s), 004/100 VUs, 29652 complete and 0 interrupted iterations
+baseline ✓ [ 100% ] 50 VUs  20s
+secured  ↓ [ 100% ] 50 VUs  20s
+
+     ✓ baseline 200
+     ✓ secured 200
+
+     checks.........................: 100.00% 29656 out of 29656
+     data_received..................: 6.9 MB  150 kB/s
+     data_sent......................: 7.3 MB  159 kB/s
+     http_req_blocked...............: avg=49.39ms  min=82.3µs  med=231.95µs p(90)=2.68ms  p(95)=10.37ms  p(99)=1.05s    max=4.08s  
+     http_req_connecting............: avg=49.25ms  min=64.3µs  med=161.1µs  p(90)=2.36ms  p(95)=8.9ms    p(99)=1.05s    max=4.08s  
+     http_req_duration..............: avg=19.3ms   min=419.7µs med=5.7ms    p(90)=57.46ms p(95)=80.74ms  p(99)=145.5ms  max=1.84s  
+       { expected_response:true }...: avg=19.3ms   min=419.7µs med=5.7ms    p(90)=57.46ms p(95)=80.74ms  p(99)=145.5ms  max=1.84s  
+     http_req_failed................: 0.00%   0 out of 29656
+     ✓ { path:baseline }............: 0.00%   0 out of 24808
+     ✓ { path:secured }.............: 0.00%   0 out of 4848
+     http_req_receiving.............: avg=1.06ms   min=12.4µs  med=238.55µs p(90)=2.67ms  p(95)=4.6ms    p(99)=11.68ms  max=67.49ms
+     http_req_sending...............: avg=316.13µs min=13.6µs  med=73.2µs   p(90)=665.2µs p(95)=1.44ms   p(99)=4.27ms   max=26.56ms
+     http_req_tls_handshaking.......: avg=0s       min=0s      med=0s       p(90)=0s      p(95)=0s       p(99)=0s       max=0s     
+     http_req_waiting...............: avg=17.92ms  min=287.6µs med=4.79ms   p(90)=54.33ms p(95)=76.46ms  p(99)=138.59ms max=1.83s  
+     http_reqs......................: 29656   644.298386/s
+     iteration_duration.............: avg=68.93ms  min=739.4µs med=6.52ms   p(90)=72.7ms  p(95)=137.13ms p(99)=1.14s    max=4.34s  
+     iterations.....................: 29656   644.298386/s
+     vus............................: 4       min=0              max=50 
+     vus_max........................: 100     min=100            max=100
+
+
+running (0m46.0s), 000/100 VUs, 29656 complete and 0 interrupted iterations
+baseline ✓ [ 100% ] 50 VUs  20s
+secured  ✓ [ 100% ] 50 VUs  20s

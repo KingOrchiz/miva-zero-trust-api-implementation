@@ -1,0 +1,4 @@
+NAME                   READY   STATUS    RESTARTS   AGE     IP           NODE                             NOMINATED NODE   READINESS GATES
+opa-7ff59bc48c-66c6z   1/1     Running   0          4h41m   10.73.1.29   aks-system-11373536-vmss000000   <none>           <none>
+spire-agent-9gz48      1/1     Running   0          4h41m   10.73.1.11   aks-system-11373536-vmss000000   <none>           <none>
+spire-server-0         1/1     Running   0          4h41m   10.73.1.25   aks-system-11373536-vmss000000   <none>           <none>

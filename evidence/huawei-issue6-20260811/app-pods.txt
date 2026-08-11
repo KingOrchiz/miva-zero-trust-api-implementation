@@ -1,0 +1,4 @@
+NAME                                    READY   STATUS      RESTARTS   AGE     IP            NODE          NOMINATED NODE   READINESS GATES
+sample-financial-api-599d567944-5jlrv   1/1     Running     0          4m28s   172.16.0.22   10.83.1.38    <none>           <none>
+sample-financial-api-599d567944-crq6p   1/1     Running     0          4m28s   172.16.0.38   10.83.1.158   <none>           <none>
+synthetic-client-smoke-test-vsbhw       0/1     Completed   0          4m28s   172.16.0.39   10.83.1.158   <none>           <none>

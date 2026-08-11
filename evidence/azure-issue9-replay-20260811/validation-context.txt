@@ -1,0 +1,5 @@
+Run ID: azure-issue9-replay-20260811
+Collected: 2026-08-11T16:26:43+01:00
+Namespace: irestrict-apps
+Target service: http://sample-financial-api.irestrict-apps.svc.cluster.local
+Kubernetes context: irestrict-azure

@@ -1,0 +1,20 @@
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority-data: [REDACTED]
+    server: https://irestrict-v3-lab-xg5egqlj.hcp.eastus.azmk8s.io:443
+  name: aks-irestrict-v3-lab
+contexts:
+- context:
+    cluster: aks-irestrict-v3-lab
+    user: clusterUser_Jane_Lab_aks-irestrict-v3-lab
+  name: aks-irestrict-v3-lab
+current-context: aks-irestrict-v3-lab
+kind: Config
+preferences: {}
+users:
+- name: clusterUser_Jane_Lab_aks-irestrict-v3-lab
+  user:
+    client-certificate-data: [REDACTED]
+    client-key-data: [REDACTED]
+    token: [REDACTED]

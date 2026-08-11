@@ -11,7 +11,7 @@ fi
 echo "Current kubectl context:"
 kubectl config current-context
 
-echo "This script deploys iRestrict Version 3 Kubernetes manifests to the current context."
+echo "This script deploys iRestrict laboratory Kubernetes manifests to the current context."
 if [[ "${DEPLOY_MIVA_CONFIRMED:-}" != "true" ]]; then
   read -r -p "Type DEPLOY-MIVA to continue: " confirm
   if [[ "$confirm" != "DEPLOY-MIVA" ]]; then
@@ -31,4 +31,4 @@ kubectl apply -f "$ROOT/k8s/spire/agent.yaml"
 kubectl apply -f "$ROOT/k8s/apps/sample-api.yaml"
 kubectl apply -f "$ROOT/k8s/apps/synthetic-client.yaml"
 
-echo "MIVA manifests submitted. Check status with scripts/collect-evidence.sh."
+echo "MIVA manifests submitted. SPIRE runs in the irestrict-security namespace. Check status with scripts/collect-evidence.sh."

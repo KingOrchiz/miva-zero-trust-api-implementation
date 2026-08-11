@@ -1,0 +1,34 @@
+azure_summary = {
+  "aks_cluster_name" = "aks-irestrict-v3-lab"
+  "aks_subnet_name" = "snet-aks-irestrict-v3-lab"
+  "container_registry_name" = "acrirestrictv3lab"
+  "deployment_mode" = "dedicated-lab"
+  "location" = "eastus"
+  "log_analytics_workspace_name" = "law-irestrict-v3-lab"
+  "node_max_count" = 2
+  "node_min_count" = 1
+  "node_size" = "Standard_B2s"
+  "project_display_name" = "iRestrict Version 3"
+  "resource_group_name" = "Jane_Lab"
+  "vnet_name" = "vnet-irestrict-v3-lab"
+}
+deployment_mode = "dedicated-lab"
+huawei_kube_config_raw = <sensitive>
+huawei_summary = {
+  "cce_api_eip" = "80.238.240.81"
+  "cce_cluster_id" = "998c0dba-9570-11f1-a91d-0255ac1000e5"
+  "cce_cluster_name" = "cce-irestrict-v3-lab"
+  "deployment_mode" = "dedicated-lab"
+  "enterprise_project_id" = "8842e64c-0771-48e5-b4de-dc5a95df99bd"
+  "lts_group_name" = "lts-irestrict-v3-lab"
+  "nat_gateway_id" = "d1eee420-2637-48f7-afec-dbdc3e273776"
+  "node_auth_mode" = "password"
+  "node_count" = 2
+  "node_flavor_id" = "s6.large.2"
+  "project_display_name" = "iRestrict Version 3"
+  "region" = "af-south-1"
+  "subnet_id" = "014d146f-b4b0-4626-a3ea-2132db8b0ef2"
+  "swr_organization" = null
+  "vpc_id" = "8b92c55d-ad25-493f-ac21-4e1cd659506a"
+}
+kubernetes_namespaces = []

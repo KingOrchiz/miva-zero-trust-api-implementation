@@ -1,0 +1,13 @@
+time="2026-08-11T10:46:38Z" level=warning msg="Current umask 0022 is too permissive; setting umask 0027"
+time="2026-08-11T10:46:38Z" level=info msg="Starting agent" data_dir=/run/spire/data version=1.11.2
+time="2026-08-11T10:46:38Z" level=info msg="Configured plugin" external=false plugin_name=k8s_psat plugin_type=NodeAttestor reconfigurable=false subsystem_name=catalog
+time="2026-08-11T10:46:38Z" level=info msg="Plugin loaded" external=false plugin_name=k8s_psat plugin_type=NodeAttestor subsystem_name=catalog
+time="2026-08-11T10:46:38Z" level=info msg="Plugin loaded" external=false plugin_name=memory plugin_type=KeyManager subsystem_name=catalog
+time="2026-08-11T10:46:38Z" level=info msg="Using the new container locator" external=false plugin_name=k8s plugin_type=WorkloadAttestor subsystem_name=catalog
+time="2026-08-11T10:46:38Z" level=info msg="Configured plugin" external=false plugin_name=k8s plugin_type=WorkloadAttestor reconfigurable=false subsystem_name=catalog
+time="2026-08-11T10:46:38Z" level=info msg="Plugin loaded" external=false plugin_name=k8s plugin_type=WorkloadAttestor subsystem_name=catalog
+time="2026-08-11T10:46:38Z" level=info msg="Bundle is not found" subsystem_name=attestor
+time="2026-08-11T10:46:38Z" level=info msg="SVID is not found. Starting node attestation" subsystem_name=attestor
+time="2026-08-11T10:46:38Z" level=warning msg="Insecure bootstrap enabled; skipping server certificate verification" subsystem_name=attestor
+time="2026-08-11T10:46:38Z" level=info msg="Node attestation was successful" reattestable=true spiffe_id="spiffe://miva.local/spire/agent/k8s_psat/miva-cluster/814987df-5d55-425b-9d5b-46eb12a57c10" subsystem_name=attestor
+time="2026-08-11T10:46:38Z" level=info msg="Starting Workload and SDS APIs" address=/tmp/spire-agent/public/api.sock network=unix subsystem_name=endpoints

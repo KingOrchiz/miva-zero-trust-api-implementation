@@ -1,0 +1,2 @@
+NAMESPACE        NAME                          STATUS   COMPLETIONS   DURATION   AGE     CONTAINERS   IMAGES                   SELECTOR
+irestrict-apps   synthetic-client-smoke-test   Failed   0/1           2m35s      2m35s   client       curlimages/curl:8.10.1   batch.kubernetes.io/controller-uid=b257a65e-9078-4b49-bc4d-7ade2fd991cc

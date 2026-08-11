@@ -1,12 +1,13 @@
-# Lean dedicated-lab profile for iRestrict Version 3.
+# Lean dedicated-lab profile for iRestrict.
 # Safe to commit because it contains no secrets.
 # Copy these values into HCP Terraform workspace variables after final review.
 
 project              = "irestrict-v3"
-project_display_name = "iRestrict Version 3"
+project_display_name = "iRestrict"
 environment          = "lab"
 deployment_mode      = "dedicated-lab"
-azure_create_resource_group = false
+azure_create_resource_group        = false
+azure_existing_resource_group_name = "Jane_Lab"
 
 # Azure: lean US region. Change only if quota, policy, or cost requires another region.
 azure_location            = "eastus"
@@ -27,7 +28,7 @@ huawei_subnet_gateway_ip = "10.83.1.1"
 # Confirm these are available in af-south-1 before final apply.
 huawei_cluster_flavor_id = "cce.s1.small"
 huawei_node_flavor_id    = "s6.large.2"
-huawei_node_count        = 1
+huawei_node_count        = 2
 huawei_node_auth_mode    = "password"
 huawei_node_key_pair     = "irestrict-v3-lab-key"
 # huawei_node_password is intentionally not shown here. Store it only as a sensitive HCP Terraform variable.
@@ -38,7 +39,7 @@ enable_kubernetes_bootstrap = false
 
 tags = {
   project      = "irestrict-v3"
-  product      = "iRestrict Version 3"
+  product      = "iRestrict"
   environment  = "lab"
   purpose      = "miva-chapter4-prototype"
   owner        = "oche"

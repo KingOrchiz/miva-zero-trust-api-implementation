@@ -1,0 +1,4 @@
+NAME                                    READY   STATUS    RESTARTS   AGE     IP           NODE                             NOMINATED NODE   READINESS GATES
+sample-financial-api-677f8654f7-crw27   1/1     Running   0          2m43s   10.73.1.14   aks-system-11373536-vmss000000   <none>           <none>
+sample-financial-api-677f8654f7-gcdkb   1/1     Running   0          2m43s   10.73.1.13   aks-system-11373536-vmss000000   <none>           <none>
+synthetic-client-smoke-test-v27t9       0/1     Error     0          2m39s   10.73.1.15   aks-system-11373536-vmss000000   <none>           <none>

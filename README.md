@@ -1,73 +1,85 @@
-# iRestrict Version 3 Prototype
+# iRestrict Laboratory Prototype
 
-Deployable implementation workspace for the iRestrict Version 3 MIVA project: **Design and Implementation of a Zero-Trust, Asymmetric, and Identity-Bound API Authentication Framework for Financial Systems**.
+Reproducible implementation workspace for **Design and Implementation of a Zero-Trust, Asymmetric, and Identity-Bound API Authentication Framework for Financial Systems**.
 
-## Purpose
+The academic artefact is called **iRestrict**. Historical resource and directory identifiers retain `irestrict-v3` where renaming would break Terraform state, Kubernetes references, or evidence paths.
 
-This repository turns the academic Chapter 4 design into a repeatable prototype that can be deployed, tested, destroyed, and redeployed on demand.
+## What this repository demonstrates
 
-## Current implementation status
+- Dedicated Azure AKS and Huawei CCE laboratory infrastructure managed by Terraform.
+- Kubernetes deployments for Keycloak, SPIRE, OPA, OpenTelemetry, a sample financial API, and synthetic clients.
+- T00-T07 policy-path validation on both clouds.
+- Supplementary RFC 9449 DPoP cryptographic validation and local requirement harnesses.
+- Matched baseline-versus-OPA policy-path benchmarks and an offered-load capacity ladder.
 
-Completed:
-- GitHub repository created and connected.
-- HCP Terraform organization and workspace created.
-- Terraform Cloud workspace uses manual apply only.
-- Terraform root module supports two deployment modes:
-  - `existing-clusters`
-  - `dedicated-lab`
-- Azure and Huawei platform modules scaffolded.
-- Kubernetes namespace, SPIRE, OPA, OpenTelemetry, sample API, and synthetic client manifests added.
-- Evidence capture and validation scripts added.
+The cloud validation uses controlled DPoP-, mTLS-, and SPIFFE-style inputs. It does **not** claim production certificate-bound mTLS, cloud-gateway DPoP verification, cross-domain SPIFFE federation, hardware-backed keys, immutable audit storage, or regulatory certification.
 
-Pending Oche confirmation:
-- Azure target environment.
-- Huawei Cloud target environment.
-- Whether to deploy into existing dev/staging clusters or create dedicated lab clusters.
-- Cloud credentials/variables in HCP Terraform.
-- Approval before any `terraform apply` or Kubernetes deployment.
+## Verified 11 August 2026 state
 
-## Target environment
+- Deployment mode: `dedicated-lab` only.
+- Azure target: approved `Jane_Lab` resource group in East US; one `Standard_B2s` AKS node at test time.
+- Huawei target: approved enterprise project in `af-south-1`; two `s6.large.2` CCE nodes at test time.
+- Terraform deployment: 17 resources added, with no pre-existing resources changed or destroyed.
+- T00-T07: 8/8 passed on Azure and 8/8 on Huawei.
+- The 30 ms P95 policy-path target was not met on Azure; it was met only in the bounded Huawei comparison.
+- The 10,000 TPS target was not achieved by either lean laboratory.
+- The laboratory remains billable until an approved destroy is completed.
 
-- Azure: AKS, Key Vault, Monitor or Log Analytics, container registry, public ingress option.
-- Huawei Cloud: CCE, DEW or secrets service, Cloud Eye, Log Tank Service, ELB, DNS, container registry.
-- Shared platform components: Keycloak, SPIRE/SPIFFE, Istio or Envoy, OPA, OpenTelemetry, sample APIs, synthetic clients, audit evidence pipeline.
-
-## Deployment modes
-
-### existing-clusters
-
-Use existing non-production AKS and CCE clusters. Recommended if suitable dev/staging clusters exist.
-
-### dedicated-lab
-
-Terraform creates a dedicated lab foundation. Recommended if existing clusters are unsuitable or too risky.
-
-## Safety principles
-
-- No real customer data.
-- No production deployment without explicit approval.
-- Cost-aware lab sizing.
-- Terraform first, manual changes avoided.
-- Teardown must be available from day one.
-- Secrets must not be committed.
-- Every validation test must produce evidence for Chapter 4.
+See [Issue 6 evidence](evidence/issue6-performance-summary-20260811.md) for measured values and limitations.
 
 ## Repository structure
 
 ```text
-terraform/               HCP Terraform configuration and cloud modules
-k8s/                     Kubernetes manifests for prototype components
-scripts/                 Review, deploy, evidence, and validation scripts
-docs/                    Architecture, implementation plan, and environment review
-evidence/                Test evidence output, gitignored except templates
+terraform/   HCP Terraform configuration and cloud modules
+k8s/         Kubernetes manifests for laboratory components
+scripts/     validation, benchmark, evidence and safety helpers
+docs/        deployment and self-replay runbooks
+evidence/    dated raw outputs and derived summaries
 ```
 
-## Next workflow
+## Safe replay sequence
 
-1. Review Azure/Huawei dev and staging environments.
-2. Select deployment target.
-3. Add cloud variables in HCP Terraform.
-4. Run Terraform plan.
-5. Oche approves any apply.
-6. Deploy Kubernetes manifests only to approved non-production context.
-7. Run validation tests and collect Chapter 4 evidence.
+1. Read [the self-run guide](docs/self-run-login-and-test-guide.md).
+2. Confirm the intended cloud account and dedicated-lab boundary.
+3. Run `./scripts/labctl.sh validate` and `./scripts/labctl.sh status`.
+4. Review `./scripts/labctl.sh plan`; apply only through the approved HCP Terraform gate.
+5. Select and verify the intended Kubernetes context.
+6. Deploy manifests with `DEPLOY_MIVA_CONFIRMED=true ./scripts/deploy-k8s-manifests.sh`.
+7. Run T00-T07 and collect evidence.
+8. Run matched performance trials in alternating order, then the capacity ladder.
+9. Preserve raw evidence and generate a destroy plan.
+10. Destroy only after explicit approval.
+
+## Minimum validation commands
+
+```bash
+./scripts/labctl.sh validate
+kubectl config current-context
+RUN_ID="manual-$(date +%F-%H%M%S)"
+./scripts/run-validation-tests.sh "$RUN_ID"
+./scripts/collect-evidence.sh "$RUN_ID"
+
+K6_VUS=50 K6_DURATION=15s K6_BASELINE_START=0s K6_SECURED_START=20s \
+  ./scripts/run-k6-benchmark.sh "${RUN_ID}-baseline-first"
+K6_VUS=50 K6_DURATION=15s K6_BASELINE_START=20s K6_SECURED_START=0s \
+  ./scripts/run-k6-benchmark.sh "${RUN_ID}-secured-first"
+./scripts/run-k6-capacity.sh "${RUN_ID}-capacity"
+```
+
+## Safety and evidence rules
+
+- Never use production systems or customer data.
+- Confirm `kubectl config current-context` before every deployment or test.
+- Store secrets only in approved secret stores or sensitive HCP Terraform variables.
+- Do not commit kubeconfigs, private keys, `.tfvars`, state files, tokens, or credentials.
+- Preserve the raw log, generated job manifest, cluster/node inventory, tool versions, test order, and timestamps for every run.
+- Treat the baseline endpoint bypass as a laboratory benchmark control, never as a production mode.
+- Do not present controlled proof headers as full cryptographic enforcement.
+
+## Teardown
+
+```bash
+./scripts/labctl.sh destroy-plan
+```
+
+Review the exact targets and resource count before approving destroy in HCP Terraform. The helper deliberately does not execute apply or destroy itself.

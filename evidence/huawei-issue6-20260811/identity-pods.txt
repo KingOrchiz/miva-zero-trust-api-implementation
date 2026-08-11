@@ -1,0 +1,2 @@
+NAME                        READY   STATUS              RESTARTS   AGE     IP       NODE         NOMINATED NODE   READINESS GATES
+keycloak-585c8989f8-c592h   0/1     ContainerCreating   0          4m30s   <none>   10.83.1.38   <none>           <none>

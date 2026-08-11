@@ -12,6 +12,20 @@ RAW="$OUT/security-test-raw.jsonl"
 NS="irestrict-apps"
 SERVICE="http://sample-financial-api.irestrict-apps.svc.cluster.local"
 RUNNER="validation-runner-$RUN_ID"
+
+{
+  echo "Run ID: $RUN_ID"
+  echo "Collected: $(date -Is)"
+  echo "Namespace: $NS"
+  echo "Target service: $SERVICE"
+  echo -n "Kubernetes context: "
+  kubectl config current-context 2>/dev/null || true
+} > "$OUT/validation-context.txt"
+
+kubectl get nodes -o wide > "$OUT/pre-validation-nodes.txt" 2>&1 || true
+kubectl get pods -A -o wide > "$OUT/pre-validation-pods.txt" 2>&1 || true
+
+RUNNER="validation-runner-$RUN_ID"
 RUNNER="${RUNNER//:/-}"
 RUNNER="${RUNNER//_/-}"
 
@@ -65,7 +79,7 @@ raw, out = sys.argv[1:3]
 rows = [json.loads(line) for line in open(raw) if line.strip()]
 latencies = [r["elapsed_ms"] for r in rows if r["result"] == "Pass"]
 with open(out, "w") as f:
-    f.write("# iRestrict Version 3 Security Validation Results\n\n")
+    f.write("# iRestrict Security Validation Results\n\n")
     f.write(f"Collected: {datetime.datetime.now().astimezone().isoformat()}\n\n")
     f.write("| Test ID | Scenario | Expected Result | Actual Result | Status | Evidence |\n")
     f.write("|---|---|---:|---:|---|---|\n")
@@ -81,6 +95,9 @@ with open(out, "w") as f:
     f.write("\n## Interpretation\n\n")
     f.write("The tests show policy-based allow and deny behavior for identity, DPoP-style proof, mTLS-style verification, SPIFFE-style workload identity, route authorization, and contextual risk. The proof signals are represented as controlled validation headers in the prototype API so the dissertation can demonstrate the authorization logic without relying on production certificates or live banking data.\n")
 PY
+
+kubectl get nodes -o wide > "$OUT/post-validation-nodes.txt" 2>&1 || true
+kubectl get pods -A -o wide > "$OUT/post-validation-pods.txt" 2>&1 || true
 
 cat "$RESULTS"
 echo "Validation results written to $RESULTS"

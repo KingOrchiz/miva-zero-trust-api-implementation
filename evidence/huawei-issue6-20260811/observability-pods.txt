@@ -1,0 +1,2 @@
+NAME                              READY   STATUS    RESTARTS   AGE     IP            NODE          NOMINATED NODE   READINESS GATES
+otel-collector-775bbc666f-jdfd7   1/1     Running   0          4m30s   172.16.0.35   10.83.1.158   <none>           <none>

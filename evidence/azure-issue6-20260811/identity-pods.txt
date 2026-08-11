@@ -1,0 +1,2 @@
+NAME                        READY   STATUS    RESTARTS   AGE    IP           NODE                             NOMINATED NODE   READINESS GATES
+keycloak-585c8989f8-glkmj   1/1     Running   0          3m4s   10.73.1.19   aks-system-11373536-vmss000000   <none>           <none>

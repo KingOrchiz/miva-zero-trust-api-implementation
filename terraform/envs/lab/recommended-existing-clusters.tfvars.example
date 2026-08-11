@@ -1,6 +1,7 @@
-# Recommended existing-clusters profile from read-only environment review.
-# Copy to a secure Terraform Cloud variable set or local .tfvars only after approval.
-# Do not commit real secrets or kubeconfig data.
+# DEPRECATED / DO NOT USE for Oche's MIVA project cycle.
+# Oche confirmed on 2026-07-29 that this work must use dedicated lab environments only.
+# This file is retained only as historical reference from the read-only environment review.
+# Do not copy this into HCP Terraform for the MIVA implementation project.
 
 project          = "miva-zt-api-auth"
 environment      = "lab"

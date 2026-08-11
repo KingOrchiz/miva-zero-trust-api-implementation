@@ -1,0 +1,1 @@
+Error from server (BadRequest): container "keycloak" in pod "keycloak-585c8989f8-c592h" is waiting to start: ContainerCreating

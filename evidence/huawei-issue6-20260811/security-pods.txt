@@ -1,0 +1,5 @@
+NAME                   READY   STATUS             RESTARTS       AGE     IP            NODE          NOMINATED NODE   READINESS GATES
+opa-5f989d48b6-lg26c   1/1     Running            0              4m29s   172.16.0.20   10.83.1.38    <none>           <none>
+spire-agent-d6bbs      0/1     Error              4 (117s ago)   4m29s   172.16.0.21   10.83.1.38    <none>           <none>
+spire-agent-l5hj8      0/1     Error              2 (23s ago)    4m29s   172.16.0.37   10.83.1.158   <none>           <none>
+spire-server-0         0/1     ImagePullBackOff   0              4m29s   172.16.0.36   10.83.1.158   <none>           <none>

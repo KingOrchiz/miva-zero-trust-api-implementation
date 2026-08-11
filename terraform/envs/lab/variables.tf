@@ -17,12 +17,12 @@ variable "environment" {
 
 variable "deployment_mode" {
   type        = string
-  description = "Deployment mode: dedicated-lab or existing-clusters."
+  description = "Deployment mode. For the MIVA/iRestrict v3 reproducible lab, only dedicated-lab is permitted."
   default     = "dedicated-lab"
 
   validation {
-    condition     = contains(["dedicated-lab", "existing-clusters"], var.deployment_mode)
-    error_message = "deployment_mode must be dedicated-lab or existing-clusters."
+    condition     = var.deployment_mode == "dedicated-lab"
+    error_message = "Only deployment_mode=dedicated-lab is permitted for the MIVA/iRestrict v3 reproducible lab. Existing enterprise/dev/staging clusters must not be targeted."
   }
 }
 
@@ -111,8 +111,9 @@ variable "huawei_node_flavor_id" {
 }
 
 variable "huawei_node_count" {
-  type    = number
-  default = 1
+  type        = number
+  description = "Huawei CCE worker node count. Default is 2 so managed add-on replicas can satisfy anti-affinity in the dedicated lab."
+  default     = 2
 }
 
 variable "huawei_node_availability_zone" {
@@ -153,8 +154,8 @@ variable "create_huawei_node_pool" {
 
 variable "azure_existing_resource_group_name" {
   type        = string
-  description = "Existing Azure resource group for dev/staging mode. Not used in dedicated-lab mode."
-  default     = ""
+  description = "Pre-created Azure resource group for the dedicated lab. Also used by historical existing-clusters mode."
+  default     = "Jane_Lab"
 }
 
 variable "azure_existing_aks_cluster_name" {

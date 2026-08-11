@@ -1,0 +1,7 @@
+NAMESPACE                 NAME                     READY   UP-TO-DATE   AVAILABLE   AGE     CONTAINERS               IMAGES                                                        SELECTOR
+irestrict-apps            sample-financial-api     2/2     2            2           4m28s   api                      python:3.12-alpine                                            app=sample-financial-api
+irestrict-identity        keycloak                 0/1     1            0           4m30s   keycloak                 keycloak/keycloak:26.0.7                                      app=keycloak
+irestrict-observability   otel-collector           1/1     1            1           4m30s   otel-collector           otel/opentelemetry-collector-contrib:0.113.0                  app=otel-collector
+irestrict-security        opa                      1/1     1            1           4m29s   opa                      openpolicyagent/opa:1.4.2                                     app=opa
+kube-system               coredns                  2/2     2            2           8m50s   coredns                  swr.af-south-1.myhuaweicloud.com/hwofficial/coredns:1.30.94   app=coredns,k8s-app=coredns
+kube-system               everest-csi-controller   2/2     2            2           8m48s   everest-csi-controller   swr.af-south-1.myhuaweicloud.com/hwofficial/everest:2.5.66    app=everest-csi-controller

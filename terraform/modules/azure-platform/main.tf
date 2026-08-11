@@ -2,7 +2,7 @@ locals {
   prefix                       = "${var.project}-${var.environment}"
   compact_prefix               = substr(replace(local.prefix, "-", ""), 0, 18)
   create_dedicated             = var.deployment_mode == "dedicated-lab"
-  resource_group_name          = local.create_dedicated ? "rg-${local.prefix}" : var.existing_resource_group_name
+  resource_group_name          = local.create_dedicated && var.create_resource_group ? "rg-${local.prefix}" : var.existing_resource_group_name
   aks_cluster_name             = local.create_dedicated ? "aks-${local.prefix}" : var.existing_aks_cluster_name
   container_registry_name      = substr("acr${local.compact_prefix}", 0, 50)
   log_analytics_workspace_name = "law-${local.prefix}"

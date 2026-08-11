@@ -1,0 +1,7 @@
+NAMESPACE        NAME                                         STATUS     COMPLETIONS   DURATION   AGE     CONTAINERS   IMAGES                   SELECTOR
+irestrict-apps   k6-benchmark-azure-issue6-perf-01            Complete   1/1           54s        4h35m   k6           grafana/k6:0.55.0        batch.kubernetes.io/controller-uid=fa302bb1-6b27-435f-8b99-a7f62413ea8a
+irestrict-apps   k6-benchmark-azure-issue6-perf-02            Complete   1/1           50s        4h34m   k6           grafana/k6:0.55.0        batch.kubernetes.io/controller-uid=9fcbd126-e56d-4f2a-9ad5-94b58856eeac
+irestrict-apps   k6-benchmark-azure-issue6-tagged-01          Complete   1/1           39s        4h30m   k6           grafana/k6:0.55.0        batch.kubernetes.io/controller-uid=d7495093-2b84-451a-8727-5f98e18594f9
+irestrict-apps   k6-benchmark-azure-issue6-tagged-02          Complete   1/1           40s        4h30m   k6           grafana/k6:0.55.0        batch.kubernetes.io/controller-uid=ea6e5698-7719-4e07-9a5a-48acbe9ee6e5
+irestrict-apps   k6-capacity-azure-issue6-capacity-20260811   Complete   1/1           105s       4h26m   k6           grafana/k6:0.55.0        batch.kubernetes.io/controller-uid=15c206d0-8818-43a6-a517-b34281a56df5
+irestrict-apps   synthetic-client-smoke-test                  Failed     0/1           4h41m      4h41m   client       curlimages/curl:8.10.1   batch.kubernetes.io/controller-uid=b257a65e-9078-4b49-bc4d-7ade2fd991cc

@@ -1,0 +1,47 @@
+T00 health
+{
+  "status": "ok",
+  "service": "sample-financial-api"
+}
+T01 valid OPA decision
+{
+  "decision": "allow",
+  "policy": "OPA",
+  "workload_identity": "spiffe://miva.local/ns/irestrict-apps/sa/sample-financial-api",
+  "accounts": [
+    {
+      "id": "demo-001",
+      "balance": "redacted"
+    }
+  ]
+}
+T02 missing DPoP should deny
+{
+  "decision": "deny",
+  "deny_reason": [
+    "invalid_dpop"
+  ],
+  "input": {
+    "method": "GET",
+    "path": [
+      "v1",
+      "accounts"
+    ],
+    "claims": {
+      "scope": [
+        "accounts.read"
+      ]
+    },
+    "spiffe_id": "spiffe://miva.local/ns/irestrict-apps/sa/sample-financial-api",
+    "dpop": {
+      "valid": false
+    },
+    "mtls": {
+      "verified": true
+    },
+    "risk": {
+      "level": "low"
+    }
+  }
+}
+Synthetic client tests completed.

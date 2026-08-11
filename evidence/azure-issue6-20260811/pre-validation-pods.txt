@@ -1,0 +1,27 @@
+NAMESPACE                 NAME                                                   READY   STATUS    RESTARTS   AGE     IP           NODE                             NOMINATED NODE   READINESS GATES
+irestrict-apps            sample-financial-api-677f8654f7-crw27                  1/1     Running   0          84s     10.73.1.14   aks-system-11373536-vmss000000   <none>           <none>
+irestrict-apps            sample-financial-api-677f8654f7-gcdkb                  1/1     Running   0          84s     10.73.1.13   aks-system-11373536-vmss000000   <none>           <none>
+irestrict-apps            synthetic-client-smoke-test-v27t9                      0/1     Error     0          80s     10.73.1.15   aks-system-11373536-vmss000000   <none>           <none>
+irestrict-identity        keycloak-585c8989f8-glkmj                              1/1     Running   0          106s    10.73.1.19   aks-system-11373536-vmss000000   <none>           <none>
+irestrict-observability   otel-collector-64cb8f97cb-v2lpm                        1/1     Running   0          103s    10.73.1.9    aks-system-11373536-vmss000000   <none>           <none>
+irestrict-security        opa-7ff59bc48c-66c6z                                   1/1     Running   0          98s     10.73.1.29   aks-system-11373536-vmss000000   <none>           <none>
+irestrict-security        spire-agent-9gz48                                      1/1     Running   0          88s     10.73.1.11   aks-system-11373536-vmss000000   <none>           <none>
+irestrict-security        spire-server-0                                         1/1     Running   0          91s     10.73.1.25   aks-system-11373536-vmss000000   <none>           <none>
+kube-system               ama-logs-rs-7d6b8f56b4-qlzl5                           1/1     Running   0          6m7s    10.73.1.5    aks-system-11373536-vmss000000   <none>           <none>
+kube-system               ama-logs-sfnfq                                         2/2     Running   0          6m7s    10.73.1.8    aks-system-11373536-vmss000000   <none>           <none>
+kube-system               azure-cns-5cpjz                                        1/1     Running   0          6m59s   10.73.1.4    aks-system-11373536-vmss000000   <none>           <none>
+kube-system               azure-ip-masq-agent-c2fr6                              1/1     Running   0          6m59s   10.73.1.4    aks-system-11373536-vmss000000   <none>           <none>
+kube-system               azure-wi-webhook-controller-manager-8487997549-bck5m   1/1     Running   0          8m4s    10.73.1.22   aks-system-11373536-vmss000000   <none>           <none>
+kube-system               azure-wi-webhook-controller-manager-8487997549-dg52w   1/1     Running   0          8m4s    10.73.1.7    aks-system-11373536-vmss000000   <none>           <none>
+kube-system               cloud-node-manager-9vg4h                               1/1     Running   0          6m59s   10.73.1.4    aks-system-11373536-vmss000000   <none>           <none>
+kube-system               coredns-5d474ff6db-jxp74                               1/1     Running   0          6m14s   10.73.1.30   aks-system-11373536-vmss000000   <none>           <none>
+kube-system               coredns-5d474ff6db-pnngs                               1/1     Running   0          7m32s   10.73.1.12   aks-system-11373536-vmss000000   <none>           <none>
+kube-system               coredns-autoscaler-6769f8f9b-lv2qf                     1/1     Running   0          7m32s   10.73.1.23   aks-system-11373536-vmss000000   <none>           <none>
+kube-system               csi-azuredisk-node-bxq9f                               3/3     Running   0          6m59s   10.73.1.4    aks-system-11373536-vmss000000   <none>           <none>
+kube-system               csi-azurefile-node-j2hdq                               4/4     Running   0          6m59s   10.73.1.4    aks-system-11373536-vmss000000   <none>           <none>
+kube-system               konnectivity-agent-79c869f8bf-f76kb                    1/1     Running   0          6m14s   10.73.1.21   aks-system-11373536-vmss000000   <none>           <none>
+kube-system               konnectivity-agent-79c869f8bf-lzbn8                    1/1     Running   0          7m31s   10.73.1.20   aks-system-11373536-vmss000000   <none>           <none>
+kube-system               konnectivity-agent-autoscaler-7c54b597d4-gkrpj         1/1     Running   0          7m31s   10.73.1.10   aks-system-11373536-vmss000000   <none>           <none>
+kube-system               kube-proxy-d89bt                                       1/1     Running   0          6m59s   10.73.1.4    aks-system-11373536-vmss000000   <none>           <none>
+kube-system               metrics-server-699498b485-6vb8q                        2/2     Running   0          6m8s    10.73.1.24   aks-system-11373536-vmss000000   <none>           <none>
+kube-system               metrics-server-699498b485-f58vd                        2/2     Running   0          6m8s    10.73.1.6    aks-system-11373536-vmss000000   <none>           <none>
