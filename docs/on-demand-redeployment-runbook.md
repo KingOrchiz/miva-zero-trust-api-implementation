@@ -44,10 +44,17 @@ A run is reproducible only when its evidence directory contains the environment 
 ## Destroy sequence
 
 ```bash
-./scripts/labctl.sh destroy-plan
+./scripts/teardown-lab.sh plan
 ```
 
-Verify that the plan targets only the dedicated lab resources. Approve destroy through HCP Terraform only after evidence preservation and explicit teardown approval.
+Verify that the plan targets only the dedicated Azure and Huawei lab resources. The existing Azure resource group is referenced as a data source and is not managed for deletion. After evidence preservation and explicit teardown approval, run the gated destroy:
+
+```bash
+DESTROY_MIVA_CONFIRMED=destroy-dedicated-azure-and-huawei-lab \
+  ./scripts/teardown-lab.sh destroy
+```
+
+Terraform regenerates the plan and asks for final confirmation. Approve only if the scope still matches the reviewed preview. After completion, run `./scripts/teardown-lab.sh verify` and check both cloud billing consoles for residual resources.
 
 ## Failure handling
 
