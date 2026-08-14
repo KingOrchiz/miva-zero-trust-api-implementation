@@ -115,7 +115,7 @@ spec:
           image: grafana/k6:0.55.0
           resources:
             requests:
-              cpu: 500m
+              cpu: 250m
               memory: 256Mi
             limits:
               cpu: "1"
