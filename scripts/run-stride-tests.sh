@@ -50,7 +50,7 @@ case_run E01 "Elevation of Privilege" "Ordinary account scope denied on admin ro
 case_run E02 "Elevation of Privilege" "Unknown workload denied on admin route" 403 GET /v1/admin/audit "-H 'x-correlation-id: stride-e02' -H 'x-demo-scope: admin.audit' -H 'x-demo-dpop: true' -H 'x-demo-mtls: true' -H 'x-demo-spiffe-id: spiffe://miva.local/ns/default/sa/unknown'"
 
 sleep 2
-kubectl logs -n "$NS" -l app=sample-financial-api --since=10m --prefix > "$OUT/api-audit-logs.txt"
+kubectl logs -n "$NS" -l app=sample-financial-api --since=10m --tail=-1 --prefix > "$OUT/api-audit-logs.txt"
 for cid in stride-s01 stride-t01 stride-t02 stride-t03 stride-i01 stride-e01 stride-e02; do
   if grep -q "\"correlation_id\": \"$cid\"" "$OUT/api-audit-logs.txt"; then
     printf '{"id":"R-%s","category":"Repudiation","scenario":"correlated audit record present","expected":1,"actual":1,"result":"Pass","response":"%s"}\n' "$cid" "$cid" >> "$RAW"
