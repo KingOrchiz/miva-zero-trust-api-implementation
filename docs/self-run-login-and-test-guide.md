@@ -105,6 +105,14 @@ RUN_ID="manual-$(date +%F-%H%M%S)"
 
 Expected result: T00-T07 show `Pass`. The tests demonstrate policy-path behaviour with controlled DPoP-, mTLS- and SPIFFE-style signals; they do not establish production cryptographic enforcement.
 
+For the final prototype STRIDE confirmation, run the dedicated replay during the approved bounded-load window:
+
+```bash
+STRIDE_MIVA_CONFIRMED=true STRIDE_LOAD_CONFIRMED=true ./scripts/replay-stride.sh huawei
+```
+
+Accept it only when the baseline, DPoP, requirements, live STRIDE cases, evidence secret scan and checksums pass. The 40-request burst is a bounded recovery check, not a production-capacity or destructive denial-of-service test. Production gateway proof enforcement and immutable audit retention remain target-design claims.
+
 ## 7. Run matched performance trials
 
 Use alternating order to reduce warm-up/order bias:

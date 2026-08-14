@@ -44,7 +44,11 @@ kubectl apply -f "$ROOT/k8s/opa/opa-deployment.yaml"
 kubectl apply -f "$ROOT/k8s/spire/rbac.yaml"
 kubectl apply -f "$ROOT/k8s/spire/server.yaml"
 kubectl apply -f "$ROOT/k8s/spire/agent.yaml"
-kubectl apply -f "$ROOT/k8s/apps/sample-api.yaml"
+api_apply_output="$(kubectl apply -f "$ROOT/k8s/apps/sample-api.yaml")"
+printf '%s\n' "$api_apply_output"
+if printf '%s\n' "$api_apply_output" | grep -q 'configmap/sample-financial-api-code configured'; then
+  kubectl -n irestrict-apps rollout restart deployment/sample-financial-api
+fi
 kubectl apply -f "$ROOT/k8s/apps/synthetic-client.yaml"
 
 for deployment in \

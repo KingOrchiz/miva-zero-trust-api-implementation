@@ -12,6 +12,7 @@ metadata:
 data:
   app.py: |
     import json
+    import hashlib
     import os
     import time
     import urllib.request
@@ -41,14 +42,29 @@ data:
                 return self._send(200, {"status": "ok", "service": "sample-financial-api"})
             if self.path == "/v1/accounts":
                 return self.authorize_and_respond("GET", ["v1", "accounts"], {"accounts": [{"id": "demo-001", "balance": "redacted"}]})
+            if self.path == "/v1/admin/audit":
+                return self.authorize_and_respond("GET", ["v1", "admin", "audit"], {"audit": "authorized_demo"})
             return self._send(404, {"error": "not_found"})
 
         def do_POST(self):
             if self.path == "/v1/payments":
-                return self.authorize_and_respond("POST", ["v1", "payments"], {"payment": "accepted_for_demo"})
+                length = int(self.headers.get("content-length", "0"))
+                body = self.rfile.read(length) if length else b""
+                return self.authorize_and_respond("POST", ["v1", "payments"], {"payment": "accepted_for_demo"}, body)
             return self._send(404, {"error": "not_found"})
 
-        def authorize_and_respond(self, method, path_parts, success_payload):
+        def authorize_and_respond(self, method, path_parts, success_payload, body=b""):
+            correlation_id = self.headers.get("x-correlation-id", "missing")[:128]
+            request_path = "/" + "/".join(path_parts)
+            body_sha256 = hashlib.sha256(body).hexdigest()
+            proof_method = self.headers.get("x-demo-proof-method", method)
+            proof_uri = self.headers.get("x-demo-proof-uri", request_path)
+            proof_body_sha256 = self.headers.get("x-demo-proof-body-sha256", body_sha256)
+            binding_valid = (
+                proof_method == method
+                and proof_uri == request_path
+                and proof_body_sha256 == body_sha256
+            )
             benchmark_response = self.headers.get("x-benchmark-response", "false").lower() == "true"
             benchmark_bypass = (
                 ALLOW_BENCHMARK_BYPASS
@@ -61,7 +77,10 @@ data:
                     "path": path_parts,
                     "claims": {"scope": parse_scopes(self.headers.get("x-demo-scope", ""))},
                     "spiffe_id": self.headers.get("x-demo-spiffe-id", SPIFFE_ID),
-                    "dpop": {"valid": self.headers.get("x-demo-dpop", "false").lower() == "true"},
+                    "dpop": {
+                        "valid": self.headers.get("x-demo-dpop", "false").lower() == "true" and binding_valid,
+                        "binding_valid": binding_valid,
+                    },
                     "mtls": {"verified": self.headers.get("x-demo-mtls", "false").lower() == "true"},
                     "risk": {"level": self.headers.get("x-demo-risk", "low")},
                 }
@@ -78,15 +97,31 @@ data:
                     allowed = bool(decision.get("result", {}).get("allow", False))
                     deny_reason = decision.get("result", {}).get("deny_reason", [])
                 except Exception as exc:
-                    return self._send(503, {"error": "policy_engine_unavailable", "detail": str(exc)})
+                    self.audit(correlation_id, method, request_path, input_doc, "error", ["policy_engine_unavailable"])
+                    return self._send(503, {"error": "policy_engine_unavailable", "correlation_id": correlation_id})
             if not allowed:
-                return self._send(403, {"decision": "deny", "deny_reason": deny_reason, "input": input_doc["input"]})
+                self.audit(correlation_id, method, request_path, input_doc, "deny", deny_reason)
+                return self._send(403, {"decision": "deny", "deny_reason": deny_reason, "correlation_id": correlation_id})
             if benchmark_response:
                 payload = success_payload
             else:
-                payload = {"decision": "allow", "policy": "OPA", "workload_identity": input_doc["input"]["spiffe_id"]}
+                payload = {"decision": "allow", "policy": "OPA", "workload_identity": input_doc["input"]["spiffe_id"], "correlation_id": correlation_id}
                 payload.update(success_payload)
+            self.audit(correlation_id, method, request_path, input_doc, "allow", [])
             return self._send(200, payload)
+
+        def audit(self, correlation_id, method, path, input_doc, decision, reasons):
+            print(json.dumps({
+                "event": "authorization_decision",
+                "ts": time.time(),
+                "correlation_id": correlation_id,
+                "method": method,
+                "path": path,
+                "workload_identity": input_doc["input"]["spiffe_id"],
+                "scopes": input_doc["input"]["claims"]["scope"],
+                "decision": decision,
+                "decision_reason": reasons,
+            }), flush=True)
 
     if __name__ == "__main__":
         ThreadingHTTPServer(("0.0.0.0", 8080), Handler).serve_forever()

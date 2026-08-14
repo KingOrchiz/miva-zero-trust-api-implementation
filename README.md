@@ -45,6 +45,7 @@ evidence/    dated raw outputs and derived summaries
 4. Review `./scripts/labctl.sh plan`; apply only through the approved HCP Terraform gate.
 5. Select and verify the intended Kubernetes context.
 6. Deploy manifests with `IRESTRICT_TARGET_CLOUD=<azure|huawei> DEPLOY_MIVA_CONFIRMED=true ./scripts/deploy-k8s-manifests.sh` and an explicit kubeconfig.
+7. For full prototype STRIDE evidence, use `STRIDE_MIVA_CONFIRMED=true STRIDE_LOAD_CONFIRMED=true ./scripts/replay-stride.sh <azure|huawei>` only in the approved lab/load window.
 7. Run T00-T07 and collect evidence.
 8. Run matched performance trials in alternating order, then the capacity ladder.
 9. Preserve raw evidence and generate a destroy plan.
@@ -58,6 +59,8 @@ REPLAY_MIVA_CONFIRMED=true ./scripts/replay-defence.sh huawei
 ```
 
 See [credential lifecycle](docs/credential-lifecycle.md) and [STRIDE test plan](docs/stride-test-plan.md).
+
+The STRIDE replay preserves baseline T00-T07, DPoP and requirement results, then adds live method/URI/body tampering, audit correlation, response-disclosure, administrative-boundary and bounded availability/recovery cases. It does not claim production gateway cryptography or immutable log retention where those target controls are not deployed.
 
 ## Minimum validation commands
 

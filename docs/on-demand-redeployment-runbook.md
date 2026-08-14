@@ -71,3 +71,12 @@ Targeting is permitted only when live refresh proves the CCE cluster/node pool w
 ## STRIDE evidence
 
 T00-T07 are control tests, not a complete threat model. Use [the STRIDE test plan](stride-test-plan.md) to state which categories are validated, partially validated, target design, or not tested.
+
+After the ordinary replay passes, run the dedicated suite inside the approved lab/load window:
+
+```bash
+export KUBECONFIG="$HOME/.kube/irestrict-huawei/kubeconfig.yaml"
+STRIDE_MIVA_CONFIRMED=true STRIDE_LOAD_CONFIRMED=true ./scripts/replay-stride.sh huawei
+```
+
+Accept the run only when the baseline matrix, supplementary harnesses, live STRIDE matrix and evidence checksums all pass. Preserve the prior evidence directories; the STRIDE run uses a new run ID.
