@@ -57,13 +57,13 @@ variable "azure_aks_subnet_prefixes" {
 
 variable "azure_aks_node_count" {
   type        = number
-  description = "Lean default node count for the dedicated AKS lab."
-  default     = 1
+  description = "Fixed two-node count for cross-cloud parity with the Huawei CCE lab."
+  default     = 2
 }
 
 variable "azure_aks_min_count" {
   type    = number
-  default = 1
+  default = 2
 }
 
 variable "azure_aks_max_count" {
@@ -73,8 +73,8 @@ variable "azure_aks_max_count" {
 
 variable "azure_aks_vm_size" {
   type        = string
-  description = "Lean AKS node size. Standard_B2s is cheap; use Standard_B2ms if Keycloak/SPIRE need more memory."
-  default     = "Standard_B2s"
+  description = "Non-burstable 2-vCPU/4-GiB AKS node size selected for parity with Huawei s6.large.2 workers."
+  default     = "Standard_F2s_v2"
 }
 
 variable "huawei_enterprise_project_id" {

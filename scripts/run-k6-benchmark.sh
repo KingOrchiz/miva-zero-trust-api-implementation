@@ -14,6 +14,14 @@ CM="${JOB}-script"
 cat > "$OUT/k6-script.js" <<'JS'
 import http from 'k6/http';
 import { check, sleep } from 'k6';
+import { Counter, Rate, Trend } from 'k6/metrics';
+
+const baselineDuration = new Trend('baseline_duration', true);
+const securedDuration = new Trend('secured_duration', true);
+const baselineRequests = new Counter('baseline_requests');
+const securedRequests = new Counter('secured_requests');
+const baselineFailures = new Rate('baseline_failures');
+const securedFailures = new Rate('secured_failures');
 
 export const options = {
   scenarios: {
@@ -53,6 +61,9 @@ export function baseline() {
     },
     tags: { path: 'baseline' },
   });
+  baselineDuration.add(r.timings.duration);
+  baselineRequests.add(1);
+  baselineFailures.add(r.status !== 200);
   check(r, { 'baseline 200': (res) => res.status === 200 });
 }
 
@@ -66,6 +77,9 @@ export function secured() {
     },
     tags: { path: 'secured' },
   });
+  securedDuration.add(r.timings.duration);
+  securedRequests.add(1);
+  securedFailures.add(r.status !== 200);
   check(r, { 'secured 200': (res) => res.status === 200 });
 }
 JS
@@ -82,11 +96,30 @@ metadata:
 spec:
   backoffLimit: 0
   template:
+    metadata:
+      labels:
+        app: k6-benchmark
     spec:
       restartPolicy: Never
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            - labelSelector:
+                matchLabels:
+                  app: opa
+              namespaces:
+                - irestrict-security
+              topologyKey: kubernetes.io/hostname
       containers:
         - name: k6
           image: grafana/k6:0.55.0
+          resources:
+            requests:
+              cpu: 500m
+              memory: 256Mi
+            limits:
+              cpu: "1"
+              memory: 512Mi
           env:
             - name: SERVICE_URL
               value: "$SERVICE"
@@ -125,7 +158,7 @@ for line in log.splitlines():
         break
 if out[-1]=='```text':
     for line in log.splitlines():
-        if any(k in line for k in ['http_req_duration','http_req_failed','checks','iterations','vus','data_received','data_sent']):
+        if any(k in line for k in ['baseline_duration','secured_duration','baseline_requests','secured_requests','baseline_failures','secured_failures','http_req_duration','http_req_failed','checks','iterations','vus','data_received','data_sent']):
             out.append(line)
     out.append('```')
 else:

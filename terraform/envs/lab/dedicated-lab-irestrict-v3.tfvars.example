@@ -13,10 +13,10 @@ azure_existing_resource_group_name = "Jane_Lab"
 azure_location            = "eastus"
 azure_address_space       = ["10.73.0.0/16"]
 azure_aks_subnet_prefixes = ["10.73.1.0/24"]
-azure_aks_node_count      = 1
-azure_aks_min_count       = 1
+azure_aks_node_count      = 2
+azure_aks_min_count       = 2
 azure_aks_max_count       = 2
-azure_aks_vm_size         = "Standard_B2s"
+azure_aks_vm_size         = "Standard_F2s_v2"
 
 # Huawei: closest practical region already reviewed.
 huawei_region                = "af-south-1"

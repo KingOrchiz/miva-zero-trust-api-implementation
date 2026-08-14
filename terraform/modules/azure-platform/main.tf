@@ -92,6 +92,12 @@ resource "azurerm_kubernetes_cluster" "this" {
     max_count           = var.aks_max_count
     vnet_subnet_id      = azurerm_subnet.aks[0].id
     os_disk_size_gb     = 64
+
+    upgrade_settings {
+      max_surge                     = "10%"
+      drain_timeout_in_minutes      = 0
+      node_soak_duration_in_minutes = 0
+    }
   }
 
   identity {
