@@ -16,7 +16,7 @@ Use a clean, dedicated lab instead of shared staging clusters. The implementatio
 - Azure Container Registry: Basic SKU
 - Key Vault: Standard SKU
 - Log Analytics: 30-day retention
-- AKS nodes: 1 x `Standard_B2s`, autoscale 1 to 2
+- AKS nodes: 2 x `Standard_F2s_v2` for the final parity evaluation
 
 ### Huawei Cloud
 
@@ -99,7 +99,7 @@ Also required before apply:
 
 - Confirm an existing Huawei ECS key pair name for `huawei_node_key_pair`.
 - Confirm `cce.s1.small` and `s6.large.2` are available in `af-south-1`.
-- Confirm quota for one CCE cluster, one worker node, EVS volumes, and any required load balancer.
+- Confirm quota for one CCE cluster, two worker nodes, EVS volumes, and any required load balancer.
 
 ## What not to do yet
 

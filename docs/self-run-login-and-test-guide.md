@@ -127,13 +127,14 @@ K6_VUS=50 K6_DURATION=15s K6_BASELINE_START=20s K6_SECURED_START=0s \
 
 The baseline calls the same endpoint and response shape but bypasses the OPA HTTP decision. Report the measured P50/P95/P99, failure rate and request count from the raw log. Do not describe the difference as full DPoP/mTLS/SPIFFE overhead.
 
-## 8. Run the capacity ladder
+## 8. Run the fixed-rate cross-cloud standard
 
 ```bash
-./scripts/run-k6-capacity.sh "${RUN_ID}-capacity"
+K6_RATE=300 K6_DURATION=60s \
+  ./scripts/run-k6-standard.sh "${RUN_ID}-300rps-60s"
 ```
 
-The job offers 500, 1,000, 2,000, 5,000 and 10,000 RPS. A configured offered rate is not achieved throughput. Use completed requests, dropped iterations, latency and failures to determine the sustainable boundary.
+Accept the run only when all scheduled iterations complete, HTTP failures remain below 1%, dropped iterations are zero, workload restart counts do not increase, and the post-test health check passes. Report P50, P95 and P99 from the retained raw log. Run the identical command and workload configuration in each cloud.
 
 ## 9. Supplementary local harnesses
 

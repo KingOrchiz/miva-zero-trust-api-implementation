@@ -34,7 +34,7 @@ After apply:
 2. Verify `kubectl config current-context` and `kubectl get nodes`.
 3. Run `IRESTRICT_TARGET_CLOUD=<azure|huawei> DEPLOY_MIVA_CONFIRMED=true ./scripts/deploy-k8s-manifests.sh` with the cloud's kubeconfig explicitly selected.
 4. Wait for the sample API and OPA deployments and SPIRE workloads.
-5. Run T00-T07, evidence collection, two alternating matched trials and the capacity ladder.
+5. Run T00-T07, the dedicated STRIDE replay, evidence collection, and the fixed-rate 300-RPS secured-path standard for 60 seconds.
 6. Preserve the raw output before any teardown.
 
 ## Reproducibility rule
