@@ -86,7 +86,6 @@ resource "azurerm_kubernetes_cluster" "this" {
   default_node_pool {
     name                = "system"
     vm_size             = var.aks_vm_size
-    node_count          = var.aks_node_count
     enable_auto_scaling = true
     min_count           = var.aks_min_count
     max_count           = var.aks_max_count
