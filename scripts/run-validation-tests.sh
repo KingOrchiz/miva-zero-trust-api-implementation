@@ -94,6 +94,8 @@ with open(out, "w") as f:
         f.write("No passing latency observations were available.\n")
     f.write("\n## Interpretation\n\n")
     f.write("The tests show policy-based allow and deny behavior for identity, DPoP-style proof, mTLS-style verification, SPIFFE-style workload identity, route authorization, and contextual risk. The proof signals are represented as controlled validation headers in the prototype API so the dissertation can demonstrate the authorization logic without relying on production certificates or live banking data.\n")
+    f.write("\n## STRIDE interpretation\n\n")
+    f.write("T01-T05 primarily exercise Spoofing and Elevation-of-Privilege controls; T06 exercises contextual authorization against Elevation of Privilege; T00 is an availability check relevant to Denial of Service. These tests do not, by themselves, fully validate Tampering, Repudiation, Information Disclosure, or load-based Denial of Service. See docs/stride-test-plan.md for the explicit coverage and evidence requirements.\n")
 PY
 
 kubectl get nodes -o wide > "$OUT/post-validation-nodes.txt" 2>&1 || true

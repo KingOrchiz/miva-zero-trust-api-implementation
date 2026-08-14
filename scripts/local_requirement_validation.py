@@ -10,13 +10,16 @@ import base64
 import hashlib
 import hmac
 import json
+import os
 import time
 import uuid
 from dataclasses import dataclass
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "evidence" / "irestrict-v3-2026-07-26-local-requirement-validation"
+OUT = ROOT / "evidence" / os.environ.get(
+    "IRESTRICT_EVIDENCE_RUN_ID", "irestrict-v3-2026-07-26-local-requirement-validation"
+)
 OUT.mkdir(parents=True, exist_ok=True)
 
 

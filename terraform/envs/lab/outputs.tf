@@ -14,7 +14,7 @@ output "kubernetes_namespaces" {
   value = var.enable_kubernetes_bootstrap ? module.kubernetes_platform[0].namespaces : []
 }
 
-output "huawei_kube_config_raw" {
-  value     = var.enable_huawei_platform ? module.huawei_platform[0].kube_config_raw : null
-  sensitive = true
-}
+# Operational CCE credentials are intentionally not exported from Terraform.
+# CCE client certificates are cluster-generation specific and can remain stale
+# in state after an out-of-band replacement. Operators must obtain a fresh,
+# short-lived kubeconfig directly from Huawei CCE.

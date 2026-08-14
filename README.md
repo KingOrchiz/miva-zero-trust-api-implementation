@@ -44,11 +44,20 @@ evidence/    dated raw outputs and derived summaries
 3. Run `./scripts/labctl.sh validate` and `./scripts/labctl.sh status`.
 4. Review `./scripts/labctl.sh plan`; apply only through the approved HCP Terraform gate.
 5. Select and verify the intended Kubernetes context.
-6. Deploy manifests with `DEPLOY_MIVA_CONFIRMED=true ./scripts/deploy-k8s-manifests.sh`.
+6. Deploy manifests with `IRESTRICT_TARGET_CLOUD=<azure|huawei> DEPLOY_MIVA_CONFIRMED=true ./scripts/deploy-k8s-manifests.sh` and an explicit kubeconfig.
 7. Run T00-T07 and collect evidence.
 8. Run matched performance trials in alternating order, then the capacity ladder.
 9. Preserve raw evidence and generate a destroy plan.
 10. Destroy only after explicit approval.
+
+For a guarded workload-to-evidence replay after infrastructure and credentials are ready:
+
+```bash
+export KUBECONFIG=/protected/path/to/the-approved-kubeconfig
+REPLAY_MIVA_CONFIRMED=true ./scripts/replay-defence.sh huawei
+```
+
+See [credential lifecycle](docs/credential-lifecycle.md) and [STRIDE test plan](docs/stride-test-plan.md).
 
 ## Minimum validation commands
 
@@ -75,6 +84,12 @@ K6_VUS=50 K6_DURATION=15s K6_BASELINE_START=20s K6_SECURED_START=0s \
 - Preserve the raw log, generated job manifest, cluster/node inventory, tool versions, test order, and timestamps for every run.
 - Treat the baseline endpoint bypass as a laboratory benchmark control, never as a production mode.
 - Do not present controlled proof headers as full cryptographic enforcement.
+- Do not export Huawei operational kubeconfigs from Terraform state; use newly issued CCE credentials.
+- Use [the STRIDE test plan](docs/stride-test-plan.md) to distinguish tested controls from untested or target-design claims.
+
+## 14 August 2026 operational recovery note
+
+The Huawei CCE cluster and node pool were recovered after an out-of-band deletion. The existing VPC, subnet, NAT and EIP were reused; Azure was not changed. Fresh Huawei-issued credentials authenticated successfully, both CCE nodes became Ready, workloads were restored, and the recovery smoke job passed T00-T02. This does not replace the historical 11 August T00-T07 8/8 evidence; a fresh full matrix must be collected before making an equivalent new claim.
 
 ## Teardown
 

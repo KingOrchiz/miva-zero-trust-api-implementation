@@ -11,6 +11,9 @@ mkdir -p "$OUT"
   echo
   echo "Run ID: $RUN_ID"
   echo "Collected: $(date -Is)"
+  echo "Collected UTC: $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+  echo "Git commit: $(git -C "$ROOT" rev-parse HEAD 2>/dev/null || echo unknown)"
+  echo "Git tags: $(git -C "$ROOT" tag --points-at HEAD 2>/dev/null | paste -sd, - || true)"
   echo
   echo "## Kubernetes context"
   kubectl config current-context 2>/dev/null || true
@@ -29,7 +32,10 @@ if command -v terraform >/dev/null 2>&1; then
 fi
 
 if command -v kubectl >/dev/null 2>&1; then
-  kubectl config view --minify --raw | sed -E 's/(client-certificate-data:|client-key-data:|certificate-authority-data:|token:).*/\1 [REDACTED]/' > "$OUT/kube-context-sanitized.txt" 2>&1 || true
+  {
+    echo "context=$(kubectl config current-context 2>/dev/null || true)"
+    kubectl config view --minify -o jsonpath='cluster={.contexts[0].context.cluster}{"\n"}user={.contexts[0].context.user}{"\n"}server={.clusters[0].cluster.server}{"\n"}' 2>/dev/null || true
+  } > "$OUT/kube-context-sanitized.txt"
   kubectl get nodes -o wide > "$OUT/nodes.txt" 2>&1 || true
   cp "$OUT/nodes.txt" "$OUT/aks-nodes.txt" 2>/dev/null || true
   kubectl get ns --show-labels > "$OUT/namespaces.txt" 2>&1 || true
@@ -39,6 +45,7 @@ if command -v kubectl >/dev/null 2>&1; then
   kubectl get daemonset -A -o wide > "$OUT/all-daemonsets.txt" 2>&1 || true
   kubectl get statefulset -A -o wide > "$OUT/all-statefulsets.txt" 2>&1 || true
   kubectl get job -A -o wide > "$OUT/all-jobs.txt" 2>&1 || true
+  kubectl get events -A --sort-by=.lastTimestamp > "$OUT/all-events.txt" 2>&1 || true
   kubectl get pods -n irestrict-security -o wide > "$OUT/security-pods.txt" 2>&1 || true
   kubectl get pods -n irestrict-observability -o wide > "$OUT/observability-pods.txt" 2>&1 || true
   kubectl get pods -n irestrict-identity -o wide > "$OUT/identity-pods.txt" 2>&1 || true
@@ -57,5 +64,10 @@ if [[ -f "$OUT/security-test-results.md" ]]; then
 else
   echo "Security test results were not present in this run folder. Run scripts/run-validation-tests.sh $RUN_ID first if a live test matrix is required." > "$OUT/security-test-results-missing.txt"
 fi
+
+{
+  echo "# SHA-256 evidence manifest"
+  find "$OUT" -maxdepth 1 -type f ! -name SHA256SUMS -print0 | sort -z | xargs -0 sha256sum
+} > "$OUT/SHA256SUMS"
 
 echo "Evidence collected under $OUT"
