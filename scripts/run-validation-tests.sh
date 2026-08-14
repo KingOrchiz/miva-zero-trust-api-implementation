@@ -28,6 +28,7 @@ kubectl get pods -A -o wide > "$OUT/pre-validation-pods.txt" 2>&1 || true
 RUNNER="validation-runner-$RUN_ID"
 RUNNER="${RUNNER//:/-}"
 RUNNER="${RUNNER//_/-}"
+RUNNER="$(printf '%s' "$RUNNER" | tr '[:upper:]' '[:lower:]' | sed -E 's/[^a-z0-9.-]+/-/g; s/^[^a-z0-9]+//; s/[^a-z0-9]+$//' | cut -c1-63)"
 
 kubectl delete pod "$RUNNER" -n "$NS" --ignore-not-found >/dev/null 2>&1 || true
 kubectl run "$RUNNER" -n "$NS" --image=curlimages/curl:8.10.1 --restart=Never --command -- sleep 3600 >/dev/null
