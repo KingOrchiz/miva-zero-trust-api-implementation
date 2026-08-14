@@ -22,7 +22,8 @@ jobs:
       - name: Terraform format check
         run: terraform fmt -check -recursive ../..
       - name: Terraform init
-        run: terraform init
+        # Validation needs providers/modules, not authenticated HCP workspace access.
+        run: terraform init -backend=false -input=false
       - name: Terraform validate
         run: terraform validate
 
