@@ -12,6 +12,9 @@ Commands:
   validate      Run Terraform format check and validation locally
   status        Show local CLI/auth/workspace status without changing cloud resources
   plan          Queue or run Terraform plan for the dedicated lab workspace
+  plan-azure    Preview Azure module changes only (exceptional scoped review)
+  plan-huawei   Preview Huawei module changes only (exceptional scoped review)
+  refresh-plan  Refresh-only drift review; never changes remote objects
   destroy-plan  Create a Terraform destroy plan for review only
 
 Safety:
@@ -82,6 +85,22 @@ cmd_plan() {
   terraform plan -input=false
 }
 
+cmd_target_plan() {
+  local cloud="$1"
+  require_cmd terraform
+  terraform_init_if_needed
+  cd "$TF_DIR"
+  echo "WARNING: targeted plans are for incident recovery/scoped diagnosis only."
+  terraform plan -input=false -target="module.${cloud}_platform[0]"
+}
+
+cmd_refresh_plan() {
+  require_cmd terraform
+  terraform_init_if_needed
+  cd "$TF_DIR"
+  terraform plan -refresh-only -input=false
+}
+
 cmd_destroy_plan() {
   require_cmd terraform
   terraform_init_if_needed
@@ -93,6 +112,9 @@ case "${1:-}" in
   validate) cmd_validate ;;
   status) cmd_status ;;
   plan) cmd_plan ;;
+  plan-azure) cmd_target_plan azure ;;
+  plan-huawei) cmd_target_plan huawei ;;
+  refresh-plan) cmd_refresh_plan ;;
   destroy-plan) cmd_destroy_plan ;;
   -h|--help|help|"") usage ;;
   *) echo "Unknown command: $1" >&2; usage; exit 2 ;;

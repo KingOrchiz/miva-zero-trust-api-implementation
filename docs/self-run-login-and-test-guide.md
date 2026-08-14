@@ -31,7 +31,7 @@ kubectl version --client
 export IRESTRICT_AZURE_SUBSCRIPTION='<approved-subscription-id-or-name>'
 export IRESTRICT_AZURE_RESOURCE_GROUP='Jane_Lab'
 export IRESTRICT_AKS_CLUSTER='aks-irestrict-v3-lab'
-export IRESTRICT_HUAWEI_KUBECONFIG="$HOME/.kube/irestrict-huawei.yaml"
+export IRESTRICT_HUAWEI_KUBECONFIG="$HOME/.kube/irestrict-huawei/kubeconfig.yaml"
 ```
 
 Historical `irestrict-v3` resource names are literal Terraform-state identifiers. The artefact name in the report is iRestrict.
@@ -57,14 +57,13 @@ Stop if the subscription, resource group, cluster or context differs from the ap
 
 ## 4. Connect to Huawei CCE
 
-The `huawei_kube_config_raw` Terraform output is sensitive. Write it to a protected file; never commit or paste it into evidence.
+Do not obtain operational credentials from Terraform state. After a cluster replacement, provider state can retain the deleted control plane's certificate and private key. In Huawei Console select AF-Johannesburg, open `cce-irestrict-v3-lab`, choose public/external access, and download the current YAML plus `client.key` using the shortest practical validity period.
 
 ```bash
-mkdir -p "$(dirname "$IRESTRICT_HUAWEI_KUBECONFIG")"
-cd terraform/envs/lab
-terraform output -raw huawei_kube_config_raw > "$IRESTRICT_HUAWEI_KUBECONFIG"
-chmod 600 "$IRESTRICT_HUAWEI_KUBECONFIG"
-cd ../../..
+mkdir -p "$HOME/.kube/irestrict-huawei"
+chmod 700 "$HOME/.kube/irestrict-huawei"
+install -m 600 "$HOME/Downloads/cce-irestrict-v3-lab-kubeconfig.yaml" "$IRESTRICT_HUAWEI_KUBECONFIG"
+install -m 600 "$HOME/Downloads/client.key" "$HOME/.kube/irestrict-huawei/client.key"
 
 KUBECONFIG="$IRESTRICT_HUAWEI_KUBECONFIG" kubectl config current-context
 KUBECONFIG="$IRESTRICT_HUAWEI_KUBECONFIG" kubectl get nodes -o wide
@@ -81,7 +80,7 @@ Azure:
 unset KUBECONFIG
 kubectl config use-context irestrict-azure
 kubectl config current-context
-DEPLOY_MIVA_CONFIRMED=true ./scripts/deploy-k8s-manifests.sh
+IRESTRICT_TARGET_CLOUD=azure DEPLOY_MIVA_CONFIRMED=true ./scripts/deploy-k8s-manifests.sh
 kubectl rollout status -n irestrict-apps deployment/sample-financial-api --timeout=180s
 kubectl get pods -A
 ```
@@ -91,7 +90,7 @@ Huawei:
 ```bash
 export KUBECONFIG="$IRESTRICT_HUAWEI_KUBECONFIG"
 kubectl config current-context
-DEPLOY_MIVA_CONFIRMED=true ./scripts/deploy-k8s-manifests.sh
+IRESTRICT_TARGET_CLOUD=huawei DEPLOY_MIVA_CONFIRMED=true ./scripts/deploy-k8s-manifests.sh
 kubectl rollout status -n irestrict-apps deployment/sample-financial-api --timeout=180s
 kubectl get pods -A
 ```
@@ -131,8 +130,9 @@ The job offers 500, 1,000, 2,000, 5,000 and 10,000 RPS. A configured offered rat
 ## 9. Supplementary local harnesses
 
 ```bash
-python3 scripts/dpop_crypto_validation.py
-python3 scripts/local_requirement_validation.py
+./scripts/bootstrap-python.sh
+.venv/bin/python scripts/dpop_crypto_validation.py
+.venv/bin/python scripts/local_requirement_validation.py
 ```
 
 These are separate from the cloud policy-path test and must be reported separately.
@@ -156,3 +156,17 @@ unset KUBECONFIG
 ```
 
 Review the destroy plan and approve it in HCP Terraform only after explicit teardown approval. Remove local kubeconfigs after the lab is destroyed.
+
+## 12. Exceptional Huawei recovery
+
+Use targeting only to recover resources confirmed deleted out of band. Preview first and approve only `2 to add, 0 to change, 0 to destroy`:
+
+```bash
+terraform -chdir=terraform/envs/lab plan \
+  -target='module.huawei_platform[0].huaweicloud_cce_cluster.this[0]' \
+  -target='module.huawei_platform[0].huaweicloud_cce_node_pool.this[0]'
+```
+
+Apply the same two targets only after explicit approval. Then run a refresh-only reconciliation, verify the EIP is `BOUND`, obtain a newly issued Huawei kubeconfig, and run a full un-targeted plan for review. Never paste drift output containing `kube_config_raw`; historical state may reveal private-key material.
+
+Registry pulls from Docker Hub or GHCR may take several minutes. Inspect pod events before changing an image tag; transient `ImagePullBackOff` during the 14 August recovery resolved automatically.
