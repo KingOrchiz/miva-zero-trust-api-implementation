@@ -7,6 +7,7 @@ the Kubernetes laboratory represented with controlled validation headers.
 import base64
 import hashlib
 import json
+import os
 import time
 import uuid
 from pathlib import Path
@@ -15,7 +16,9 @@ import jwt
 from cryptography.hazmat.primitives.asymmetric import ec
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "evidence" / "irestrict-v3-2026-07-26-dpop-crypto"
+OUT = ROOT / "evidence" / os.environ.get(
+    "IRESTRICT_EVIDENCE_RUN_ID", "irestrict-v3-2026-07-26-dpop-crypto"
+)
 OUT.mkdir(parents=True, exist_ok=True)
 
 ACCESS_TOKEN_SECRET = "local-lab-only-secret-for-dpop-evidence"

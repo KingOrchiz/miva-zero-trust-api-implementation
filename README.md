@@ -50,6 +50,15 @@ evidence/    dated raw outputs and derived summaries
 9. Preserve raw evidence and generate a destroy plan.
 10. Destroy only after explicit approval.
 
+For a guarded workload-to-evidence replay after infrastructure and credentials are ready:
+
+```bash
+export KUBECONFIG=/protected/path/to/the-approved-kubeconfig
+REPLAY_MIVA_CONFIRMED=true ./scripts/replay-defence.sh huawei
+```
+
+See [credential lifecycle](docs/credential-lifecycle.md) and [STRIDE test plan](docs/stride-test-plan.md).
+
 ## Minimum validation commands
 
 ```bash
