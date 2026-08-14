@@ -80,3 +80,23 @@ STRIDE_MIVA_CONFIRMED=true STRIDE_LOAD_CONFIRMED=true ./scripts/replay-stride.sh
 ```
 
 Accept the run only when the baseline matrix, supplementary harnesses, live STRIDE matrix and evidence checksums all pass. Preserve the prior evidence directories; the STRIDE run uses a new run ID.
+
+## Defence-day operator routine
+
+Use `scripts/defence-day.sh` as the single guarded entry point. It verifies the explicit kubeconfig, approved context, API reachability and that at least two nodes are Ready before changing workloads. It never runs Terraform apply or destroy.
+
+```bash
+# Azure
+export KUBECONFIG="$HOME/.kube/irestrict-azure.yaml"
+./scripts/defence-day.sh preflight azure
+DEFENCE_DEPLOY_CONFIRMED=true DEFENCE_LOAD_CONFIRMED=true \
+  ./scripts/defence-day.sh full azure defence-azure-$(date -u +%Y%m%dT%H%M%SZ)
+
+# Huawei
+export KUBECONFIG="$HOME/.kube/irestrict-huawei/kubeconfig.yaml"
+./scripts/defence-day.sh preflight huawei
+DEFENCE_DEPLOY_CONFIRMED=true DEFENCE_LOAD_CONFIRMED=true \
+  ./scripts/defence-day.sh full huawei defence-huawei-$(date -u +%Y%m%dT%H%M%SZ)
+```
+
+The `full` action deploys the manifests, replays T00–T07, DPoP, requirements and the dedicated STRIDE suite, collects checksummed evidence, then runs the fixed 300-RPS secured-path standard for 60 seconds. For a short oral demonstration, use `preflight`, `deploy`, or `validate` independently. Never expose kubeconfig contents in slides, terminal captures or evidence.
