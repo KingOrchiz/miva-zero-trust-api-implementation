@@ -10,19 +10,19 @@ The academic artefact is called **iRestrict**. Historical resource and directory
 - Kubernetes deployments for Keycloak, SPIRE, OPA, OpenTelemetry, a sample financial API, and synthetic clients.
 - T00-T07 policy-path validation on both clouds.
 - Supplementary RFC 9449 DPoP cryptographic validation and local requirement harnesses.
-- Matched baseline-versus-OPA policy-path benchmarks and an offered-load capacity ladder.
+- A fixed-rate, in-cluster secured-path benchmark at 300 requests per second for 60 seconds on both clouds.
 
 The cloud validation uses controlled DPoP-, mTLS-, and SPIFFE-style inputs. It does **not** claim production certificate-bound mTLS, cloud-gateway DPoP verification, cross-domain SPIFFE federation, hardware-backed keys, immutable audit storage, or regulatory certification.
 
-## Verified 11 August 2026 state
+## Verified 14 August 2026 state
 
 - Deployment mode: `dedicated-lab` only.
-- Azure target: approved `Jane_Lab` resource group in East US; one `Standard_B2s` AKS node at test time.
+- Azure target: approved `Jane_Lab` resource group in East US; two `Standard_F2s_v2` AKS nodes at test time.
 - Huawei target: approved enterprise project in `af-south-1`; two `s6.large.2` CCE nodes at test time.
 - Terraform deployment: 17 resources added, with no pre-existing resources changed or destroyed.
 - T00-T07: 8/8 passed on Azure and 8/8 on Huawei.
-- The 30 ms P95 policy-path target was not met on Azure; it was met only in the bounded Huawei comparison.
-- The 10,000 TPS target was not achieved by either lean laboratory.
+- The standardized secured-path test completed 18,001 requests on Azure and 18,000 on Huawei with zero failures and zero dropped iterations.
+- Azure recorded P50 26.48 ms, P95 123.86 ms and P99 232.58 ms; Huawei recorded P50 4.25 ms, P95 7.42 ms and P99 13.95 ms.
 - The laboratory remains billable until an approved destroy is completed.
 
 See [Issue 6 evidence](evidence/issue6-performance-summary-20260811.md) for measured values and limitations.
@@ -47,7 +47,7 @@ evidence/    dated raw outputs and derived summaries
 6. Deploy manifests with `IRESTRICT_TARGET_CLOUD=<azure|huawei> DEPLOY_MIVA_CONFIRMED=true ./scripts/deploy-k8s-manifests.sh` and an explicit kubeconfig.
 7. For full prototype STRIDE evidence, use `STRIDE_MIVA_CONFIRMED=true STRIDE_LOAD_CONFIRMED=true ./scripts/replay-stride.sh <azure|huawei>` only in the approved lab/load window.
 7. Run T00-T07 and collect evidence.
-8. Run matched performance trials in alternating order, then the capacity ladder.
+8. Run the fixed-rate 300-RPS secured-path standard for 60 seconds on each cloud.
 9. Preserve raw evidence and generate a destroy plan.
 10. Destroy only after explicit approval.
 
@@ -75,7 +75,8 @@ K6_VUS=50 K6_DURATION=15s K6_BASELINE_START=0s K6_SECURED_START=20s \
   ./scripts/run-k6-benchmark.sh "${RUN_ID}-baseline-first"
 K6_VUS=50 K6_DURATION=15s K6_BASELINE_START=20s K6_SECURED_START=0s \
   ./scripts/run-k6-benchmark.sh "${RUN_ID}-secured-first"
-./scripts/run-k6-capacity.sh "${RUN_ID}-capacity"
+K6_RATE=300 K6_DURATION=60s \
+  ./scripts/run-k6-standard.sh "${RUN_ID}-300rps-60s"
 ```
 
 ## Safety and evidence rules

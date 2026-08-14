@@ -84,14 +84,20 @@ resource "azurerm_kubernetes_cluster" "this" {
   dns_prefix          = replace(local.prefix, "_", "-")
 
   default_node_pool {
-    name                = "system"
-    vm_size             = var.aks_vm_size
-    node_count          = var.aks_node_count
-    enable_auto_scaling = true
-    min_count           = var.aks_min_count
-    max_count           = var.aks_max_count
-    vnet_subnet_id      = azurerm_subnet.aks[0].id
-    os_disk_size_gb     = 64
+    name                        = "system"
+    vm_size                     = var.aks_vm_size
+    enable_auto_scaling         = true
+    min_count                   = var.aks_min_count
+    max_count                   = var.aks_max_count
+    vnet_subnet_id              = azurerm_subnet.aks[0].id
+    os_disk_size_gb             = 64
+    temporary_name_for_rotation = "sysrotate"
+
+    upgrade_settings {
+      max_surge                     = "10%"
+      drain_timeout_in_minutes      = 0
+      node_soak_duration_in_minutes = 0
+    }
   }
 
   identity {

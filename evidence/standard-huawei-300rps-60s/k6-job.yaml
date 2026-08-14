@@ -1,0 +1,110 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"batch/v1","kind":"Job","metadata":{"annotations":{},"name":"k6-standard-standard-huawei-300rps-60s","namespace":"irestrict-apps"},"spec":{"backoffLimit":0,"template":{"metadata":{"labels":{"app":"k6-standard"}},"spec":{"affinity":{"podAntiAffinity":{"requiredDuringSchedulingIgnoredDuringExecution":[{"labelSelector":{"matchLabels":{"app":"opa"}},"namespaces":["irestrict-security"],"topologyKey":"kubernetes.io/hostname"}]}},"containers":[{"command":["k6","run","--summary-trend-stats","avg,min,med,p(90),p(95),p(99),max","/scripts/k6-standard.js"],"env":[{"name":"SERVICE_URL","value":"http://sample-financial-api.irestrict-apps.svc.cluster.local"},{"name":"RATE","value":"300"},{"name":"DURATION","value":"60s"},{"name":"PRE_VUS","value":"150"},{"name":"MAX_VUS","value":"600"}],"image":"grafana/k6:0.55.0","name":"k6","resources":{"limits":{"cpu":"1","memory":"512Mi"},"requests":{"cpu":"250m","memory":"256Mi"}},"volumeMounts":[{"mountPath":"/scripts","name":"script"}]}],"restartPolicy":"Never","volumes":[{"configMap":{"name":"k6-standard-standard-huawei-300rps-60s-script"},"name":"script"}]}}}}
+  creationTimestamp: "2026-08-14T12:41:58Z"
+  generation: 1
+  labels:
+    app: k6-standard
+    batch.kubernetes.io/controller-uid: feea65b3-572c-49a8-8a72-96b7af11ace4
+    batch.kubernetes.io/job-name: k6-standard-standard-huawei-300rps-60s
+    controller-uid: feea65b3-572c-49a8-8a72-96b7af11ace4
+    job-name: k6-standard-standard-huawei-300rps-60s
+  name: k6-standard-standard-huawei-300rps-60s
+  namespace: irestrict-apps
+  resourceVersion: "91898"
+  uid: feea65b3-572c-49a8-8a72-96b7af11ace4
+spec:
+  backoffLimit: 0
+  completionMode: NonIndexed
+  completions: 1
+  manualSelector: false
+  parallelism: 1
+  podReplacementPolicy: TerminatingOrFailed
+  selector:
+    matchLabels:
+      batch.kubernetes.io/controller-uid: feea65b3-572c-49a8-8a72-96b7af11ace4
+  suspend: false
+  template:
+    metadata:
+      labels:
+        app: k6-standard
+        batch.kubernetes.io/controller-uid: feea65b3-572c-49a8-8a72-96b7af11ace4
+        batch.kubernetes.io/job-name: k6-standard-standard-huawei-300rps-60s
+        controller-uid: feea65b3-572c-49a8-8a72-96b7af11ace4
+        job-name: k6-standard-standard-huawei-300rps-60s
+    spec:
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+          - labelSelector:
+              matchLabels:
+                app: opa
+            namespaces:
+            - irestrict-security
+            topologyKey: kubernetes.io/hostname
+      containers:
+      - command:
+        - k6
+        - run
+        - --summary-trend-stats
+        - avg,min,med,p(90),p(95),p(99),max
+        - /scripts/k6-standard.js
+        env:
+        - name: SERVICE_URL
+          value: http://sample-financial-api.irestrict-apps.svc.cluster.local
+        - name: RATE
+          value: "300"
+        - name: DURATION
+          value: 60s
+        - name: PRE_VUS
+          value: "150"
+        - name: MAX_VUS
+          value: "600"
+        image: grafana/k6:0.55.0
+        imagePullPolicy: IfNotPresent
+        name: k6
+        resources:
+          limits:
+            cpu: "1"
+            memory: 512Mi
+          requests:
+            cpu: 250m
+            memory: 256Mi
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /scripts
+          name: script
+      dnsPolicy: ClusterFirst
+      restartPolicy: Never
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+      volumes:
+      - configMap:
+          defaultMode: 420
+          name: k6-standard-standard-huawei-300rps-60s-script
+        name: script
+status:
+  completionTime: "2026-08-14T12:43:01Z"
+  conditions:
+  - lastProbeTime: "2026-08-14T12:43:01Z"
+    lastTransitionTime: "2026-08-14T12:43:01Z"
+    message: Reached expected number of succeeded pods
+    reason: CompletionsReached
+    status: "True"
+    type: SuccessCriteriaMet
+  - lastProbeTime: "2026-08-14T12:43:01Z"
+    lastTransitionTime: "2026-08-14T12:43:01Z"
+    message: Reached expected number of succeeded pods
+    reason: CompletionsReached
+    status: "True"
+    type: Complete
+  ready: 0
+  startTime: "2026-08-14T12:41:58Z"
+  succeeded: 1
+  terminating: 0
+  uncountedTerminatedPods: {}

@@ -65,11 +65,30 @@ metadata:
 spec:
   backoffLimit: 0
   template:
+    metadata:
+      labels:
+        app: k6-capacity
     spec:
       restartPolicy: Never
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            - labelSelector:
+                matchLabels:
+                  app: opa
+              namespaces:
+                - irestrict-security
+              topologyKey: kubernetes.io/hostname
       containers:
         - name: k6
           image: grafana/k6:0.55.0
+          resources:
+            requests:
+              cpu: 500m
+              memory: 256Mi
+            limits:
+              cpu: "1"
+              memory: 512Mi
           env:
             - name: SERVICE_URL
               value: "$SERVICE"

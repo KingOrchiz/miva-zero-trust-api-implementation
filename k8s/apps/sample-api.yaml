@@ -133,6 +133,11 @@ metadata:
   namespace: irestrict-apps
 spec:
   replicas: 2
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 0
+      maxUnavailable: 1
   selector:
     matchLabels:
       app: sample-financial-api
@@ -143,10 +148,31 @@ spec:
         miva.openclaw.io/workload: protected-api
     spec:
       serviceAccountName: sample-financial-api
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            - labelSelector:
+                matchLabels:
+                  app: sample-financial-api
+              topologyKey: kubernetes.io/hostname
+      topologySpreadConstraints:
+        - maxSkew: 1
+          topologyKey: kubernetes.io/hostname
+          whenUnsatisfiable: DoNotSchedule
+          labelSelector:
+            matchLabels:
+              app: sample-financial-api
       containers:
         - name: api
           image: python:3.12-alpine
           imagePullPolicy: IfNotPresent
+          resources:
+            requests:
+              cpu: 200m
+              memory: 128Mi
+            limits:
+              cpu: 500m
+              memory: 256Mi
           command: ["python", "/app/app.py"]
           ports:
             - containerPort: 8080
